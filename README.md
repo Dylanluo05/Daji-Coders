@@ -4,7 +4,7 @@ Jean Kim, Dylan Luo, Isabelle Guawan, Alex Do
 ## Table of Contents
 - [Project / Website Description](#project--website-description)
 - [Credits](#credits)
-- [Runtime Link](#runtime_link)
+- [Runtime Link](#runtime-link)
 - [Organization Sprint 0](#organization_sprint_0)
 
 ### Project / Website Description
