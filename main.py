@@ -17,9 +17,9 @@ def kangaroos():
     return render_template("kangaroos.html")
 
 
-@app.route('/walruses/')
-def walruses():
-    return render_template("walruses.html")
+@app.route('/isabelle', methods=['GET', 'POST'])
+def isabelle():
+    return render_template("isabelle.html")
 
 
 @app.route('/hawkers/')
