@@ -11,12 +11,12 @@ Jean Kim, Dylan Luo, Isabelle Guawan, Alex Do
 Our project is a travel / vacation website that aims to provide users with information on travel and various trip destinations. 
 
 ### Credits
-- [Team Scrum Board](https://github.com/jeankim05/flask_portfolio/projects/1)
-- [Team Insights Graphs](https://github.com/jeankim05/flask_portfolio/graphs/contributors)
+- [Team Scrum Board](https://github.com/Dylanluo05/Daji-Coders/projects/1)
+- [Team Insights Graphs](https://github.com/Dylanluo05/Daji-Coders/graphs/contributors)
 
 Contributor | GitHub | Tasks and Issues | Scrum Board | Commits | Links to Journal
 ----------- | ----------- | ------------- | ------------- | ------------- | -------------
-Jean Kim | [@jeankim05](https://github.com/jeankim05) | [Tasks and Issues](https://github.com/jeankim05/flask_portfolio/issues/assigned/jeankim05) | [Scrum Board](https://github.com/jeankim05/flask_portfolio/projects/1)  | [Commits](https://github.com/jeankim05/flask_portfolio/commits/main?author=jeankim05) |[Jean Kim and Jay Manjrekar Journal](https://docs.google.com/document/d/1bYsR9b6nUoS4Svl8AnUcRA0bOjl8gRcyT-kbd1AhnOc/edit?usp=sharing)
+Jean Kim | [@jeankim05](https://github.com/jeankim05) | [Tasks and Issues](https://github.com/Dylanluo05/Daji-Coders/issues/assigned/jeankim05) | [Scrum Board](https://github.com/Dylanluo05/Daji-Coders/projects/1)  | [Commits](https://github.com/Dylanluo05/Daji-Coders/commits?author=jeankim05) |[Jean Kim and Alex Do Journal](https://docs.google.com/document/d/1Z-1t7JIvJnqctDlQt7ALcxyDKhtoPdDNBLIA8d82Qgo/edit?usp=sharing)
 
 ### Runtime Link
 To be determined!
