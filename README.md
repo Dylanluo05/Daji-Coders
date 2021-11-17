@@ -8,7 +8,7 @@ Jean Kim, Dylan Luo, Isabelle Gunawan, Alex Do
 - [Organization Sprint 0](#organization-sprint-0)
 
 ### Project / Website Description
-Our project is a travel / vacation website that aims to provide users with information on travel and various trip destinations. 
+- Our project is a travel / vacation website that aims to provide users with information on travel and various trip destinations. 
 
 ### Credits
 - [Team Scrum Board](https://github.com/Dylanluo05/Daji-Coders/projects/1)
