@@ -9,18 +9,18 @@
 </head>
 <body>
     <h1>About Me</h1>
-    <p>Sophomore at Del Norte High School. I like snails.</p>
+    <p>I'm Isabelle, and I'm a sophomore at Del Norte High School. I like snails.</p>
     <button><a href="https://docs.google.com/document/d/1LDHFMI3j1qDKWwgjiuCrH2cgK1KQCoKsQF3OOdGBvIw/edit">My Pair Share Journal!</a></button>
-    <img src="/static/assets/images/isabellemasked.png" id="myImg" width="500" height="500">
+    <img src="/static/assets/images/isabellemasked.jpg" id="myImg" width="300" height="300">
     <input type="button" onclick="changeImg()" value="Click Here" />
     <script type="text/javascript">
         function changeImg() {
             var image = document.getElementById('myImg');
-            if (image.src.match("/static/assets/images/about_us_pics/isabellemasked.png")) {
-                image.src = "/static/assets/images/about_us_pics/isabelleunmasked.png";
+            if (image.src.match("/static/assets/images/isabellemasked.jpg")) {
+                image.src = "/static/assets/images/isabelleunmasked.jpg";
             }
             else {
-                image.src = "/static/assets/images/about_us_pics/isabellemasked.png";
+                image.src = "/static/assets/images/isabellemasked.jpg";
             }
         }
     </script>
