@@ -1,10 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+{% extends "layouts/base.html" %}
+
+{% block body %}
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>About Isabelle</title>
 </head>
 <body>
-
+    <h1>About Me</h1>
+    <p>Sophomore at Del Norte High School. I like snails.</p>
+    <button><a href="https://docs.google.com/document/d/1LDHFMI3j1qDKWwgjiuCrH2cgK1KQCoKsQF3OOdGBvIw/edit">My Pair Share Journal!</a></button>
+    <img src="/static/images/isabellemasked.png" id="myImg" width="500" height="500">
+    <input type="button" onclick="changeImg()" value="Click Here" />
+    <script type="text/javascript">
+        function changeImg() {
+            var image = document.getElementById('myImg');
+            if (image.src.match("/static/images/about_us_pics/isabellemasked.png")) {
+                image.src = "/static/images/about_us_pics/isabelleunmasked.png";
+            }
+            else {
+                image.src = "/static/images/about_us_pics/isabellemasked.png";
+            }
+        }
+    </script>
 </body>
 </html>
+
+{% endblock %}
