@@ -13,6 +13,9 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
 <head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
     <style>
         :root{
             --white: whitesmoke;
@@ -29,6 +32,8 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
             -o-animation: fadein 2s; /* Opera */
             background-color: var(--grey);
             color: var(--white);
+            font-family: 'Ubuntu', sans-serif;
+            background: url("https://wallpaperaccess.com/full/3315704.jpg");
         }
 
         .dark-mode {
@@ -94,9 +99,10 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
             margin: auto;
         }
 
+
     </style>
 
-    <title>{{ name }} | {{ project }} </title>
+    <title>{{ name }} | TRAVEL HUB </title>
 
 </head>
 
@@ -104,41 +110,42 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
 {% include "layouts/navbar.html" %}
 
 {% block body %}
-<div class="container-fluid">
-    <div class="row justify-content-end" style="padding: 2%;">
-        <div class="col-2" style="text-align: right;">
-            {% block info %}
-                <!-- notice jinja style variables used in href's -->
-                <a><h5>{{name}}</h5></a>
-            {% endblock %}
+    <div class="container-fluid">
+        <div class="row justify-content-end" style="padding: 2%;">
+            <div class="col-2" style="text-align: right;">
+                {% block info %}
+                    <!-- notice jinja style variables used in href's -->
+                    <a><h5>{{name}}</h5></a>
+                {% endblock %}
+            </div>
         </div>
-    </div>
 
-    <div class="product" style="margin-top: 2%;">
-        <div class="row" style="padding: 10%; padding-top: 0%; padding-bottom: 5%;">
+        <div class="product" style="margin-top: 2%;">
+            <div class="row" style="padding: 10%; padding-top: 0%; padding-bottom: 5%;">
 
-            <div class="col-8" >
-                <h1>{{ project }}</h1>
+                <div class="col-8" >
+                    <h1>{{ project }}</h1>
+                </div>
+
+            </div>
+
+            <div class="row" style="padding-left: 10%;">
+                {% block links %}
+
+                    <div class="col-3">
+                        <a href="https://github.com/Dylanluo05/Daji-Coders" class="btn">Repository</a>
+                    </div>
+                {% endblock %}
             </div>
 
         </div>
-
-        <div class="row" style="padding-left: 10%;">
-            {% block links %}
-
-            <div class="col-3">
-                <a href="{{ repo }}" class="btn">Repository</a>
-            </div>
-            {% endblock %}
-        </div>
-
     </div>
-</div>
+
 {% endblock %}
 
 </body>
 
-{% block background %}
+<!-- {% block background %}
     <script src="{{ url_for('static', filename='three.r119.min.js') }}"></script>
     <script src="{{ url_for('static', filename='vanta.birds.min.js') }}"></script>
     <script>
