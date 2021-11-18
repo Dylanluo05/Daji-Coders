@@ -28,6 +28,18 @@
 
     <img src="https://media.istockphoto.com/illustrations/martial-arts-sidekick-illustration-id163541371?k=20&m=163541371&s=612x612&w=0&h=bE1eu_vUiv8QWWZINeTUU1DJ9yaTXjPDUATT5B1TUGs=" alt="Taekwondo Picture.">
 
+    <img src="/static/assets/images/jeanmaskpic.jpg" id="myImg2" width="auto" height="auto">
+    <input type="button" onclick="changeImg()" value="Toggle Pictures" />
+    <script>
+        function changeImg() {
+            var image = document.getElementById('myImg2');
+            if (image.src.match("/static/assets/images/jeanmaskpic.jpg")) {
+                image.src = "/static/assets/images/jeannomaskpic.jpg";
+            } else {
+                image.src = "/static/assets/images/jeanmaskpic.jpg";
+            }
+        }
+    </script>
 
     <style>
         html, body {
