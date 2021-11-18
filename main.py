@@ -27,6 +27,22 @@ def hawkers():
     return render_template("hawkers.html")
 
 
+@app.route('/AboutAlex/')
+def AboutAlex():
+    return render_template("AboutAlex.html")
+
+@app.route('/AboutDylan/')
+def AboutDylan():
+    return render_template("AboutDylan.html")
+
+@app.route('/AboutIsabelle/')
+def AboutIsabelle():
+    return render_template("AboutIsabelle.html")
+
+@app.route('/AboutJean/')
+def AboutJean():
+    return render_template("AboutJean.html")
+
 @app.route('/stub/')
 def stub():
     return render_template("stub.html")
