@@ -233,10 +233,10 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
         <h1>hello tourists<span>!</span></h1>
         <div class="center-block" style="margin: 2% 5% 5%; text-align:center; font-family: 'MADE Soulmaze';">
             <div class="col-12">
-                <p style="color: dodgerblue">Hello I am Dylan, {{name}}!</p>
+                <p style="color: dodgerblue">Hello I am Dylan, {{ name }}!</p>
             </div>
             <div class="col-12">
-                <form action="/dylangreet/" id="dylangreet" method="POST" >
+                <form action="/AboutDylan/" id="AboutDylan" method="POST" >
                     <label for="name" style="color: dodgerblue">You are?</label>
                     <input name="name" id="name">
                     <input type="submit" value="Greetings!">
