@@ -27,7 +27,7 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
         height: 100vh;
     }
     .about-left{
-        background: orange;
+        background: slateblue;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -35,7 +35,7 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
         height: 100vh;
     }
     .about-left-content > div{
-        background: radial-gradient(orange,whitesmoke);
+        background: radial-gradient(slateblue,whitesmoke);
         padding: 4rem 4rem 2.5rem 5rem;
         text-align: center;
     }
@@ -105,7 +105,7 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
     }
     .icons li{
         list-style-type: none;
-        background: orange;
+        background: slateblue;
         color: #fff;
         width: 40px;
         height: 40px;
@@ -137,7 +137,7 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
         text-transform: uppercase;
     }
     .about-right h1 span{
-        color: orange;
+        color: slateblue;
     }
     .about-right h2{
         font-weight: 600;
@@ -160,22 +160,22 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
         cursor: pointer;
     }
     .btn.btn-pink{
-        background: orange;
+        background: slateblue;
         color: #fff;
-        border-color: orange;
+        border-color: slateblue;
         transition: all 0.5s ease-in-out;
     }
     .btn.btn-pink:hover{
         background: transparent;
-        border-color: orange;
+        border-color: slateblue;
         color: #000;
     }
     .btn.btn-white{
         transition: all 0.5s ease-in-out;
     }
     .btn.btn-white:hover{
-        background: orange;
-        border-color: orange;
+        background: slateblue;
+        border-color: slateblue;
         color: #fff;
     }
     .about-para p{
@@ -215,10 +215,20 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
             <div>
                 <div class = "shadow">
                     <div class = "about-img">
-                        <img src = "/static/assets/" alt = "Jean">
+                        <img src="/static/assets/images/jeanmaskpic.jpg" id="myImg" onclick="changeImg()" style = "height: 200px; width:325px;">
+                        <script type="text/javascript">
+                            function changeImg() {
+                                var image = document.getElementById('myImg');
+                                if (image.src.match("/static/assets/images/jeanmaskpic.jpg")) {
+                                    image.src = "/static/assets/images/jeannomaskpic.jpg";
+                                }
+                                else {
+                                    image.src = "/static/assets/images/jeanmaskpic.jpg";
+                                }
+                            }
+                        </script>
                     </div>
                 </div>
-
                 <h2>Jean<br>Kim</h2>
                 <h3>Scrum Master of DAJI Coders and Class Technical Officer</h3>
             </div>
@@ -233,11 +243,11 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
         <h1>hello tourists<span>!</span></h1>
         <div class="center-block" style="margin: 2% 5% 5%; text-align:center; font-family: 'MADE Soulmaze';">
             <div class="col-12">
-                <p style="color: orange">Hello I am Jean, {{name}}!</p>
+                <p style="color: slateblue">Hello I am Jean, {{name}}!</p>
             </div>
             <div class="col-12">
                 <form action="/jeangreet/" id="jeangreet" method="POST" >
-                    <label for="name" style="color: orange">You are?</label>
+                    <label for="name" style="color: slateblue">You are?</label>
                     <input name="name" id="name">
                     <input type="submit" value="Greetings!">
                 </form>
@@ -247,7 +257,7 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
         </div>
 
         <div class = "about-para">
-            <p></p>
+            <p>Hello, my name is Jean, a junior at Del Norte and I am 16 years old. In my spare time, I enjoy listening to music, playing basketball with friends, or going mountain biking. I am also a Taekwondo Athlete. In school, my favorite subject is biology, but I also enjoy programming.</p>
             <p></p>
         </div>
     </div>
