@@ -215,12 +215,23 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
             <div>
                 <div class = "shadow">
                     <div class = "about-img">
-                        <img src = "/static/assets/" alt = "Isabelle">
+                        <img src="/static/assets/images/isabellemasked.jpg" id="myImg" onclick="changeImg()">
+                        <script type="text/javascript">
+                            function changeImg() {
+                                var image = document.getElementById('myImg');
+                                if (image.src.match("/static/assets/images/isabellemasked.jpg")) {
+                                    image.src = "/static/assets/images/isabelleunmasked.jpg";
+                                }
+                                else {
+                                    image.src = "/static/assets/images/isabellemasked.jpg";
+                                }
+                            }
+                        </script>
                     </div>
                 </div>
 
                 <h2>Isabelle<br>Gunawan</h2>
-                <h3>Scrum Team Techinical Officer of DAJI Coders</h3>
+                <h3>Scrum Team Technical Officer of DAJI Coders</h3>
             </div>
 
             <ul class = "icons">
@@ -236,7 +247,7 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
                 <p style="color: mediumseagreen">Hello I am Isabelle, {{name}}!</p>
             </div>
             <div class="col-12">
-                <form action="/isabellegreet/" id="isabellegreet" method="POST" >
+                <form action="/AboutIsabelle/" id="AboutIsabelle" method="POST" >
                     <label for="name" style="color: mediumseagreen">You are?</label>
                     <input name="name" id="name">
                     <input type="submit" value="Greetings!">
@@ -247,8 +258,9 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
         </div>
 
         <div class = "about-para">
-            <p></p>
-            <p></p>
+            <button><a href="https://docs.google.com/document/d/1LDHFMI3j1qDKWwgjiuCrH2cgK1KQCoKsQF3OOdGBvIw/edit">My Pair Share Journal!</a></button>
+            <p>My name is Isabelle Gunawan, and I'm a sophomore at Del Norte High School. </p>
+            <p>I like snails.</p>
         </div>
     </div>
 </div>

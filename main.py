@@ -41,10 +41,6 @@ def AboutJean():
 def stub():
     return render_template("stub.html")
 
-@app.route('/isabelle', methods=['GET', 'POST'])
-def isabelle():
-    return render_template("isabelle.html")
-
 @app.route('/jean', methods=['GET', 'POST'])
 def jean():
     return render_template("jean.html")
