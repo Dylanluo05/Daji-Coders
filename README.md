@@ -4,8 +4,8 @@ Jean Kim, Dylan Luo, Isabelle Gunawan, Alex Do
 ## Table of Contents
 - [Project / Website Description](#project--website-description)
 - [Project / Website Navigation Guide](#project--website-navigation-guide)
-- [Credits](#credits)
 - [Runtime Link](#runtime-link)
+- [Credits](#credits)
 - [Organization Sprint 0](#organization-sprint-0)
 
 ### Project / Website Description
