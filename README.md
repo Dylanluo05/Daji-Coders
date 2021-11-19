@@ -11,7 +11,7 @@ Jean Kim, Dylan Luo, Isabelle Gunawan, Alex Do
 ### Project / Website Description
 - Our project is a travel / vacation website that aims to provide users with information on travel and various trip destinations. It is called VacationHub and it is a user-friendly, easy to navigate website. [More Information](https://github.com/Dylanluo05/Daji-Coders/wiki/Project-Ideation-and-Purpose)
 
-### Project / Website Description
+### Project / Website Navigation Guide
 - VacationHub is very user-friendly and here is the navigation guide for our website.[More Information](https://github.com/Dylanluo05/Daji-Coders/wiki/How-To-Navigate-VacationHub)
 
 ### Credits
