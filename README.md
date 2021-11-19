@@ -20,6 +20,7 @@ To be determined!
 ### Credits
 - [Team Scrum Board](https://github.com/Dylanluo05/Daji-Coders/projects/1)
 - [Team Insights Graphs](https://github.com/Dylanluo05/Daji-Coders/graphs/contributors)
+
 Contributor | Role | GitHub | Tasks and Issues | Scrum Board | Commits | Links to Journal |
 ----------- | ---- | ------ | ---------------- | ----------- | ------- | ---------------- |
 Jean Kim | Scrum Master and Class Technical Officer | [@jeankim05](https://github.com/jeankim05) | [Tasks and Issues](https://github.com/Dylanluo05/Daji-Coders/issues/assigned/jeankim05) | [Scrum Board](https://github.com/Dylanluo05/Daji-Coders/projects/1)  | [Commits](https://github.com/Dylanluo05/Daji-Coders/commits?author=jeankim05) |[Jean Kim and Alex Do Journal](https://docs.google.com/document/d/1Z-1t7JIvJnqctDlQt7ALcxyDKhtoPdDNBLIA8d82Qgo/edit?usp=sharing) |
