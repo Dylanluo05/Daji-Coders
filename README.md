@@ -5,6 +5,7 @@ Jean Kim, Dylan Luo, Isabelle Gunawan, Alex Do
 - [Runtime Link](#runtime-link)
 - [Project / Website Description](#project--website-description)
 - [Project / Website Navigation Guide](#project--website-navigation-guide)
+- [Project / Website Brain Write](#project--website-brain-write)
 - [Credits](#credits)
 - [Organization Sprint 0](#organization-sprint-0)
 
@@ -12,10 +13,13 @@ Jean Kim, Dylan Luo, Isabelle Gunawan, Alex Do
 To be determined!
 
 ### Project / Website Description
-- Our project is a travel / vacation website that aims to provide users with information on travel and various trip destinations. It is called VacationHub and it is a user-friendly, easy to navigate website. [More Information](https://github.com/Dylanluo05/Daji-Coders/wiki/Project-Ideation-and-Purpose)
+- Our project is a travel / vacation website that aims to provide users with information on travel and various trip destinations. It is called VacationHub and it is a user-friendly, easy to navigate website. [Page](https://github.com/Dylanluo05/Daji-Coders/wiki/Project-Ideation-and-Purpose)
 
 ### Project / Website Navigation Guide
-- VacationHub is very user-friendly and here is the navigation guide for our website. [More Information](https://github.com/Dylanluo05/Daji-Coders/wiki/How-To-Navigate-VacationHub)
+- VacationHub is very user-friendly and here is the navigation guide for our website. [Page](https://github.com/Dylanluo05/Daji-Coders/wiki/How-To-Navigate-VacationHub)
+
+### Project / Website Brain Write
+- This page has the newest ideas on this page and more information on the different features we have provided for our users. [Page](https://github.com/Dylanluo05/Daji-Coders/wiki/Very-Cool-Brain-Write)
 
 ### Credits
 - [Team Scrum Board](https://github.com/Dylanluo05/Daji-Coders/projects/1)
