@@ -54,10 +54,6 @@ def AboutJean():
 def HotelSearch():
     return render_template("HotelSearch.html")
 
-@app.route('/jean', methods=['GET', 'POST'])
-def jean():
-    return render_template("jean.html")
-
 @app.route('/fact', methods=['GET', 'POST'])
 def fact():
     url = "http://localhost:5000/api/fact"
