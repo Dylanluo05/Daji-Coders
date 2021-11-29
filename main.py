@@ -1,9 +1,11 @@
 # import "packages" from flask
 from flask import Flask, render_template, request
+import requests
+from api.jeanapi import api_bp
 
 # create a Flask instance
 app = Flask(__name__)
-
+app.register_blueprint(api_bp)
 
 # connects default URL to render index.html
 @app.route('/')
@@ -55,6 +57,18 @@ def HotelSearch():
 @app.route('/jean', methods=['GET', 'POST'])
 def jean():
     return render_template("jean.html")
+
+@app.route('/fact', methods=['GET', 'POST'])
+def fact():
+    url = "http://localhost:5000/api/fact"
+    response = requests.request("GET", url)
+    return render_template("fact.html", fact=response.json())
+
+@app.route('/facts/', methods=['GET', 'POST'])
+def facts():
+    url = "http://localhost:5000/api/facts"
+    response = requests.request("GET", url)
+    return render_template("facts.html", facts=response.json())
 
 # runs the application on the development server
 if __name__ == "__main__":
