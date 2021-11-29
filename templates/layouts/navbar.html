@@ -8,17 +8,22 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
 </head>
+<style>
+    html, body{
+        font-family: 'Ubuntu', sans-serif;
+    }
+</style>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="https://csp.nighthawkcodingsociety.com/">{{name}}</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <ul class="navbar-nav mr-auto">
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
             <!--root menu -->
-            <li class="nav-item active">
                 <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-            </li>
+                <a class="nav-link" href="/HotelSearch/">Hotel Search <span class="sr-only">(current)</span></a>
+
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false" id="dropdownMenuButton1" type="button">About Us</a>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
@@ -28,7 +33,7 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
                     <a class="dropdown-item" href="/AboutJean/">About Jean</a>
                 </div>
             </li>
-            </li>
-        </ul>
+            </div>
+        </div>
     </div>
 </nav>

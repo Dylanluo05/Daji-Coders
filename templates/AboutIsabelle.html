@@ -8,9 +8,13 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
 <html lang="en">
 <head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
 
 </head>
-
+{% set name = "Daji Coders" %}
 {% include "layouts/navbar.html" %}
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
@@ -23,6 +27,33 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
     body{
         font-family: 'Poppins', sans-serif;
     }
+    a {
+        font-family: 'Ubuntu', sans-serif;
+    }
+    .button {
+        background-color: white;
+        border: none;
+        color: white;
+        padding: 16px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+    }
+    .button2 {
+        background-color: white;
+        color: mediumseagreen;
+        border: 2px solid mediumseagreen;
+    }
+
+    .button2:hover {
+        background-color: mediumseagreen;
+        color: white;
+    }
+
     .about-wrapper{
         height: 100vh;
     }
@@ -258,7 +289,9 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
         </div>
 
         <div class = "about-para">
-            <button><a href="https://docs.google.com/document/d/1LDHFMI3j1qDKWwgjiuCrH2cgK1KQCoKsQF3OOdGBvIw/edit">My Pair Share Journal!</a></button>
+            <form action = "https://docs.google.com/document/d/1LDHFMI3j1qDKWwgjiuCrH2cgK1KQCoKsQF3OOdGBvIw/edit" method="get" target="_blank">
+                <button class = "button button2">My Pair Share Journal!</button>
+            </form>
             <p>My name is Isabelle Gunawan, and I'm a sophomore at Del Norte High School. </p>
             <p>I like snails.</p>
         </div>

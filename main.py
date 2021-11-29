@@ -48,9 +48,9 @@ def AboutIsabelle():
 def AboutJean():
     return render_template("AboutJean.html")
 
-@app.route('/stub/')
-def stub():
-    return render_template("stub.html")
+@app.route('/HotelSearch/')
+def HotelSearch():
+    return render_template("HotelSearch.html")
 
 @app.route('/jean', methods=['GET', 'POST'])
 def jean():
