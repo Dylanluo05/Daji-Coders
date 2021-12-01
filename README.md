@@ -12,7 +12,7 @@ Jean Kim, Dylan Luo, Isabelle Gunawan, Alex Do
 To be determined!
 
 ### Github Community Guidelines
-- The github community guidelines serves as a basis for our scrum team (DAJI Coders) when pulling, pushing code, assigning tasks, and meeting deadlines. 
+- The github community guidelines serves as a basis for our scrum team (DAJI Coders) when pulling, pushing code, assigning tasks, and meeting deadlines. [Page](https://github.com/Dylanluo05/Daji-Coders/wiki/Github-Community-Guidelines)
 
 ### Wiki Home Page
 - Our project's wiki contains all the information our users need to know in order to navigate the website, enjoy its features, and learn about the original purpose and ideation. [Page](https://github.com/Dylanluo05/Daji-Coders/wiki)
