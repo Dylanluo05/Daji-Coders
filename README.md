@@ -5,11 +5,6 @@ Jean Kim, Dylan Luo, Isabelle Gunawan, Alex Do
 - [Runtime Link](#runtime-link)
 - [Github Community Guidelines](#github-community-guidelines)
 - [Wiki Home Page](#wiki-home-page)
-- [Project / Website Description](#project--website-description)
-- [Project / Website Navigation Guide](#project--website-navigation-guide)
-- [Project / Website Brain Write](#project--website-brain-write)
-- [Project / Website Wire Frames](#project--website-wire-frames)
-- [Project / Website Technicals](#project--website-technicals)
 - [Credits](#credits)
 - [Organization Sprint 0](#organization-sprint-0)
 
