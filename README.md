@@ -3,8 +3,8 @@ Jean Kim, Dylan Luo, Isabelle Gunawan, Alex Do
 
 ## Table of Contents
 - [Runtime Link](#runtime-link)
-- [Wiki Home Page](#wiki-home-page)
 - [Github Community Guidelines](#github-community-guidelines)
+- [Wiki Home Page](#wiki-home-page)
 - [Project / Website Description](#project--website-description)
 - [Project / Website Navigation Guide](#project--website-navigation-guide)
 - [Project / Website Brain Write](#project--website-brain-write)
@@ -16,9 +16,9 @@ Jean Kim, Dylan Luo, Isabelle Gunawan, Alex Do
 ### Runtime Link
 To be determined!
 
-### Wiki Home Page
-
 ### Github Community Guidelines
+
+### Wiki Home Page
 
 #### Project / Website Description
 - Our project is a travel / vacation website that aims to provide users with information on travel and various trip destinations. It is called VacationHub and it is a user-friendly, easy to navigate website. [Page](https://github.com/Dylanluo05/Daji-Coders/wiki/Project-Ideation-and-Purpose)
