@@ -19,6 +19,7 @@ To be determined!
 ### Github Community Guidelines
 
 ### Wiki Home Page
+- Our project's wiki contains all the information our users need to know in order to navigate the website, enjoy its features, and learn about the original purpose and ideation. [Page](https://github.com/Dylanluo05/Daji-Coders/wiki)
 
 #### Project / Website Description
 - Our project is a travel / vacation website that aims to provide users with information on travel and various trip destinations. It is called VacationHub and it is a user-friendly, easy to navigate website. [Page](https://github.com/Dylanluo05/Daji-Coders/wiki/Project-Ideation-and-Purpose)
