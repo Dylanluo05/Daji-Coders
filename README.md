@@ -3,9 +3,13 @@ Jean Kim, Dylan Luo, Isabelle Gunawan, Alex Do
 
 ## Table of Contents
 - [Runtime Link](#runtime-link)
+- [Wiki Home Page](#wiki-home-page)
+- [Github Community Guidelines](#github-community-guidelines)
 - [Project / Website Description](#project--website-description)
 - [Project / Website Navigation Guide](#project--website-navigation-guide)
 - [Project / Website Brain Write](#project--website-brain-write)
+- [Project / Website Wire Frames](#project--website-wire-frames)
+- [Project / Website Technicals](#project--website-technicals)
 - [Credits](#credits)
 - [Organization Sprint 0](#organization-sprint-0)
 
