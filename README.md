@@ -31,7 +31,10 @@ To be determined!
 - We started our project with an end goal in mind. Here is what we first envisioned. [Page](https://www.canva.com/design/DAEwNnwMqgM/Gd1tt7xu9HMLv8IRIt2PQA/edit)
 
 #### Project / Website Technicals
-- Here is the list of all the pages and features planned in our website. [Page]()
+- Here is the list of all the pages and features planned in our website. [Page](https://github.com/Dylanluo05/Daji-Coders/wiki/Technicals)
+
+#### Project / Website Scrum Board and README Guidelines
+- Guidelines for making changes to our Scrum Board and README file is found here. [Page](https://github.com/Dylanluo05/Daji-Coders/wiki/Scrum-Board-and-README-Guidelines)
 
 ### Credits
 - [Team Scrum Board](https://github.com/Dylanluo05/Daji-Coders/projects/1)
