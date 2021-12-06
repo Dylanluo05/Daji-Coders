@@ -31,7 +31,10 @@ To be determined!
 - We started our project with an end goal in mind. Here is what we first envisioned. [Page](https://www.canva.com/design/DAEwNnwMqgM/Gd1tt7xu9HMLv8IRIt2PQA/edit)
 
 #### Project / Website Technicals
-- Here is the list of all the pages and features planned in our website. [Page]()
+- Here is the list of all the pages and features planned in our website. [Page](https://github.com/Dylanluo05/Daji-Coders/wiki/Technicals)
+
+#### Project / Website Scrum Board and README Guidelines
+- Guidelines for making changes to our Scrum Board and README file is found here. [Page](https://github.com/Dylanluo05/Daji-Coders/wiki/Scrum-Board-and-README-Guidelines)
 
 ### Credits
 - [Team Scrum Board](https://github.com/Dylanluo05/Daji-Coders/projects/1)
@@ -57,7 +60,10 @@ Alex Do | College Board Quizzes 1.1 and 1.2 | [Jean Kim and Alex Do Journal](htt
 
 Name | Requirements | Evidence |
 ---- | ------------ | -------- |
-Jean Kim | College Board Quizzes 1.3 and 1.4 | [Jean Kim and Alex Do Journal](https://docs.google.com/document/d/1Z-1t7JIvJnqctDlQt7ALcxyDKhtoPdDNBLIA8d82Qgo/edit?usp=sharing)
-Dylan Luo | College Board Quizzes 1.3 and 1.4 | [Dylan Luo and Isabelle Gunawan Journal](https://docs.google.com/document/d/1LDHFMI3j1qDKWwgjiuCrH2cgK1KQCoKsQF3OOdGBvIw/edit?usp=sharing) 
-Isabelle Gunawan | College Board Quizzes 1.3 and 1.4 | [Dylan Luo and Isabelle Gunawan Journal](https://docs.google.com/document/d/1LDHFMI3j1qDKWwgjiuCrH2cgK1KQCoKsQF3OOdGBvIw/edit?usp=sharing) 
-Alex Do | College Board Quizzes 1.3 and 1.4 | [Jean Kim and Alex Do Journal](https://docs.google.com/document/d/1Z-1t7JIvJnqctDlQt7ALcxyDKhtoPdDNBLIA8d82Qgo/edit?usp=sharing)
+Jean Kim | College Board Quizzes 1.3 and 1.4, Deployment Plan, Github Community Guidelines, Design Elements, Technical Ideation and Features of PBL, Update Team Scrum Board | [Jean Kim and Alex Do Journal](https://docs.google.com/document/d/1Z-1t7JIvJnqctDlQt7ALcxyDKhtoPdDNBLIA8d82Qgo/edit?usp=sharing) // [Github Community Guideline Ticket](https://github.com/Dylanluo05/Daji-Coders/issues/12) // [Deployment Plan Ticket](https://github.com/Dylanluo05/Daji-Coders/issues/11) // [Design Elements Ticket](https://github.com/Dylanluo05/Daji-Coders/issues/10) // [Technical Ideation and Features of PBL Ticket](https://github.com/Dylanluo05/Daji-Coders/issues/9) // [Link to Team Scrum Board](https://github.com/Dylanluo05/Daji-Coders/projects/1)
+Dylan Luo | College Board Quizzes 1.3 and 1.4, Github Community Guidelines, Design Elements, Technical Ideation  and Features of PBL | [Dylan Luo and Isabelle Gunawan Journal](https://docs.google.com/document/d/1LDHFMI3j1qDKWwgjiuCrH2cgK1KQCoKsQF3OOdGBvIw/edit?usp=sharing) // [Github Community Guidelines Ticket](https://github.com/Dylanluo05/Daji-Coders/issues/12) // [Design Elements Ticket](https://github.com/Dylanluo05/Daji-Coders/issues/10) // [Technical Ideation and Features of PBL Ticket](https://github.com/Dylanluo05/Daji-Coders/issues/9)
+Isabelle Gunawan | College Board Quizzes 1.3 and 1.4, Design Elements, Technical ideation and features of PBL | [Dylan Luo and Isabelle Gunawan Journal](https://docs.google.com/document/d/1LDHFMI3j1qDKWwgjiuCrH2cgK1KQCoKsQF3OOdGBvIw/edit?usp=sharing) // [Design Elements Ticket](https://github.com/Dylanluo05/Daji-Coders/issues/10) // [Technical Ideation and Features of PBL Ticket](https://github.com/Dylanluo05/Daji-Coders/issues/9)
+Alex Do | College Board Quizzes 1.3 and 1.4, Deployment Plan, Design Elements, Technical ideation and Features of PBL | [Jean Kim and Alex Do Journal](https://docs.google.com/document/d/1Z-1t7JIvJnqctDlQt7ALcxyDKhtoPdDNBLIA8d82Qgo/edit?usp=sharing) // [Deployment Plan Ticket](https://github.com/Dylanluo05/Daji-Coders/issues/11) // [Design Elements Ticket](https://github.com/Dylanluo05/Daji-Coders/issues/10) // [Technical Ideation and Features of PBL Ticket](https://github.com/Dylanluo05/Daji-Coders/issues/9)
+Everyone | Add Create Task Idea and Notes for AP Exam | [Link to Ticket on Scrum Board](https://github.com/Dylanluo05/Daji-Coders/issues/18)// [Jean Kim and Alex Do Journal](https://docs.google.com/document/d/1Z-1t7JIvJnqctDlQt7ALcxyDKhtoPdDNBLIA8d82Qgo/edit?usp=sharing) // [Dylan Luo and Isabelle Gunawan Journal](https://docs.google.com/document/d/1LDHFMI3j1qDKWwgjiuCrH2cgK1KQCoKsQF3OOdGBvIw/edit?usp=sharing)
+Team Review | Week 1 Review Ticket | [Week 1 Review Ticket](https://github.com/Dylanluo05/Daji-Coders/issues/19)
+
