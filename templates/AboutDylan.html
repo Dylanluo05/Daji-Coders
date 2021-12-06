@@ -247,7 +247,18 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
             <div>
                 <div class = "shadow">
                     <div class = "about-img">
-                        <img src = "/static/assets/images/Dylanmasked.jpg" alt = "Dylan">
+                        <img src="/static/assets/images/Dylanmasked.jpg" id="myImg" onclick="changeImg()" style = "height: 200px; width:325px;">
+                        <script type="text/javascript">
+                            function changeImg() {
+                                var image = document.getElementById('myImg');
+                                if (image.src.match("/static/assets/images/Dylanmasked.jpg")) {
+                                    image.src = "/static/assets/images/Dylanunmasked.jpg";
+                                }
+                                else {
+                                    image.src = "/static/assets/images/Dylanmasked.jpg";
+                                }
+                            }
+                        </script>
                     </div>
                 </div>
 

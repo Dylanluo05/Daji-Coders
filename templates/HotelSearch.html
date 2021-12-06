@@ -131,41 +131,16 @@
         .mySlides {display: none}
         img {vertical-align: middle;}
 
-        .slider {
-            width: 500px;
-            height: 300px;
-            background-color: yellow;
-            margin-left: auto;
-            margin-right: auto;
-            margin-top: 0px;
-            text-align: center;
-            overflow: hidden;
-        }
-        .image-container {
-            width: 1500px;
-            background-color: pink;
-            height: 300px;
-            clear: both;
+        .slideshow-container {
+            max-width: 1000px;
             position: relative;
-            -webkit-transition: left 2s;
-            -moz-transition: left 2s;
-            -o-transition: left 2s;
-            transition: left 2s;
-        }
-        .slide {
-            float: left;
-            margin: 0px;
-            padding: 0px;
-            position: relative;
-        }
-        #slide-1:target ~ .image-container {
-            left: 0px;
-        }
-        #slide-2:target ~ .image-container {
-            left: -500px;
-        }
-        #slide-3:target ~ .image-container {
-            left: -1000px;
+            top: -100px;
+            margin: auto;
+            -webkit-animation: slide 0.5s forwards;
+            -webkit-animation-delay: 2s;
+            animation: slide 0.5s forwards;
+            animation-delay: 2s;
+            /* clear: both; */
         }
 
         .prev, .next {
@@ -210,6 +185,23 @@
             top: 0;
         }
 
+
+        .slide {
+            -webkit-animation: slide 0.5s forwards;
+            -webkit-animation-delay: 2s;
+            animation: slide 0.5s forwards;
+            animation-delay: 2s;
+            animation-duration: 2s;
+        }
+
+        @-webkit-keyframes slide {
+            100% { left: 0; }
+        }
+
+        @keyframes slide {
+            100% { left: 0; }
+        }
+
         .dot {
             cursor: pointer;
             height: 15px;
@@ -228,6 +220,41 @@
         @media only screen and (max-width: 300px) {
             .prev, .next,.text {font-size: 11px}
         }
+
+        input {
+            border: 1px solid transparent;
+            background-color: #f1f1f1;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        input[type=text] {
+            background-color: #f1f1f1;
+        }
+
+        input[type=submit] {
+            background-color: DodgerBlue;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .autocomplete {
+            position: relative;
+        }
+
+        .autocomplete-items div {
+            padding: 10px;
+            cursor: pointer;
+            background-color: #fff;
+            border-bottom: 1px solid #d4d4d4;
+        }
+        .autocomplete-items div:hover {
+            background-color: #e9e9e9;
+        }
+        .autocomplete-active {
+            background-color: DodgerBlue !important;
+            color: #ffffff;
+        }
     </style>
 
     <title> Hotel Search | DAJI Coders </title>
@@ -239,10 +266,14 @@
     <div class="HotelBackground1_background"></div>
     <div class="HotelBackground1_overlay"></div>
     <div class="HotelBackground1_content">
-        <h1 style = "position: relative; top:-200px; left: 325px;">Choose Your Destination!</h1>
-        <div class="search-container" style = "position: relative; left: -175px; top: -100px;">
+        <h1 style = "position: relative; top:-200px; left: 150px;">Choose Your Destination!</h1>
+
+        <div class="search-container" style = "position: relative; left: -340px; top: -100px;">
+            <form autocomplete="off" action="/action_page.php">
+                <div class="autocomplete" style="width:300px; color:black;">
                     <input id="myInput" type="text" name="myHotelSearch" placeholder="Search">
-                <button type="submit" style = "position: relative; left: 7px;"><i class="fa fa-search"></i></button>
+                    <button type="submit" style = "position: relative; left: 300px; top: -45px;"><i class="fa fa-search"></i></button>
+                </div>
             </form>
         </div>
     </div>
@@ -252,20 +283,36 @@
 <div id="HotelBackground2">
     <h1 style = "position:relative; text-align: center; top: -150px">Special Deals</h1>
 
-    <div class="slider">
-        <span id="slide-1" ></span>
-        <span id="slide-2"></span>
-        <span id="slide-3"></span>
-        <div class="image-container">
-            <img src="/static/assets/images/Holiday-Inn.jpg" class="slide" width="500" height="300" />
-            <img src="/static/assets/images/Sheraton.jpg" class="slide" width="500" height="300" />
-            <img src="/static/assets/images/Bestwestern.jpg" class="slide" width="500" height="300" />
+    <div class="slideshow-container">
+
+        <div class="mySlides slide">
+            <div class="numbertext">1 / 3</div>
+            <img src="/static/assets/images/Holiday-Inn.jpg" style="width:1000px; height: 550px;">
+            <div class="text">Holiday Inn</div>
         </div>
-        <div style="text-align:center;">
-            <a href="#slide-1"></a>
-            <a class = "dot" href="#slide-2" ></a>
-            <a class = "dot" href="#slide-3" ></a>
+
+        <div class="mySlides slide">
+            <div class="numbertext">2 / 3</div>
+            <img src="/static/assets/images/Sheraton.jpg" style="width:1000px; height: 550px;">
+            <div class="text">Sheraton</div>
+        </div>
+
+        <div class="mySlides slide">
+            <div class="numbertext">3 / 3</div>
+            <img src="/static/assets/images/Bestwestern.jpg" style="width:1000px; height: 550px;">
+            <div class="text">Best Western</div>
+        </div>
+
+        <a class="prev" style = "color:white;" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" style = "color:white;" onclick="plusSlides(1)">&#10095;</a>
+
     </div>
+    <br>
+
+    <div style="text-align:center;">
+        <span class="dot" style = "position: relative; top: -100px;" onclick="currentSlide(1)"></span>
+        <span class="dot" style = "position: relative; top: -100px;" onclick="currentSlide(2)"></span>
+        <span class="dot" style = "position: relative; top: -100px;" onclick="currentSlide(3)"></span>
     </div>
 </div>
 <script>
@@ -292,15 +339,102 @@
         for (i = 0; i < dots.length; i++) {
             dots[i].className = dots[i].className.replace(" active", "");
         }
-        slideIndex++;
-        if (slideIndex > slides.length) {slideIndex = 1}
-        for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-        }
         slides[slideIndex-1].style.display = "block";
         dots[slideIndex-1].className += " active";
-        setTimeout(showSlides, 7000);
     }
+
+    function autocomplete(inp, arr) {
+
+        var currentFocus;
+
+        inp.addEventListener("input", function(e) {
+            var a, b, i, val = this.value;
+
+            closeAllLists();
+            if (!val) { return false;}
+            currentFocus = -1;
+
+            a = document.createElement("DIV");
+            a.setAttribute("id", this.id + "autocomplete-list");
+            a.setAttribute("class", "autocomplete-items");
+
+            this.parentNode.appendChild(a);
+
+            for (i = 0; i < arr.length; i++) {
+
+                if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
+
+                    b = document.createElement("DIV");
+
+                    b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
+                    b.innerHTML += arr[i].substr(val.length);
+
+                    b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+
+                    b.addEventListener("click", function(e) {
+
+                        inp.value = this.getElementsByTagName("input")[0].value;
+
+                        closeAllLists();
+                    });
+                    a.appendChild(b);
+                }
+            }
+        });
+
+        inp.addEventListener("keydown", function(e) {
+            var x = document.getElementById(this.id + "autocomplete-list");
+            if (x) x = x.getElementsByTagName("div");
+            if (e.keyCode == 40) {
+
+                currentFocus++;
+
+                addActive(x);
+            } else if (e.keyCode == 38) {
+                currentFocus--;
+
+                addActive(x);
+            } else if (e.keyCode == 13) {
+
+                e.preventDefault();
+                if (currentFocus > -1) {
+
+                    if (x) x[currentFocus].click();
+                }
+            }
+        });
+        function addActive(x) {
+            if (!x) return false;
+
+            removeActive(x);
+            if (currentFocus >= x.length) currentFocus = 0;
+            if (currentFocus < 0) currentFocus = (x.length - 1);
+            x[currentFocus].classList.add("autocomplete-active");
+        }
+        function removeActive(x) {
+            for (var i = 0; i < x.length; i++) {
+                x[i].classList.remove("autocomplete-active");
+            }
+        }
+        function closeAllLists(elmnt) {
+
+            var x = document.getElementsByClassName("autocomplete-items");
+            for (var i = 0; i < x.length; i++) {
+                if (elmnt != x[i] && elmnt != inp) {
+                    x[i].parentNode.removeChild(x[i]);
+                }
+            }
+        }
+
+        document.addEventListener("click", function (e) {
+            closeAllLists(e.target);
+        });
+    }
+
+    var HotelSearch = ["Holiday-Inn", "Sheraton", "Hampton", "Wyndham", "Best Western", "Days Inn", "Motel 6", "Mariott"];
+
+    autocomplete(document.getElementById("myInput"), HotelSearch);
+
 </script>
 </body>
 </html>
