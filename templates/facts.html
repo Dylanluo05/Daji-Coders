@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% extends "layouts/base.html" %}
+
+{% block body %}
+    <div class="container">
+        <div class="center-block" style="margin: 2% 5% 5%; font-family: gilroy,serif;">
+            <div class="col-12" style="text-align: center;">
+                <h1><strong>All Travel Facts</strong></h1>
+            </div>
+
+            <div class="jumbotron text-left row">
+                <div class="col-md">
+                    {% for fact in facts %}
+                        <p style="color: black;" class="setup"><strong>{{fact.id}}. {{fact.fact}}</strong></p>
+                    {% endfor %}
+                </div>
+            </div>
+
+        </div>
+        <table style="margin: 2%">
+            <tr>
+                <th>JSON Data</th>
+            </tr>
+            <tr>
+                <td>{{facts}}</td>
+            </tr>
+        </table>
+    </div>
+{% endblock %}
