@@ -20,6 +20,10 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
 
+    {#table{#}
+    {#    border: 10px;#}
+    {#    border-color: black;#}
+    {#}#}
     *{
         padding: 0;
         margin: 0;
@@ -31,6 +35,14 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
     a {
         font-family: 'Ubuntu', sans-serif;
     }
+    {#tr {#}
+    {#    border: 10px;#}
+    {#    border-color: black;#}
+    {#}#}
+    {#th {#}
+    {#    border: 10px;#}
+    {#    border-color: black;#}
+    {#}#}
     .button {
         background-color: white;
         border: none;
@@ -297,10 +309,102 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
     </div>
 </div>
 
+
+
+{% set locations = output.data %}
+
+
+
+<div class="center-block" style="margin: 2% 5% 5%; font-family: gilroy,serif;">
+    <!-- Title -->
+    <div class="col-12" style="text-align: center;">
+        <h1><strong>World Time Database</strong></h1>
+    </div>
+
+
+    <!-- Sequence -->
+    <div class="col-12 mainbox center-block">
+        <table style="margin: 2%; border: 5px; border-bottom-color: black;" >
+            <tr>
+                <th>Week</th>
+                <th>UTC Offset</th>
+                <th>Unix time</th>
+                <th>UTC Datetime</th>
+                <th>Time Zone</th>
+                <th>Raw Offset</th>
+                <th>DST Until</th>
+                <th>DST Offset</th>
+                <th>DST From</th>
+                <th>DST</th>
+                <th>Day of Week</th>
+                <th>Day of Year</th>
+                <th>Date Time</th>
+                <th>Client IP</th>
+                <th>Abbreviation</th>
+            </tr>
+            {% for headers in output %}
+                <tr>
+                    <td>{{ output.week_number }}</td>
+                    <td>{{ output.utc_offset }}</td>
+                    <td>{{ output.unixtime }}</td>
+                    <td>{{ output.utc_datetime }}</td>
+                    <td>{{ output.timezone }}</td>
+                    <td>{{ output.raw_offset }}</td>
+                    <td>{{ output.dst_until }}</td>
+                    <td>{{ output.dst_offset }}</td>
+                    <td>{{ output.dst_from }}</td>
+                    <td>{{ output.dst }}</td>
+                    <td>{{ output.day_of_week }}</td>
+                    <td>{{ output.day_of_year }}</td>
+                    <td>{{ output.datetime }}</td>
+                    <td>{{ output.client_ip }}</td>
+                    <td>{{ output.abbreviation }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+</div>
+
 </body>
 
-<!--
-    Adding a section of code to add the web data API
+<!--Added a section of code to add the web data API
     API on home page for the web API
     Calls from the python API file
+    https://rapidapi.com/brianiswu/api/world-time2/
 -->
+
+
+{#{% for location in locations %}#}
+{#    <tr>#}
+{#        <td>{{location.week_number}}</td>#}
+{#        {% set utc_offset = location.utc_offset %}#}
+{#        <td>{{location.utc_offset}}</td>#}
+{#        {% set unixtime = location.unixtime %}#}
+{#        <td>{{location.unixtime}}</td>#}
+{#        {% set utc_datetime = location.utc_datetime %}#}
+{#        <td>{{location.utc_datetime}}</td>#}
+{#        {% set timezone = location.timezone %}#}
+{#        <td>{{location.timezone}}</td>#}
+{#        {% set raw_offset = location.raw_offset %}#}
+{#        <td>{{location.raw_offset}}</td>#}
+{#        {% set dst_until = location.dst_until %}#}
+{#        <td>{{location.dst_until}}</td>#}
+{#        {% set dst_offset = location.dst_offset %}#}
+{#        <td>{{location.dst_offset}}</td>#}
+{#        {% set dst_from = location.dst_from %}#}
+{#        <td>{{location.dst_from}}</td>#}
+{#        {% set dst = location.dst %}#}
+{#        <td>{{location.dst}}</td>#}
+{#        {% set day_of_week = location.day_of_week %}#}
+{#        <td>{{location.day_of_week}}</td>#}
+{#        {% set day_of_year = location.day_of_year %}#}
+{#        <td>{{location.day_of_year}}</td>#}
+{#        {% set datetime = location.datetime %}#}
+{#        <td>{{location.datetime}}</td>#}
+{#        {% set client_ip = location.client_ip %}#}
+{#        <td>{{location.client_ip}}</td>#}
+{#        {% set abbreviation = location.abbreviation %}#}
+{#        <td>{{location.abbreviation}}</td>#}
+{#    </tr>#}
+{#{% endfor %}#}
+

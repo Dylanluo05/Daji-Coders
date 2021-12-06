@@ -1,6 +1,7 @@
 # import "packages" from flask
 from flask import Flask, render_template, request
 import requests
+import json
 from api.jeanapi import api_bp
 
 # create a Flask instance
@@ -46,9 +47,17 @@ def greet():
 def AboutIsabelle():
     return render_template("AboutIsabelle.html")
 
-@app.route('/AboutJean/')
+@app.route('/AboutJean/', methods=['GET', 'POST'])
 def AboutJean():
-    return render_template("AboutJean.html")
+    url = "https://world-time2.p.rapidapi.com/timezone/Europe/London"
+    headers = {
+            'x-rapidapi-host': "world-time2.p.rapidapi.com",
+            'x-rapidapi-key': "0a00932a78msh5f89ea8b8f5d589p124611jsn64789e16513c"
+            }
+    response = requests.request("GET", url, headers=headers)
+    # return(response.json())
+    data = json.loads(response.text)
+    return render_template("AboutJean.html", output=response.json())
 
 @app.route('/HotelSearch/')
 def HotelSearch():
