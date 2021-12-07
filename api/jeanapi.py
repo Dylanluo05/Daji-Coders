@@ -17,6 +17,8 @@ facts_list = [
     "77% of US adults have stayed in a hotel or resort, 65% have flown and 27% have taken a cruise",
     "American women rank first in solo traveling and are more likely to take three trips or more in a given year",
     "51% of business travelers said they traveled for business at least four times a year pre-pandemic compared to 31% during the pandemic",
+    "Currently, France is the top vacation spot with close to 81 million annual visitors",
+    "The longest current flight is about 30 hours from Australia to Sri Lanka",
 ]
 
 def find_next_id():
