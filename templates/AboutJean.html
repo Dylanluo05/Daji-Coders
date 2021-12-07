@@ -29,8 +29,13 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
         margin: 0;
         box-sizing: border-box;
     }
-    body{
+    html, body{
         font-family: 'Poppins', sans-serif;
+        width: 100%;
+        height: 100%;
+        margin: 0px;
+        padding: 0px;
+        overflow-x: hidden;
     }
     a {
         font-family: 'Ubuntu', sans-serif;
@@ -240,6 +245,20 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
             right: -50px;
         }
     }
+
+    .mainbox{
+        border: 10px;
+
+    }
+
+    table, th, td {
+        border: 5px solid black;
+        border-collapse: collapse;
+        border-color: slateblue;
+        font-size: 15px;
+        padding: 7px;
+        text-align: center;
+    }
 </style>
 
 <head>
@@ -248,7 +267,7 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
     <title>About Page</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous"/>
 </head>
 <body>
 
@@ -324,7 +343,7 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
 
     <!-- Sequence -->
     <div class="col-12 mainbox center-block">
-        <table style="margin: 2%; border: 5px; border-bottom-color: black;" >
+        <table style="margin: 2%;" >
             <tr>
                 <th>Week</th>
                 <th>UTC Offset</th>
