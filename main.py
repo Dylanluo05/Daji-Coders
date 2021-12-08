@@ -51,9 +51,18 @@ def AboutDylan():
     response = requests.request("GET", url, headers=headers)
     return render_template("AboutDylan.html", stats=response.json())
 
-@app.route('/AboutIsabelle/')
+@app.route('/AboutIsabelle/', methods=['GET', 'POST'])
 def AboutIsabelle():
-    return render_template("AboutIsabelle.html")
+    url = "https://iata-and-icao-codes.p.rapidapi.com/airlines"
+
+    headers = {
+        'x-rapidapi-host': "iata-and-icao-codes.p.rapidapi.com",
+        'x-rapidapi-key': "1d7d18e024msh1c32fb3c6271277p1b2d7djsnd1cb3334d831"
+    }
+    response = requests.request("GET", url, headers=headers)
+    data = json.loads(response.text)
+    print(response.text)
+    return render_template("AboutIsabelle.html", output=response.json())
 
 @app.route('/AboutJean/', methods=['GET', 'POST'])
 def AboutJean():
