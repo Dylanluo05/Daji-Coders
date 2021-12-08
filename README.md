@@ -8,6 +8,8 @@ Jean Kim, Dylan Luo, Isabelle Gunawan, Alex Do
 - [Credits](#credits)
 - [Organization Sprint 0](#organization-sprint-0)
 - [Sprint 1 Week 1](#sprint-1-week-1)
+- [Sprint 2 Week 2](#sprint-2-week-2)
+
 
 ### Runtime Link
 To be determined!
@@ -66,4 +68,13 @@ Isabelle Gunawan | College Board Quizzes 1.3 and 1.4, Design Elements, Technical
 Alex Do | College Board Quizzes 1.3 and 1.4, Deployment Plan, Design Elements, Technical ideation and Features of PBL | [Jean Kim and Alex Do Journal](https://docs.google.com/document/d/1Z-1t7JIvJnqctDlQt7ALcxyDKhtoPdDNBLIA8d82Qgo/edit?usp=sharing) // [Deployment Plan Ticket](https://github.com/Dylanluo05/Daji-Coders/issues/11) // [Design Elements Ticket](https://github.com/Dylanluo05/Daji-Coders/issues/10) // [Technical Ideation and Features of PBL Ticket](https://github.com/Dylanluo05/Daji-Coders/issues/9)
 Everyone | Add Create Task Idea and Notes for AP Exam | [Link to Ticket on Scrum Board](https://github.com/Dylanluo05/Daji-Coders/issues/18)// [Jean Kim and Alex Do Journal](https://docs.google.com/document/d/1Z-1t7JIvJnqctDlQt7ALcxyDKhtoPdDNBLIA8d82Qgo/edit?usp=sharing) // [Dylan Luo and Isabelle Gunawan Journal](https://docs.google.com/document/d/1LDHFMI3j1qDKWwgjiuCrH2cgK1KQCoKsQF3OOdGBvIw/edit?usp=sharing)
 Team Review | Week 1 Review Ticket | [Week 1 Review Ticket](https://github.com/Dylanluo05/Daji-Coders/issues/19)
+
+### Sprint 2 Week 2
+
+Name | Requirements | Evidence |
+---- | ------------ | -------- |
+Jean Kim | College Board Notes and Quizzes 2.3 and 2.4, Create Task Plan, About Page Finished
+Dylan Luo | College Board Notes and Quizzes 2.3 and 2.4, Create Task Plan, About Page Finished
+Isabelle Gunawan | College Board Notes and Quizzes 2.3 and 2.4, Create Task Plan, About Page Finished
+Alex Do | College Board Notes and Quizzes 2.3 and 2.4, Create Task Plan, About Page Finished
 
