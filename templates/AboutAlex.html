@@ -12,8 +12,8 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
-
 </head>
+
 {% set name = "Daji Coders" %}
 {% include "layouts/navbar.html" %}
 <style>
@@ -26,32 +26,6 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
     }
     body{
         font-family: 'Poppins', sans-serif;
-    }
-    a {
-        font-family: 'Ubuntu', sans-serif;
-    }
-    .button {
-        background-color: white;
-        border: none;
-        color: white;
-        padding: 16px 32px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-        margin: 4px 2px;
-        transition-duration: 0.4s;
-        cursor: pointer;
-    }
-    .button3 {
-        background-color: white;
-        color: red;
-        border: 2px solid red;
-    }
-
-    .button3:hover {
-        background-color: red;
-        color: white;
     }
     .about-wrapper{
         height: 100vh;
@@ -208,6 +182,32 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
         border-color: red;
         color: #fff;
     }
+    a {
+        font-family: 'Ubuntu', sans-serif;
+    }
+    .button {
+        background-color: white;
+        border: none;
+        color: white;
+        padding: 16px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+    }
+    .button3 {
+        background-color: white;
+        color: red;
+        border: 2px solid red;
+    }
+
+    .button3:hover {
+        background-color: red;
+        color: white;
+    }
     .about-para p{
         font-weight: 300;
         padding: 0.5rem;
@@ -245,7 +245,18 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
             <div>
                 <div class = "shadow">
                     <div class = "about-img">
-                        <img src = "/static/assets/" alt = "Alex">
+                        <img src="/static/assets/images/alexmasked.jpg" id="myImg" onclick="changeImg()" style="height:200px">
+                        <script type="text/javascript">
+                            function changeImg() {
+                                var image = document.getElementById('myImg');
+                                if (image.src.match("/static/assets/images/alexmasked.jpg")) {
+                                    image.src = "/static/assets/images/alexunmasked.jpg";
+                                }
+                                else {
+                                    image.src = "/static/assets/images/alexmasked.jpg";
+                                }
+                            }
+                        </script>
                     </div>
                 </div>
 
@@ -266,7 +277,7 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
                 <p style="color: red">Hello I am Alex, {{name}}!</p>
             </div>
             <div class="col-12">
-                <form action="/alexgreet/" id="alexgreet" method="POST" >
+                <form action="/AboutAlex/" id="AboutAlex" method="POST" >
                     <label for="name" style="color: red">You are?</label>
                     <input name="name" id="name">
                     <input type="submit" value="Greetings!">
@@ -278,10 +289,10 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
 
         <div class = "about-para">
             <form action = "https://docs.google.com/document/d/1Z-1t7JIvJnqctDlQt7ALcxyDKhtoPdDNBLIA8d82Qgo/edit" method="get" target="_blank">
-                <button class = "button button3">My Pair Share Journal!</button>
+            <button class = "button button3">My Pair Share Journal!</button>
             </form>
-            <p>Hi my name is Alex Do</p>
-            <p></p>
+            <p>Hello! my name is Alex, a junior at Del Norte.</p>
+            <p>I came from Seoul, Korea about 8 years ago. I like listening to any types of music, playing basketball, and video games with my friends. My favorite subject in school is math.</p>
         </div>
     </div>
 </div>
