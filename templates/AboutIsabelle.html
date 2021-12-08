@@ -14,7 +14,7 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
 
 </head>
-{% set name = "Daji Coders" %}
+{#{% set name = "Daji Coders" %}#}
 {% include "layouts/navbar.html" %}
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
@@ -273,20 +273,20 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
 
     <div class = "about-right">
         <h1>hello tourists<span>!</span></h1>
-        <div class="center-block" style="margin: 2% 5% 5%; text-align:center; font-family: 'MADE Soulmaze';">
-            <div class="col-12">
-                <p style="color: mediumseagreen">Hello I am Isabelle, {{name}}!</p>
-            </div>
-            <div class="col-12">
-                <form action="/AboutIsabelle/" id="AboutIsabelle" method="POST" >
-                    <label for="name" style="color: mediumseagreen">You are?</label>
-                    <input name="name" id="name">
-                    <input type="submit" value="Greetings!">
-                </form>
-            </div>
-            <div class="col-12">
-            </div>
-        </div>
+{#        <div class="center-block" style="margin: 2% 5% 5%; text-align:center; font-family: 'MADE Soulmaze';">#}
+{#            <div class="col-12">#}
+{#                <p style="color: mediumseagreen">Hello I am Isabelle, {{name}}!</p>#}
+{#            </div>#}
+{#            <div class="col-12">#}
+{#                <form action="/AboutIsabelle/" id="AboutIsabelle" method="POST" >#}
+{#                    <label for="name" style="color: mediumseagreen">You are?</label>#}
+{#                    <input name="name" id="name">#}
+{#                    <input type="submit" value="Greetings!">#}
+{#                </form>#}
+{#            </div>#}
+{#            <div class="col-12">#}
+{#            </div>#}
+{#        </div>#}
 
         <div class = "about-para">
             <form action = "https://docs.google.com/document/d/1LDHFMI3j1qDKWwgjiuCrH2cgK1KQCoKsQF3OOdGBvIw/edit" method="get" target="_blank">
@@ -295,6 +295,25 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
             <p>My name is Isabelle Gunawan, and I'm a sophomore at Del Norte High School. </p>
             <p>I like snails.</p>
         </div>
+    </div>
+
+    {% set airports = output %}
+    <div class="col-12 mainbox center-block">
+        <table style="margin: 2%">
+            <tr>
+                <th>IATA Codes</th>
+                <th>Name</th>
+                <th>ICAO Codes</th>
+            </tr>
+
+            {% for headers in airports %}
+                <tr>
+                    <td>{{headers.iata_code}}</td>
+                    <td>{{headers.name}}</td>
+                    <td>{{headers.icao_code}}</td>
+                </tr>
+            {% endfor %}
+        </table>
     </div>
 </div>
 

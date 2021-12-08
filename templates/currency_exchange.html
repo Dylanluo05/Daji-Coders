@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends "layouts/base.html" %}
+{% block body %}
+<head>
+    <meta charset="UTF-8">
+    <title>Currency Exchange</title>
+</head>
+<body>
+    <!-- Currency exchange rates -->
+    <div class="display-4 text-center">Currency Exchange Rates</div>
+    <div class="APIContainer">
+        <h4>Planning on traveling to another country? Find out currency exchange rates here!</h4>
+        <div class="currencyContainer">
+            <div style="margin-top: 16px">
+                <p>From: </p>
+                <p>To: </p>
+            </div>
+            <div style="margin-left: 20px">
+                <input class="form-control marginTopBottom" type="text" id="inputCurrencyFrom" value="USD">
+                <input class="form-control marginTopBottom" type="text" id="inputCurrencyTo" value="USD">
+                <button class="btn btn-primary" id="buttonCurrency">Calculate</button>
+                <h2 id="currencyResult">Result: 0</h2>
+            </div>
+            <div class="currencyResult">
+                <a class="bloop"  href="/Calculator/">Calculator</a> <br>
+                <br><ul><li><b>“SGD”</b><span style="font-weight: 400;"> – Singapore Dollar</span></li><li><b>“MYR” </b><span style="font-weight: 400;">– Malaysian Ringgit</span></li><li><b>“EUR” </b><span style="font-weight: 400;">– Euro [E.U.]</span></li><li><b>“USD” </b><span style="font-weight: 400;">– U.S. Dollar</span></li><li><b>“AUD”</b><span style="font-weight: 400;"> – Australian Dollar</span></li><li><b>“JPY” </b><span style="font-weight: 400;">– Japanese Yen</span></li><li><b>“CNH” </b><span style="font-weight: 400;">– Chinese Yuan</span></li><li><b>“HKD” </b><span style="font-weight: 400;">– Hong Kong Dollar</span></li><li><b>“CAD” </b><span style="font-weight: 400;">– Canadian Dollar</span></li><li><b>“INR” </b><span style="font-weight: 400;">– Indian Rupee</span></li><li><b>“DKK”</b><span style="font-weight: 400;"> – Danish Krone</span></li><li><b>“GBP”</b><span style="font-weight: 400;"> – Great Britain Pound [Sterling]</span></li><li><b>“RUB” </b><span style="font-weight: 400;">– Russian Ruble</span></li><li><b>“NZD” </b><span style="font-weight: 400;">– New Zealand Dollar</span></li><li><b>“MXN” </b><span style="font-weight: 400;">– Mexican Peso</span></li><li><b>“IDR” </b><span style="font-weight: 400;">– Indonesian Rupiah</span></li><li><b>“TWD”</b><span style="font-weight: 400;"> – Taiwanese Dollar</span></li><li><b>“THB” </b><span style="font-weight: 400;">– Thai Baht</span></li><li><b>“VND” </b><span style="font-weight: 400;">– Vietnamese Dong</span></li></ul>
+            </div>
+        </div>
+    </div>
+    <script>
+        (function onLoad()
+        {
+            // set a function for each button
+            setButtonFunctions();
+
+            // fetch from each API when the page loads
+            getCurrencyExchangeRates();
+        })();
+
+        function setButtonFunctions()
+        {
+            document.getElementById('buttonCurrency').onclick = getCurrencyExchangeRates;
+        }
+
+        // Currency Exchange rates
+        async function getCurrencyExchangeRates()
+        {
+            const from = document.getElementById('inputCurrencyFrom').value;
+            const to = document.getElementById('inputCurrencyTo').value;
+            await fetch("https://currency-exchange.p.rapidapi.com/exchange?q=1.0&from=" + from + "&to=" + to, {
+                "method": "GET",
+                "headers": {
+                    "x-rapidapi-host": "currency-exchange.p.rapidapi.com",
+                    "x-rapidapi-key": "9fb1283360mshedc514375b603d6p156a26jsna7cd4ca5744a"
+                }
+            })
+                .then(response => response.json())
+                .then(response => {
+                    console.log("Currency Exchange API object:");
+                    console.log(response);
+                    console.log("\n");
+
+                    // display data
+                    document.getElementById('currencyResult').innerHTML = 'Result: ' + response;
+                })
+                .catch(err => {
+                    console.log(err);
+                });
+        }
+    </script>
+</body>
+</html>
