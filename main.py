@@ -30,16 +30,6 @@ def AboutAlex():
 
 
 @app.route('/AboutDylan/', methods=['GET', 'POST'])
-def greet1():
-    # submit button has been pushed
-    if request.form:
-        name = request.form.get("name")
-        if len(name) != 0:  # input field has content
-            return render_template("AboutDylan.html", name=name)
-    # starting and empty input default
-    return render_template("AboutDylan.html", name1="World")
-
-@app.route('/AboutDylan/', methods=['GET', 'POST'])
 def AboutDylan():
     url = "https://sportscore1.p.rapidapi.com/sports/1/teams"
     headers = {
@@ -50,6 +40,14 @@ def AboutDylan():
 
     response = requests.request("GET", url, headers=headers)
     return render_template("AboutDylan.html", stats=response.json())
+def greet1():
+    # submit button has been pushed
+    if request.form:
+        name = request.form.get("name")
+        if len(name) != 0:  # input field has content
+            return render_template("AboutDylan.html", name=name)
+    # starting and empty input default
+    return render_template("AboutDylan.html", name1="World")
 
 @app.route('/AboutIsabelle/', methods=['GET', 'POST'])
 def AboutIsabelle():
