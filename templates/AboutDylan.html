@@ -336,19 +336,19 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
                     <th>Country</th>
                     <th>Gender</th>
                     <th>Team Name</th>
-{#                    <th>Logo</th>#}
+                    <th>Logo</th>
                 </tr>
 
-                {% for headers in stats %}
+                {% for team in teams %}
                     <tr>
-{#                        {% set country = team.country %}#}
-                        <td>{{ stats.country }}</td>
-{#                        {% set gender = team.gender %}#}
-                        <td>{{ stats.gender }}</td>
-{#                        {% set teamname = team.name %}#}
-                        <td>{{ stats.teamname }}</td>
-{#                        {% set logo = team.logo %}#}
-{#                        <td><img src="{{logo}}"></td>#}
+                        {% set country = team.country %}
+                        <td>{{country}}</td>
+                        {% set gender = team.gender %}
+                        <td>{{gender}}</td>
+                        {% set teamname = team.name %}
+                        <td>{{teamname}}</td>
+                        {% set logo = team.logo %}
+                        <td><img src="{{logo}}"></td>
                     </tr>
                 {% endfor %}
             </table>
@@ -358,6 +358,65 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
     </div>
 
 {% endblock %}
+
+{##}
+{#{% block body %}#}
+{#    <style>#}
+{#        table, td, th {#}
+{#            border: 1px solid white;#}
+{#        }#}
+{#        td, th {#}
+{#            text-align:center;#}
+{#        }#}
+{#        table{#}
+{#            width: 100%;#}
+{#            margin:auto;#}
+{#        }#}
+{#        .mainbox{#}
+{#            text-align: center;#}
+{#        }#}
+{#        h5 {#}
+{#            text-align: center;#}
+{#        }#}
+{#    </style>#}
+{##}
+{#    {% set teams = stats.data %}#}
+{##}
+{#    <div class="center-block" style="margin: 2% 5% 5%; font-family: gilroy,serif;">#}
+{#        <!-- Title -->#}
+{#        <div class="col-12" style="text-align: center;">#}
+{#            <h1><strong>Soccer Database and Information</strong></h1>#}
+{#        </div>#}
+{##}
+{#        <!-- Sequence -->#}
+{#        <div class="col-12 mainbox center-block">#}
+{#            <table style="margin: 2%">#}
+{#                <tr>#}
+{#                    <th>Country</th>#}
+{#                    <th>Gender</th>#}
+{#                    <th>Team Name</th>#}
+{#                    <th>Logo</th>#}
+{#                </tr>#}
+{##}
+{#                {% for headers in stats %}#}
+{#                    <tr>#}
+{#                        {% set country = team.country %}#}
+{#                        <td>{{ stats.country }}</td>#}
+{#                        {% set gender = team.gender %}#}
+{#                        <td>{{ stats.gender }}</td>#}
+{#                        {% set teamname = team.name %}#}
+{#                        <td>{{ stats.teamname }}</td>#}
+{#                        {% set logo = team.logo %}#}
+{#                        <td><img src="{{logo}}"></td>#}
+{#                    </tr>#}
+{#                {% endfor %}#}
+{#            </table>#}
+{##}
+{#        </div>#}
+{##}
+{#    </div>#}
+{##}
+{#{% endblock %}#}
 
 
 </body>
