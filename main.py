@@ -49,14 +49,14 @@ def AboutDylan():
 
     response = requests.request("GET", url, headers=headers)
     return render_template("AboutDylan.html", stats=response.json())
-def greet1():
+def AboutDylan1():
     # submit button has been pushed
     if request.form:
         name = request.form.get("name")
         if len(name) != 0:  # input field has content
-            return render_template("AboutDylan.html", name=name)
+            return render_template("AboutDylan.html", nickname=name)
     # starting and empty input default
-    return render_template("AboutDylan.html", name1="World")
+    return render_template("AboutDylan.html", nickname="World")
 
 @app.route('/AboutIsabelle/', methods=['GET', 'POST'])
 def AboutIsabelle():
