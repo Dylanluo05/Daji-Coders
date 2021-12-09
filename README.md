@@ -71,10 +71,10 @@ Team Review | Week 1 Review Ticket | [Week 1 Review Ticket](https://github.com/D
 
 ### Sprint 2 Week 2
 
-Name | Requirements | Evidence |
----- | ------------ | -------- |
-Jean Kim | College Board Notes and Quizzes 2.3 and 2.4, Create Task Plan, About Page Finished
-Dylan Luo | College Board Notes and Quizzes 2.3 and 2.4, Create Task Plan, About Page Finished
-Isabelle Gunawan | College Board Notes and Quizzes 2.3 and 2.4, Create Task Plan, About Page Finished
-Alex Do | College Board Notes and Quizzes 2.3 and 2.4, Create Task Plan, About Page Finished, Website Completely Deployed
+Name | Requirements | Evidence | Notes |
+---- | ------------ | -------- | ----- |
+Jean Kim | College Board Notes and Quizzes 2.3 and 2.4, Create Task Plan, About Page Finished | [Link to Scrum Board Ticket](https://github.com/Dylanluo05/Daji-Coders/issues/24) // [Jean Kim and Alex Do Journal](https://docs.google.com/document/d/1Z-1t7JIvJnqctDlQt7ALcxyDKhtoPdDNBLIA8d82Qgo/edit?usp=sharing)
+Dylan Luo | College Board Notes and Quizzes 2.3 and 2.4, Create Task Plan, About Page Finished | [Link to Scrum Board Ticket](https://github.com/Dylanluo05/Daji-Coders/issues/24) // [Dylan Luo and Isabelle Gunawan Journal](https://docs.google.com/document/d/1LDHFMI3j1qDKWwgjiuCrH2cgK1KQCoKsQF3OOdGBvIw/edit?usp=sharing)
+Isabelle Gunawan | College Board Notes and Quizzes 2.3 and 2.4, Create Task Plan, About Page Finished | [Link to Scrum Board Ticket](https://github.com/Dylanluo05/Daji-Coders/issues/24) // [Dylan Luo and Isabelle Gunawan Journal](https://docs.google.com/document/d/1LDHFMI3j1qDKWwgjiuCrH2cgK1KQCoKsQF3OOdGBvIw/edit?usp=sharing)
+Alex Do | College Board Notes and Quizzes 2.3 and 2.4, Create Task Plan, About Page Finished, Website Completely Deployed | [Link to Scrum Board Ticket](https://github.com/Dylanluo05/Daji-Coders/issues/24) // [Jean Kim and Alex Do Journal](https://docs.google.com/document/d/1Z-1t7JIvJnqctDlQt7ALcxyDKhtoPdDNBLIA8d82Qgo/edit?usp=sharing)
 
