@@ -76,5 +76,5 @@ Name | Requirements | Evidence |
 Jean Kim | College Board Notes and Quizzes 2.3 and 2.4, Create Task Plan, About Page Finished
 Dylan Luo | College Board Notes and Quizzes 2.3 and 2.4, Create Task Plan, About Page Finished
 Isabelle Gunawan | College Board Notes and Quizzes 2.3 and 2.4, Create Task Plan, About Page Finished
-Alex Do | College Board Notes and Quizzes 2.3 and 2.4, Create Task Plan, About Page Finished
+Alex Do | College Board Notes and Quizzes 2.3 and 2.4, Create Task Plan, About Page Finished, Website Completely Deployed
 
