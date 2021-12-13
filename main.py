@@ -2,26 +2,29 @@
 from flask import Flask, render_template, request
 import requests
 import json
+from __init__ import app
+
+from starter.starter import app_starter
+from algorithm.algorithm import app_algorithm
+from api.webapi import app_api
+from crud.app_crud import app_crud
+from y2022 import app_y2022
 from api.jeanapi import api_bp
 
 # create a Flask instance
 app = Flask(__name__)
 app.register_blueprint(api_bp)
 
+app.register_blueprint(app_starter)
+app.register_blueprint(app_algorithm)
+app.register_blueprint(app_api)
+app.register_blueprint(app_crud)
+app.register_blueprint(app_y2022)
 # connects default URL to render index.html
 @app.route('/')
 def index():
     return render_template("index.html")
 
-
-# connects /kangaroos path to render kangaroos.html
-@app.route('/kangaroos/')
-def kangaroos():
-    return render_template("kangaroos.html")
-
-@app.route('/hawkers/')
-def hawkers():
-    return render_template("hawkers.html")
 
 @app.route('/AboutAlex/', methods=['GET', 'POST'])
 def AboutAlex():
@@ -86,6 +89,10 @@ def AboutJean():
 @app.route('/HotelSearch/')
 def HotelSearch():
     return render_template("HotelSearch.html")
+
+@app.route('/currency_exchange/', methods=['GET', 'POST'])
+def currency_exchange():
+    return render_template("currency_exchange.html")
 
 @app.route('/fact', methods=['GET', 'POST'])
 def fact():
