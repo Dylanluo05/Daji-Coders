@@ -2,18 +2,17 @@
 from flask import Flask, render_template, request
 import requests
 import json
-from __init__ import app
 
-from starter.starter import app_starter
-from algorithm.algorithm import app_algorithm
-from api.webapi import app_api
+from starter import app_starter
+from algorithm import app_algorithm
+from webapi import app_api
 from crud.app_crud import app_crud
 from y2022 import app_y2022
-from api.jeanapi import api_bp
+# from api.jeanapi import api_bp
 
 # create a Flask instance
 app = Flask(__name__)
-app.register_blueprint(api_bp)
+# app.register_blueprint(api_bp)
 
 app.register_blueprint(app_starter)
 app.register_blueprint(app_algorithm)

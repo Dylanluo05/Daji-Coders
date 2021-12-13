@@ -1,4 +1,9 @@
 Flask~=2.0.1
 SQLAlchemy~=1.4.28
+flask_sqlalchemy
+flask_migrate
+flask_restful
 requests~=2.26.0
 api~=0.0.7
+Starter~=0.4.2
+algorithm~=1.2.0
