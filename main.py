@@ -105,6 +105,10 @@ def facts():
     response = requests.request("GET", url)
     return render_template("facts.html", facts=response.json())
 
+@app.route('/RestaurantSearch/')
+def RestaurantSearch():
+    return render_template("RestaurantSearch.html")
+
 # runs the application on the development server
 if __name__ == "__main__":
     app.run(debug=True)
