@@ -9,10 +9,10 @@ Jean Kim, Dylan Luo, Isabelle Gunawan, Alex Do
 - [Organization Sprint 0](#organization-sprint-0)
 - [Sprint 1 Week 1](#sprint-1-week-1)
 - [Sprint 2 Week 2](#sprint-2-week-2)
-
+- [Sprint 3 Week 3](#sprint-3-week-3)
 
 ### Runtime Link
-To be determined!
+http://dajicoders.tk/
 
 ### Github Community Guidelines
 - The github community guidelines serves as a basis for our scrum team (DAJI Coders) when pulling, pushing code, assigning tasks, and meeting deadlines. [Page](https://github.com/Dylanluo05/Daji-Coders/wiki/Github-Community-Guidelines)
@@ -78,3 +78,13 @@ Dylan Luo | College Board Notes and Quizzes 2.3 and 2.4, Create Task Plan, About
 Isabelle Gunawan | College Board Notes and Quizzes 2.3 and 2.4, Create Task Plan, About Page Finished | [Link to Scrum Board Ticket](https://github.com/Dylanluo05/Daji-Coders/issues/24) // [Dylan Luo and Isabelle Gunawan Journal](https://docs.google.com/document/d/1LDHFMI3j1qDKWwgjiuCrH2cgK1KQCoKsQF3OOdGBvIw/edit?usp=sharing) | Ticket has information on both the college board work and the create task plan, about page ticket has links for all scrum team members
 Alex Do | College Board Notes and Quizzes 2.3 and 2.4, Create Task Plan, About Page Finished, Website Completely Deployed | [Link to Scrum Board Ticket](https://github.com/Dylanluo05/Daji-Coders/issues/24) // [Jean Kim and Alex Do Journal](https://docs.google.com/document/d/1Z-1t7JIvJnqctDlQt7ALcxyDKhtoPdDNBLIA8d82Qgo/edit?usp=sharing) // [Link to Deployment Ticket](https://github.com/Dylanluo05/Daji-Coders/issues/22) | Ticket has information on both the college board work and the create task plan, about page ticket has links for all scrum team members
 Team | Scrum Board Updated and Policies, Team Review | [Link to Scrum Board](https://github.com/Dylanluo05/Daji-Coders/projects/1) // [Link to Policies Ticket](https://github.com/Dylanluo05/Daji-Coders/issues/23) // [Week 2 Review Ticket](https://github.com/Dylanluo05/Daji-Coders/issues/39) | Policies are on a wiki page // Scores are 7.75/8 for everyone
+
+### Sprint 3 Week 3
+
+Name | Requirements | Evidence | Notes and Scores |
+---- | ------------ | -------- | ----- |
+Jean Kim | 
+Dylan Luo | 
+Isabelle Gunawan | 
+Alex Do | 
+Team | 
