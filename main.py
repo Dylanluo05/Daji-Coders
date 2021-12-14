@@ -87,6 +87,26 @@ def AboutJean():
 def HotelSearch():
     return render_template("HotelSearch.html")
 
+@app.route('/FunTimes/')
+def Funtimes():
+    return render_template("Funtimes.html")
+
+@app.route('/CurrencyExchange/')
+def CurrencyExchange():
+    return render_template("currency_exchange.html")
+import requests
+
+url = "https://currency-exchange.p.rapidapi.com/listquotes"
+
+headers = {
+    'x-rapidapi-host': "currency-exchange.p.rapidapi.com",
+    'x-rapidapi-key': "9205057203msh04a5e5cadaa01c8p11274ejsnf67dea2bb043"
+}
+
+response = requests.request("GET", url, headers=headers)
+
+print(response.text)
+
 @app.route('/fact', methods=['GET', 'POST'])
 def fact():
     url = "http://localhost:5000/api/fact"

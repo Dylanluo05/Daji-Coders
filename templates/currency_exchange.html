@@ -1,16 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
-{% extends "layouts/base.html" %}
-{% block body %}
-<head>
-    <meta charset="UTF-8">
-    <title>Currency Exchange</title>
-</head>
-<body>
+{% include "layouts/navbar.html" %}
+{% block background %}
+    <html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>Currency Exchange Rates</title>
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+
+    <style>
+        /* general */
+
+        .bloop{
+            font-size: 14px;
+            font-family: 'Open Sans';
+            font-weight: 600;
+            color: blueviolet;
+            cursor: pointer;
+        }
+
+        body {
+            margin-bottom: 100px;
+            background-image: url('/static/assets/bg4k.jpg');
+            background-size: 100%;
+        }
+
+        .APIContainer {
+            margin: 50px auto 150px auto;
+            padding: 20px 100px 20px 100px;
+            border: 1px solid darkgray;
+            border-radius: 5px;
+            width: 40%;
+            min-width: 500px;
+            height: 20%;
+        }
+
+        .marginTopBottom {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        /* Currency */
+        .currencyContainer {
+            display: flex;
+        }
+
+        .currencyInput {
+            display: flex;
+            margin: 20px 0 20px 0px;
+        }
+
+        .currencyResult {
+            margin: auto;
+        }
+
+        #buttonCurrency {
+            width: 100%;
+        }
+    </style>
+
+    <body>
     <!-- Currency exchange rates -->
     <div class="display-4 text-center">Currency Exchange Rates</div>
     <div class="APIContainer">
-        <h4>Planning on traveling to another country? Find out currency exchange rates here!</h4>
+        <h4>Find out current currency exchange rates</h4>
         <div class="currencyContainer">
             <div style="margin-top: 16px">
                 <p>From: </p>
@@ -28,7 +84,9 @@
             </div>
         </div>
     </div>
+
     <script>
+
         (function onLoad()
         {
             // set a function for each button
@@ -69,5 +127,9 @@
                 });
         }
     </script>
+
+
+
+{% endblock %}
 </body>
 </html>

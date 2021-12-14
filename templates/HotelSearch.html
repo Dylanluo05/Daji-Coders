@@ -51,6 +51,9 @@
             background-position: center center;
             background-repeat: no-repeat;
             background: url("https://www.prisagroup.com/wp-content/uploads/2016/07/AC_TPAAC_Exterior_Night_2_Low_Res.jpg");
+            animation-name: colorswitch1;
+            animation-duration: 20s;
+            animation-iteration-count: infinite;
             z-index: 1
         }
 
@@ -140,6 +143,8 @@
             -webkit-animation-delay: 2s;
             animation: slide 0.5s forwards;
             animation-delay: 2s;
+            transform: translate3d(0%, 0px, 0px);
+            transition: all 450ms ease-out 0s;
             /* clear: both; */
         }
 
@@ -200,6 +205,13 @@
 
         @keyframes slide {
             100% { left: 0; }
+        }
+        @keyframes colorswitch1 {
+            0% {background: url("https://www.prisagroup.com/wp-content/uploads/2016/07/AC_TPAAC_Exterior_Night_2_Low_Res.jpg;");}
+            25% {background: url("https://imgcy.trivago.com/c_limit,d_dummy.jpeg,f_auto,h_1300,q_auto,w_2000/itemimages/77/61/77615_v3.jpeg");}
+            50% {background: url("https://cdn.christravelblog.com/wp-content/uploads/2015/05/Intercontinental_Chengdu_Global_Center_009.jpg");}
+            75% {background: url("https://imgcy.trivago.com/c_limit,d_dummy.jpeg,f_auto,h_1300,q_auto,w_2000/itemimages/25/88/25887_v10.jpeg")}
+            100% {background: url("https://www.prisagroup.com/wp-content/uploads/2016/07/AC_TPAAC_Exterior_Night_2_Low_Res.jpg;");}
         }
 
         .dot {
