@@ -109,6 +109,10 @@ def facts():
 def RestaurantSearch():
     return render_template("RestaurantSearch.html")
 
+@app.route('/CarSearch/')
+def CarSearch():
+    return render_template("CarSearch.html")
+
 # runs the application on the development server
 if __name__ == "__main__":
     app.run(debug=True)
