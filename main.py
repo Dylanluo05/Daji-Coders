@@ -2,26 +2,28 @@
 from flask import Flask, render_template, request
 import requests
 import json
-from api.jeanapi import api_bp
+
+from starter import app_starter
+from algorithm import app_algorithm
+from webapi import app_api
+from crud.app_crud import app_crud
+from y2022 import app_y2022
+# from api.jeanapi import api_bp
 
 # create a Flask instance
 app = Flask(__name__)
-app.register_blueprint(api_bp)
+# app.register_blueprint(api_bp)
 
+app.register_blueprint(app_starter)
+app.register_blueprint(app_algorithm)
+app.register_blueprint(app_api)
+app.register_blueprint(app_crud)
+app.register_blueprint(app_y2022)
 # connects default URL to render index.html
 @app.route('/')
 def index():
     return render_template("index.html")
 
-
-# connects /kangaroos path to render kangaroos.html
-@app.route('/kangaroos/')
-def kangaroos():
-    return render_template("kangaroos.html")
-
-@app.route('/hawkers/')
-def hawkers():
-    return render_template("hawkers.html")
 
 @app.route('/AboutAlex/', methods=['GET', 'POST'])
 def AboutAlex():
@@ -87,25 +89,9 @@ def AboutJean():
 def HotelSearch():
     return render_template("HotelSearch.html")
 
-@app.route('/FunTimes/')
-def Funtimes():
-    return render_template("Funtimes.html")
-
-@app.route('/CurrencyExchange/')
-def CurrencyExchange():
+@app.route('/currency_exchange/', methods=['GET', 'POST'])
+def currency_exchange():
     return render_template("currency_exchange.html")
-import requests
-
-url = "https://currency-exchange.p.rapidapi.com/listquotes"
-
-headers = {
-    'x-rapidapi-host': "currency-exchange.p.rapidapi.com",
-    'x-rapidapi-key': "9205057203msh04a5e5cadaa01c8p11274ejsnf67dea2bb043"
-}
-
-response = requests.request("GET", url, headers=headers)
-
-print(response.text)
 
 @app.route('/fact', methods=['GET', 'POST'])
 def fact():
@@ -118,6 +104,14 @@ def facts():
     url = "http://localhost:5000/api/facts"
     response = requests.request("GET", url)
     return render_template("facts.html", facts=response.json())
+
+@app.route('/RestaurantSearch/')
+def RestaurantSearch():
+    return render_template("RestaurantSearch.html")
+
+@app.route('/CarSearch/')
+def CarSearch():
+    return render_template("CarSearch.html")
 
 # runs the application on the development server
 if __name__ == "__main__":
