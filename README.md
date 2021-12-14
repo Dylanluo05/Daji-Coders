@@ -12,7 +12,7 @@ Jean Kim, Dylan Luo, Isabelle Gunawan, Alex Do
 
 
 ### Runtime Link
-To be determined!
+http://dajicoders.tk/
 
 ### Github Community Guidelines
 - The github community guidelines serves as a basis for our scrum team (DAJI Coders) when pulling, pushing code, assigning tasks, and meeting deadlines. [Page](https://github.com/Dylanluo05/Daji-Coders/wiki/Github-Community-Guidelines)
