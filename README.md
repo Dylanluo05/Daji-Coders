@@ -84,7 +84,7 @@ Team | Scrum Board Updated and Policies, Team Review | [Link to Scrum Board](htt
 Name | Requirements | Evidence | Notes and Scores |
 ---- | ------------ | -------- | ----- |
 Jean Kim | Practice AP MCQ Test and Corrections, Updating README, Tickets in Scrum Board Backlog, Wiki pages | [Jean Kim and Alex Do Journal](https://docs.google.com/document/d/1Z-1t7JIvJnqctDlQt7ALcxyDKhtoPdDNBLIA8d82Qgo/edit?usp=sharing) // [Link to Scrum Board Ticket](https://github.com/Dylanluo05/Daji-Coders/issues/26)
-Dylan Luo | Practice AP MCQ Test and Corrections, Github admin highlighting issues and commits, and showing Bootstrap layouts for 3 frontend screens | [Dylan Luo and Isabelle Gunawan Journal](https://docs.google.com/document/d/1LDHFMI3j1qDKWwgjiuCrH2cgK1KQCoKsQF3OOdGBvIw/edit?usp=sharing)
+Dylan Luo | Practice AP MCQ Test and Corrections, Github admin highlighting issues and commits, and showing Bootstrap layouts for 3 frontend screens | [Dylan Luo and Isabelle Gunawan Journal](https://docs.google.com/document/d/1LDHFMI3j1qDKWwgjiuCrH2cgK1KQCoKsQF3OOdGBvIw/edit?usp=sharing) // [Link to Scrum Board Ticket](https://github.com/Dylanluo05/Daji-Coders/issues/25)
 Isabelle Gunawan | Practice AP MCQ Test and Corrections, Access to Database | [Dylan Luo and Isabelle Gunawan Journal](https://docs.google.com/document/d/1LDHFMI3j1qDKWwgjiuCrH2cgK1KQCoKsQF3OOdGBvIw/edit?usp=sharing)
 Alex Do | Practice AP MCQ Test and Corrections, Deploying website from URL, and performing updates | [Jean Kim and Alex Do Journal](https://docs.google.com/document/d/1Z-1t7JIvJnqctDlQt7ALcxyDKhtoPdDNBLIA8d82Qgo/edit?usp=sharing)
 Team | Week 3 Review
