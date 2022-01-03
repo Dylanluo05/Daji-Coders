@@ -83,8 +83,8 @@ Team | Scrum Board Updated and Policies, Team Review | [Link to Scrum Board](htt
 
 Name | Requirements | Evidence | Notes and Scores |
 ---- | ------------ | -------- | ----- |
-Jean Kim | 
-Dylan Luo | 
-Isabelle Gunawan | 
-Alex Do | 
-Team | 
+Jean Kim | Practice AP MCQ Test and Corrections, Updating README, Tickets in Scrum Board Backlog, Wiki pages | [Jean Kim and Alex Do Journal](https://docs.google.com/document/d/1Z-1t7JIvJnqctDlQt7ALcxyDKhtoPdDNBLIA8d82Qgo/edit?usp=sharing) // [Link to Scrum Board Ticket](https://github.com/Dylanluo05/Daji-Coders/issues/26) | 7.75/8
+Dylan Luo | Practice AP MCQ Test and Corrections, Github admin highlighting issues and commits, and showing Bootstrap layouts for 3 frontend screens | [Dylan Luo and Isabelle Gunawan Journal](https://docs.google.com/document/d/1LDHFMI3j1qDKWwgjiuCrH2cgK1KQCoKsQF3OOdGBvIw/edit?usp=sharing) // [Link to Scrum Board Ticket](https://github.com/Dylanluo05/Daji-Coders/issues/25) // [Link to Scrum Board Ticket](https://github.com/Dylanluo05/Daji-Coders/issues/29) | 7.75/8
+Isabelle Gunawan | Practice AP MCQ Test and Corrections, Access to Database | [Dylan Luo and Isabelle Gunawan Journal](https://docs.google.com/document/d/1LDHFMI3j1qDKWwgjiuCrH2cgK1KQCoKsQF3OOdGBvIw/edit?usp=sharing) // [Link to Scrum Board Ticket](https://github.com/Dylanluo05/Daji-Coders/issues/27) | 7.75/8
+Alex Do | Practice AP MCQ Test and Corrections, Deploying website from URL, and performing updates | [Jean Kim and Alex Do Journal](https://docs.google.com/document/d/1Z-1t7JIvJnqctDlQt7ALcxyDKhtoPdDNBLIA8d82Qgo/edit?usp=sharing) // [Link to Scrum Board Ticket](https://github.com/Dylanluo05/Daji-Coders/issues/28) | 7.75/8
+Team | Week 3 Review, Team Video with Scrum Master and Technical Officer | [Week 3 Review Video](https://youtu.be/fpRPzU7187o) // [Week 3 Review Ticket](https://github.com/Dylanluo05/Daji-Coders/issues/45) | All tickets have information on what to have, evidence, and scores of all members
