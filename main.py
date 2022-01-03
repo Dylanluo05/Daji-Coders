@@ -89,6 +89,10 @@ def AboutJean():
 def HotelSearch():
     return render_template("HotelSearch.html")
 
+@app.route('/FunTimes/')
+def FunTimes():
+    return render_template("FunTimes.html")
+
 @app.route('/currency_exchange/', methods=['GET', 'POST'])
 def currency_exchange():
     return render_template("currency_exchange.html")
@@ -113,9 +117,7 @@ def RestaurantSearch():
 def CarSearch():
     return render_template("CarSearch.html")
 
-@app.route('/FunTimes/')
-def FunTimes():
-    return render_template("FunTimes.html")
+
 
 # runs the application on the development server
 if __name__ == "__main__":
