@@ -10,6 +10,8 @@ Jean Kim, Dylan Luo, Isabelle Gunawan, Alex Do
 - [Sprint 1 Week 1](#sprint-1-week-1)
 - [Sprint 2 Week 2](#sprint-2-week-2)
 - [Sprint 3 Week 3](#sprint-3-week-3)
+- [Sprint 4 Week 4](#sprint-4-week-4)
+
 
 ### Runtime Link
 http://dajicoders.tk/
@@ -80,6 +82,16 @@ Alex Do | College Board Notes and Quizzes 2.3 and 2.4, Create Task Plan, About P
 Team | Scrum Board Updated and Policies, Team Review | [Link to Scrum Board](https://github.com/Dylanluo05/Daji-Coders/projects/1) // [Link to Policies Ticket](https://github.com/Dylanluo05/Daji-Coders/issues/23) // [Week 2 Review Ticket](https://github.com/Dylanluo05/Daji-Coders/issues/39) | Policies are on a wiki page // Scores are 7.75/8 for everyone
 
 ### Sprint 3 Week 3
+
+Name | Requirements | Evidence | Notes and Scores |
+---- | ------------ | -------- | ----- |
+Jean Kim | Practice AP MCQ Test and Corrections, Updating README, Tickets in Scrum Board Backlog, Wiki pages | [Jean Kim and Alex Do Journal](https://docs.google.com/document/d/1Z-1t7JIvJnqctDlQt7ALcxyDKhtoPdDNBLIA8d82Qgo/edit?usp=sharing) // [Link to Scrum Board Ticket](https://github.com/Dylanluo05/Daji-Coders/issues/26) | 7.75/8
+Dylan Luo | Practice AP MCQ Test and Corrections, Github admin highlighting issues and commits, and showing Bootstrap layouts for 3 frontend screens | [Dylan Luo and Isabelle Gunawan Journal](https://docs.google.com/document/d/1LDHFMI3j1qDKWwgjiuCrH2cgK1KQCoKsQF3OOdGBvIw/edit?usp=sharing) // [Link to Scrum Board Ticket](https://github.com/Dylanluo05/Daji-Coders/issues/25) // [Link to Scrum Board Ticket](https://github.com/Dylanluo05/Daji-Coders/issues/29) | 7.75/8
+Isabelle Gunawan | Practice AP MCQ Test and Corrections, Access to Database | [Dylan Luo and Isabelle Gunawan Journal](https://docs.google.com/document/d/1LDHFMI3j1qDKWwgjiuCrH2cgK1KQCoKsQF3OOdGBvIw/edit?usp=sharing) // [Link to Scrum Board Ticket](https://github.com/Dylanluo05/Daji-Coders/issues/27) | 7.75/8
+Alex Do | Practice AP MCQ Test and Corrections, Deploying website from URL, and performing updates | [Jean Kim and Alex Do Journal](https://docs.google.com/document/d/1Z-1t7JIvJnqctDlQt7ALcxyDKhtoPdDNBLIA8d82Qgo/edit?usp=sharing) // [Link to Scrum Board Ticket](https://github.com/Dylanluo05/Daji-Coders/issues/28) | 7.75/8
+Team | Week 3 Review, Team Video with Scrum Master and Technical Officer | [Week 3 Review Video](https://youtu.be/fpRPzU7187o) // [Week 3 Review Ticket](https://github.com/Dylanluo05/Daji-Coders/issues/45) | All tickets have information on what to have, evidence, and scores of all members
+
+### Sprint 4 Week 4
 
 Name | Requirements | Evidence | Notes and Scores |
 ---- | ------------ | -------- | ----- |
