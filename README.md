@@ -10,6 +10,8 @@ Jean Kim, Dylan Luo, Isabelle Gunawan, Alex Do
 - [Sprint 1 Week 1](#sprint-1-week-1)
 - [Sprint 2 Week 2](#sprint-2-week-2)
 - [Sprint 3 Week 3](#sprint-3-week-3)
+- [Sprint 4 Week 4](#sprint-4-week-4)
+
 
 ### Runtime Link
 http://dajicoders.tk/
@@ -88,3 +90,13 @@ Dylan Luo | Practice AP MCQ Test and Corrections, Github admin highlighting issu
 Isabelle Gunawan | Practice AP MCQ Test and Corrections, Access to Database | [Dylan Luo and Isabelle Gunawan Journal](https://docs.google.com/document/d/1LDHFMI3j1qDKWwgjiuCrH2cgK1KQCoKsQF3OOdGBvIw/edit?usp=sharing) // [Link to Scrum Board Ticket](https://github.com/Dylanluo05/Daji-Coders/issues/27) | 7.75/8
 Alex Do | Practice AP MCQ Test and Corrections, Deploying website from URL, and performing updates | [Jean Kim and Alex Do Journal](https://docs.google.com/document/d/1Z-1t7JIvJnqctDlQt7ALcxyDKhtoPdDNBLIA8d82Qgo/edit?usp=sharing) // [Link to Scrum Board Ticket](https://github.com/Dylanluo05/Daji-Coders/issues/28) | 7.75/8
 Team | Week 3 Review, Team Video with Scrum Master and Technical Officer | [Week 3 Review Video](https://youtu.be/fpRPzU7187o) // [Week 3 Review Ticket](https://github.com/Dylanluo05/Daji-Coders/issues/45) | All tickets have information on what to have, evidence, and scores of all members
+
+### Sprint 4 Week 4
+
+Name | Requirements | Evidence | Notes and Scores |
+---- | ------------ | -------- | ----- |
+Jean Kim | 3.11 - 3.13 College Board Work and Quizzes | [Jean Kim and Alex Do Journal](https://docs.google.com/document/d/1Z-1t7JIvJnqctDlQt7ALcxyDKhtoPdDNBLIA8d82Qgo/edit?usp=sharing)
+Dylan Luo | 3.11 - 3.13 College Board Work and Quizzes | [Dylan Luo and Isabelle Gunawan Journal](https://docs.google.com/document/d/1LDHFMI3j1qDKWwgjiuCrH2cgK1KQCoKsQF3OOdGBvIw/edit?usp=sharing)
+Isabelle Gunawan | 3.11 - 3.13 College Board Work and Quizzes | [Dylan Luo and Isabelle Gunawan Journal](https://docs.google.com/document/d/1LDHFMI3j1qDKWwgjiuCrH2cgK1KQCoKsQF3OOdGBvIw/edit?usp=sharing)
+Alex Do | 3.11 - 3.13 College Board Work and Quizzes | [Jean Kim and Alex Do Journal](https://docs.google.com/document/d/1Z-1t7JIvJnqctDlQt7ALcxyDKhtoPdDNBLIA8d82Qgo/edit?usp=sharing)
+Team |
