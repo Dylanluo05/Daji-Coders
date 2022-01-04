@@ -12,7 +12,7 @@ from y2022 import app_y2022
 from __init__ import app
 
 # create a Flask instance
-#app = Flask(__name__)
+# app = Flask(__name__)
 # app.register_blueprint(api_bp)
 
 app.register_blueprint(app_starter)
@@ -118,7 +118,9 @@ def RestaurantSearch():
 def CarSearch():
     return render_template("CarSearch.html")
 
-
+@app.route('/Calculator/')
+def Calculator():
+    return render_template("Calculator.html")
 
 # runs the application on the development server
 if __name__ == "__main__":

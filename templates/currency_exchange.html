@@ -79,11 +79,45 @@
                 <h2 id="currencyResult">Result: 0</h2>
             </div>
             <div class="currencyResult">
-                <a class="bloop"  href="/Calculator/">Calculator</a> <br>
                 <br><ul><li><b>“SGD”</b><span style="font-weight: 400;"> – Singapore Dollar</span></li><li><b>“MYR” </b><span style="font-weight: 400;">– Malaysian Ringgit</span></li><li><b>“EUR” </b><span style="font-weight: 400;">– Euro [E.U.]</span></li><li><b>“USD” </b><span style="font-weight: 400;">– U.S. Dollar</span></li><li><b>“AUD”</b><span style="font-weight: 400;"> – Australian Dollar</span></li><li><b>“JPY” </b><span style="font-weight: 400;">– Japanese Yen</span></li><li><b>“CNH” </b><span style="font-weight: 400;">– Chinese Yuan</span></li><li><b>“HKD” </b><span style="font-weight: 400;">– Hong Kong Dollar</span></li><li><b>“CAD” </b><span style="font-weight: 400;">– Canadian Dollar</span></li><li><b>“INR” </b><span style="font-weight: 400;">– Indian Rupee</span></li><li><b>“DKK”</b><span style="font-weight: 400;"> – Danish Krone</span></li><li><b>“GBP”</b><span style="font-weight: 400;"> – Great Britain Pound [Sterling]</span></li><li><b>“RUB” </b><span style="font-weight: 400;">– Russian Ruble</span></li><li><b>“NZD” </b><span style="font-weight: 400;">– New Zealand Dollar</span></li><li><b>“MXN” </b><span style="font-weight: 400;">– Mexican Peso</span></li><li><b>“IDR” </b><span style="font-weight: 400;">– Indonesian Rupiah</span></li><li><b>“TWD”</b><span style="font-weight: 400;"> – Taiwanese Dollar</span></li><li><b>“THB” </b><span style="font-weight: 400;">– Thai Baht</span></li><li><b>“VND” </b><span style="font-weight: 400;">– Vietnamese Dong</span></li></ul>
             </div>
         </div>
     </div>
+    <div class = title >VacationHub Calculator</div>
+    <table border="1">
+        <tr>
+            <td colspan="3"><input type="text" id="result"/></td>
+            <!-- clr() function will call clr to clear all value -->
+            <td><input type="button" value="c" onclick="clr()"/> </td>
+        </tr>
+        <tr>
+            <!-- create button and assign value to each button -->
+            <!-- dis("1") will call function dis to display value -->
+            <td><input type="button" value="1" onclick="dis('1')"/> </td>
+            <td><input type="button" value="2" onclick="dis('2')"/> </td>
+            <td><input type="button" value="3" onclick="dis('3')"/> </td>
+            <td><input type="button" value="/" onclick="dis('/')"/> </td>
+        </tr>
+        <tr>
+            <td><input type="button" value="4" onclick="dis('4')"/> </td>
+            <td><input type="button" value="5" onclick="dis('5')"/> </td>
+            <td><input type="button" value="6" onclick="dis('6')"/> </td>
+            <td><input type="button" value="-" onclick="dis('-')"/> </td>
+        </tr>
+        <tr>
+            <td><input type="button" value="7" onclick="dis('7')"/> </td>
+            <td><input type="button" value="8" onclick="dis('8')"/> </td>
+            <td><input type="button" value="9" onclick="dis('9')"/> </td>
+            <td><input type="button" value="+" onclick="dis('+')"/> </td>
+        </tr>
+        <tr>
+            <td><input type="button" value="." onclick="dis('.')"/> </td>
+            <td><input type="button" value="0" onclick="dis('0')"/> </td>
+            <!-- solve function call function solve to evaluate value -->
+            <td><input type="button" value="=" onclick="solve()"/> </td>
+            <td><input type="button" value="*" onclick="dis('*')"/> </td>
+        </tr>
+    </table>
 
     <script>
 
@@ -125,6 +159,25 @@
                 .catch(err => {
                     console.log(err);
                 });
+        }
+        //function that display value
+        function dis(val)
+        {
+            document.getElementById("result").value+=val
+        }
+
+        //function that evaluates the digit and return result
+        function solve()
+        {
+            let x = document.getElementById("result").value
+            let y = eval(x)
+            document.getElementById("result").value = y
+        }
+
+        //function that clear the display
+        function clr()
+        {
+            document.getElementById("result").value = ""
         }
     </script>
 
