@@ -99,4 +99,4 @@ Jean Kim | 3.11 - 3.13 College Board Work and Quizzes, Add to Restaurant Search 
 Dylan Luo | 3.11 - 3.13 College Board Work and Quizzes, Create fun times with activities background and update hotel search | [Dylan Luo and Isabelle Gunawan Journal](https://docs.google.com/document/d/1LDHFMI3j1qDKWwgjiuCrH2cgK1KQCoKsQF3OOdGBvIw/edit?usp=sharing)
 Isabelle Gunawan | 3.11 - 3.13 College Board Work and Quizzes, Add to Currency Exchange, Work on navbar search bar | [Dylan Luo and Isabelle Gunawan Journal](https://docs.google.com/document/d/1LDHFMI3j1qDKWwgjiuCrH2cgK1KQCoKsQF3OOdGBvIw/edit?usp=sharing) // [Link to Scrum Board Ticket](https://github.com/Dylanluo05/Daji-Coders/issues/32)
 Alex Do | 3.11 - 3.13 College Board Work and Quizzes, Deploy repository README through github pages, update runtime link | [Jean Kim and Alex Do Journal](https://docs.google.com/document/d/1Z-1t7JIvJnqctDlQt7ALcxyDKhtoPdDNBLIA8d82Qgo/edit?usp=sharing)
-Team |
+Team | Continue hard work and focus in class, Week 4 Review (Live Review with Teacher) | [Week 4 Review Ticket](https://github.com/Dylanluo05/Daji-Coders/issues/47)
