@@ -13,6 +13,123 @@
     {% include "layouts/navbar.html" %}
 
     <style>
+        .filterDiv {
+            display: none;
+        }
+
+        .show {
+            display: block;
+        }
+
+        .container {
+            margin-top: 20px;
+        }
+
+        .container2 {
+            height: 50vh;
+            width: 50vh;
+            margin: 0rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-gap: 20px 20px;
+            font-family: 'Ubuntu', sans-serif;
+        }
+
+        .btn {
+            border: none;
+            outline: none;
+            padding: 12px 16px;
+            background-color: #f1f1f1;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #ddd;
+        }
+
+        .btn.active {
+            background-color: #777777;
+            color: white;
+        }
+
+
+        .cell {
+            color: white;
+            font-size: 40px;
+            text-align: center;
+            padding: 5px;
+            font-family: 'Ubuntu', sans-serif;
+        }
+        .cell-1 {
+            background: whitesmoke;
+            font-family: 'Ubuntu', sans-serif;
+        }
+
+        .cell-2 {
+            background: whitesmoke;
+            font-family: 'Ubuntu', sans-serif;
+        }
+        .cell-3 {
+            background: whitesmoke;
+            font-family: 'Ubuntu', sans-serif;
+        }
+        .cell-4 {
+            background: whitesmoke;
+            font-family: 'Ubuntu', sans-serif;
+        }
+        .card-body {
+            background: whitesmoke;
+            font-family: 'Ubuntu', sans-serif;
+        }
+        .card-title{
+        }
+        .card {
+            background: whitesmoke;
+            font-family: 'Ubuntu', sans-serif;
+        }
+        .collapsible {
+            background-color: black;
+            color: white;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            font-family: 'Ubuntu', sans-serif;
+        }
+
+        .active2, .collapsible:hover {
+            background-color: #282828;
+            font-family: 'Ubuntu', sans-serif;
+        }
+
+        .collapsible:after {
+            content: '\002B';
+            color: white;
+            font-weight: bold;
+            float: right;
+            margin-left: 5px;
+            font-family: 'Ubuntu', sans-serif;
+        }
+
+        .active2:after {
+            content: "\2212";
+            color: white;
+            font-family: 'Ubuntu', sans-serif;
+        }
+
+        .content {
+            padding: 0 24px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            background-color: #282828;
+            color: white;
+            font-family: 'Ubuntu', sans-serif;
+        }
         :root{
             --white: whitesmoke;
             --black: black;
@@ -75,6 +192,13 @@
             border: 1px solid black;
             background: white;
             padding: 200px;
+            font-family: 'Ubuntu', sans-serif;
+            background-repeat: no-repeat;
+        }
+
+        #carBackground3 {
+            background: white;
+            padding: 500px;
             font-family: 'Ubuntu', sans-serif;
             background-repeat: no-repeat;
         }
@@ -315,6 +439,83 @@
         <span class="dot" style = "position: relative; top: -100px;" onclick="currentSlide(3)"></span>
     </div>
 </div>
+
+<div id = "carBackground3">
+<div id="myBtnContainer" style = "white-space: nowrap; position: relative; left: -400px; top: -400px;" >
+    <button class="btn" onclick="filterSelection('All')"> Show All</button>
+    <button class="btn" onclick="filterSelection('On Sale')">On Sale</button>
+    <button class="btn" onclick="filterSelection('Highest Ratings')">Highest Ratings</button>
+    <button class="btn" onclick="filterSelection('Most Popular')">Most Popular</button>
+    <button class="btn" onclick="filterSelection('Newest')">Newest</button>
+    <button class="btn" onclick="filterSelection('Luxury/Exclusive')">Luxury/Exclusive</button>
+</div>
+
+<div class="container" style = "position: relative; left: -400px; top: -400px;">
+    <div class="container2">
+        <div class="filterDiv On Sale">
+            <div class="card" style="width: 24rem;"><div class="cell cell-1"><img src="https://www.extremetech.com/wp-content/uploads/2020/04/764B8781-640x354.jpg" alt="Greeting" width="370" height="300"></div>
+                <div class="card-body">
+                    <h5 class="card-title">SUV</h5>
+                    <button class="collapsible">Info</button>
+                    <div class="content">
+                        <p>Short for Sports Utility Vehicle, SUVs are cars that combine both road cars and off road automobiles. There are multiple sizes for most SUVs.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="filterDiv Highest Ratings">
+            <div class="card" style="width: 24rem;"><div class="cell cell-1"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMA3S0oJ8mB_bRlbEsjhCjr7ivIbdOYksN7Fkd2DxFf7-wYs9RzJYqRLwgzJpRjXuNrBU&usqp=CAU" alt="Greeting" width="370" height="300"></div>
+                <div class="card-body">
+                    <h5 class="card-title">RV</h5>
+                    <button class="collapsible">Info</button>
+                    <div class="content">
+                        <p>Recreational Vehicles are very popular among tourists. They mostly consist of a small kitchen, bathroom, living room, and bedroom. Some are even used as motorhomes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="filterDiv Most Popular">
+            <div class="card" style="width: 24rem;"><div class="cell cell-1"><img src="https://di-uploads-pod11.dealerinspire.com/hollywoodchryslerjeep/uploads/2020/07/HCJ-2021-Jeep-Wrangler-1024x576.jpg" alt="Greeting" width="370" height="300"></div>
+                <div class="card-body">
+                    <h5 class="card-title">Jeep</h5>
+                    <button class="collapsible">Info</button>
+                    <div class="content">
+                        <p>Jeeps are generally characterized by strong engines, big tires, and an advantage on off road trails or during wild vacations.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="filterDiv Newest">
+            <div class="card" style="width: 24rem;"><div class="cell cell-1"><img src="https://thumbor.forbes.com/thumbor/fit-in/960x/filters:format(jpg)/https://www.forbes.com/wheels/wp-content/uploads/2021/05/Chevrolet_Corvette_stingray_convertible.png" alt="Greeting" width="370" height="300"></div>
+                <div class="card-body">
+                    <h5 class="card-title">Convertible</h5>
+                    <button class="collapsible">Info</button>
+                    <div class="content">
+                        <p>Convertibles are characterized by a roof that opens and closes as desired. They are more expensive as luxury cars and mostly seen in cities over rural areas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="filterDiv Luxury/Exclusive">
+            <div class="card" style="width: 24rem;"><div class="cell cell-1"><img src="https://cdn.jdpower.com/how%20much%20do%20trucks%20weigh.jpg" alt="Greeting" width="370" height="300"></div>
+                <div class="card-body">
+                    <h5 class="card-title">Truck</h5>
+                    <button class="collapsible">Info</button>
+                    <div class="content">
+                        <p>Most trucks have stronger engines than normal cars with an open trunk for storage. When on vacation in the woods, these are excellent for space division and easy navigation.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+</div>
+
 <script>
     var slideIndex = 1;
     showSlides(slideIndex);
@@ -459,6 +660,61 @@
 
     autocomplete(document.getElementById("myInput"), carSearch);
 
+    filterSelection("All")
+    function filterSelection(c) {
+        var x, i;
+        x = document.getElementsByClassName("filterDiv");
+        if (c == "All") c = "";
+        for (i = 0; i < x.length; i++) {
+            RemoveClass(x[i], "show");
+            if (x[i].className.indexOf(c) > -1) AddClass(x[i], "show");
+        }
+    }
+
+    function AddClass(element, name) {
+        var i, arr1, arr2;
+        arr1 = element.className.split(" ");
+        arr2 = name.split(" ");
+        for (i = 0; i < arr2.length; i++) {
+            if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+        }
+    }
+
+    function RemoveClass(element, name) {
+        var i, arr1, arr2;
+        arr1 = element.className.split(" ");
+        arr2 = name.split(" ");
+        for (i = 0; i < arr2.length; i++) {
+            while (arr1.indexOf(arr2[i]) > -1) {
+                arr1.splice(arr1.indexOf(arr2[i]), 1);
+            }
+        }
+        element.className = arr1.join(" ");
+    }
+
+    var btnContainer = document.getElementById("myBtnContainer");
+    var btns = btnContainer.getElementsByClassName("btn");
+    for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function(){
+            var current = document.getElementsByClassName("active");
+            current[0].className = current[0].className.replace(" active", "");
+            this.className += " active";
+        });
+    }
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+            this.classList.toggle("active2");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight){
+                content.style.maxHeight = null;
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+            }
+        });
+    }
 </script>
 </body>
 </html>
