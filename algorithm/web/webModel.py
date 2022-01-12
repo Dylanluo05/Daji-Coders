@@ -4,7 +4,7 @@ from flask_migrate import Migrate
 
 from __init__ import app
 
-dbURI = 'sqlite:///model/myDB.db'
+dbURI = 'sqlite:///model/websiteDB.db'
 # Setup properties for the database
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SQLALCHEMY_DATABASE_URI'] = dbURI
@@ -16,11 +16,11 @@ Migrate(app, db)
 
 class webPages(db.Model):
     pageID = db.Column(db.Integer, primary_key=True)
-    pageName = db.Column(db.String(255), unique=True, nullable=False)
+    pageName = db.Column(db.String(255), unique=False, nullable=False)
     pageURL = db.Column(db.String(255), unique=True, nullable=False)
     pageDesc = db.Column(db.String(255), unique=False, nullable=False)
 
-    def __init__(self, pageID, pageName, pageURL, pageDesc):
+    def __init__(self, pageName, pageURL, pageDesc):
         self.pageName = pageName
         self.pageURL = pageURL
         self.pageDesc = pageDesc
@@ -42,7 +42,7 @@ class webPages(db.Model):
             "pageDesc": self.pageDesc
         }
 
-    def update(self, pageName, pageURL, pageDesc):
+    def update(self, pageName, pageURL='', pageDesc=''):
         if len(pageName) > 0:
             self.pageName = pageName
         if len(pageURL) > 0:
@@ -58,7 +58,31 @@ class webPages(db.Model):
         return None
 
 
-    def model_Tester():
-        db.create_all()
-        p1 = webPages(pageName='Fun Times', pageURL='http://127.0.0.1:8000/FunTimes/', pageDesc='Fun Times for fun people :)')
-        p2 = webPages(pageName='Hotel Search', pageURL='http://127.0.0.1:8000/HotelSearch/', pageDesc='Find a hotel for your next vacation here!')
+def model_tester():
+    db.create_all()
+    p1 = webPages(pageName='Fun Times', pageURL='http://127.0.0.1:8000/FunTimes/', pageDesc='Fun Times for fun people :)')
+    p2 = webPages(pageName='Hotel Search', pageURL='http://127.0.0.1:8000/HotelSearch/', pageDesc='Find a hotel for your next vacation here!')
+    p3 = webPages(pageName='Car Rental', pageURL='http://127.0.0.1:8000/CarSearch/', pageDesc='Rent a car here!')
+    p4 = webPages(pageName='Foodie Finder', pageURL='http://127.0.0.1:8000/RestaurantSearch/', pageDesc='Require sustenance during your trip? FInd somewhere to eat here!')
+    p5 = webPages(pageName='Currency Exchange', pageURL='http://127.0.0.1:8000/currency_exchange/', pageDesc='Learn how much your money is worth in another country')
+    table = [p1, p2, p3, p4, p5]
+    for row in table:
+        try:
+            db.session.add(row)
+            db.session.commit()
+        except IntegrityError:
+            db.session.remove()
+            print(f"Records already exist: {row.pageURL}")
+
+def model_printer():
+    print("------------")
+    print("Table: webpages with SQL query")
+    print("------------")
+    result = db.session.execute('select * from webPages')
+    print(result.keys())
+    for row in result:
+        print(row)
+
+if __name__ == "__main__":
+    model_tester()  # builds model of Users
+    model_printer()
