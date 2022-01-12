@@ -54,6 +54,6 @@ class Palindrome:
         return self._analysis
 
 if __name__ == "__main__":
-    word = "bug"
+    word = "hi"
     palindrome = Palindrome(word)
     print(palindrome.isPalindrome)
