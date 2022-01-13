@@ -3,6 +3,11 @@
 
 
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,31 +21,79 @@
 <style>
     * { box-sizing: border-box }
 
-    body{
+    html, body{
         margin:0;
         padding:0;
         color: white;
         font-family:sans-serif;
         overflow-x: hidden;
         font-family: 'Ubuntu', sans-serif;
+        scroll-behavior: smooth;
     }
-    div{
+
+    #FunTimesBackground1 {
+        padding: 150px;
+        background-color: #6fb2cc;
+        background-repeat: no-repeat;
     }
+
+    #FunTimesBackground2 {
+        padding: 50px;
+        background-color: slategray;
+        background-repeat: no-repeat;
+    }
+
+    #FunTimesBackground3 {
+        padding: 100px;
+        background-color: white;
+        background-repeat: no-repeat;
+    }
+
+    #FunTimesBackground4 {
+        padding: 400px;
+        background-color: white;
+        background-repeat: no-repeat;
+    }
+
+    #FunTimesBackground5 {
+        padding: 100px;
+        background-color: white;
+        background-repeat: no-repeat;
+    }
+
+    #FunTimesBackground6 {
+        padding: 100px;
+        background-color: white;
+        background-repeat: no-repeat;
+    }
+
+    #FunTimesBackground7 {
+        padding: 100px;
+        background-color: white;
+        background-repeat: no-repeat;
+    }
+
+
     .one{
         background-color: crimson;
-        background-image: -webkit-linear-gradient(30deg, crimson 50% , whitesmoke 50%);
-        min-height: 500px;
+        background-image: -webkit-linear-gradient(30deg, crimson 50% , black 50%);
+        min-height: 200px;
     }
     .two{
         background-color: whitesmoke;
-        background-image: -webkit-linear-gradient(150deg, crimson 35%, whitesmoke 35%);
-        min-height: 500px;
+        padding: 20px;
     }
 
     .three{
-        background-color: crimson;
-        background-image: -webkit-linear-gradient(30deg, crimson 50%, whitesmoke 50%);
-        min-height: 500px;
+        background-color: blue;
+        background-image: -webkit-linear-gradient(30deg, blue 50%, orange 50%);
+        min-height: 200px;
+    }
+
+    .four {
+        background-color: yellow;
+        background-image: -webkit-linear-gradient(30deg, yellow 50%, rebeccapurple 50%);
+        min-height: 200px;
     }
 
     .MovingBox{
@@ -75,11 +128,6 @@
 
     #div1 {animation-timing-function: ease;}
 
-    .four{
-        background-color: whitesmoke;
-        background-image: -webkit-linear-gradient(150deg, crimson 35%, whitesmoke 35%);
-        min-height: 500px;
-    }
 
     .five {
         background-color: crimson;
@@ -102,6 +150,14 @@
         90% {background-color: orangered;}
         100% {background-color: crimson;}
     }
+
+    @keyframes fadein {
+        0% {opacity: 0%;}
+        100% {opacity: 100%;}
+        from {top: 75px;}
+        to {top: -50px;}
+    }
+
 
     @keyframes mymove {
         from {left: 0px;}
@@ -151,6 +207,70 @@
         background-image: -webkit-linear-gradient(150deg, #34ADFF 35%, #4CBFFF 35%);
         min-height: 500px;
     } */
+
+    .cropped {
+        object-fit: cover;
+        object-position: -10px;
+    }
+
+    .button {
+        background-color: white;
+        border: none;
+        color: white;
+        padding: 16px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        transition-duration: 0.4s;
+        border-radius: 40px;
+        cursor: pointer;
+    }
+    .button1 {
+        background-color: white;
+        color: mediumseagreen;
+        border: 2px solid mediumseagreen;
+    }
+
+    .button1:hover {
+        background-color: mediumseagreen;
+        color: white;
+    }
+
+    .button2 {
+        background-color: white;
+        color: yellow;
+        border: 2px solid yellow;
+    }
+
+    .button2:hover {
+        background-color: yellow;
+        color: white;
+    }
+
+    .button3 {
+        background-color: white;
+        color: dodgerblue;
+        border: 2px solid dodgerblue;
+    }
+
+    .button3:hover {
+        background-color: dodgerblue;
+        color: white;
+    }
+
+    .button4 {
+        background-color: white;
+        color: red;
+        border: 2px solid red;
+    }
+
+    .button4:hover {
+        background-color: red;
+        color: white;
+    }
+
 </style>
 
 <body>
@@ -163,7 +283,51 @@
     <span style = "position: relative; top: 20px; left:40px;">&#8227</span>
 </div></div> -->
 
-<div class="one">
+
+<div id = "FunTimesBackground1">
+    <h1 style = "text-align: center; color: white; position: relative; top: -100px;">Welcome to Fun Times!</h1>
+    <img src = "/static/assets/images/Airplane2.jpg" style = "width: 700px; height: 700px; position: relative; left: 270px; top:-50px; animation-name: fadein; animation-duration: 4s;" class = "cropped">
+</div>
+
+
+<div id = "FunTimesBackground2">
+    <h4 style = "color:black; position: relative; top: -25px;">Key:</h4>
+    <!-- <button class = "button button1" onclick = "document.getElementById('FunTimesBackground3').scrollIntoView();">Amusement Parks!</button>
+    <button class = "button button2" onclick = "document.getElementById('FunTimesBackground4').scrollIntoView();">Beaches!</button>
+    <button class = "button button3" onclick = "document.getElementById('FunTimesBackground5').scrollIntoView();">Skiing/Snowboarding!</button>
+    <button class = "button button4" onclick = "document.getElementById('FunTimesBackground6').scrollIntoView();">National Parks!</button> -->
+    <button type="button" class="btn btn-warning" onclick = "document.getElementById('FunTimesBackground3').scrollIntoView();">Amusement Parks!</button>
+    <button type="button" class="btn btn-primary" onclick = "document.getElementById('FunTimesBackground4').scrollIntoView();">Beaches!</button>
+    <button type="button" class="btn btn-success" onclick = "document.getElementById('FunTimesBackground5').scrollIntoView();">Skiing and Snowboarding!</button>
+    <button type="button" class="btn btn-info" onclick = "document.getElementById('FunTimesBackground6').scrollIntoView();">National Parks!</button>
+</div>
+
+<div id = "FunTimesBackground3">
+    <h2 style = "color: black; text-align: center; position: relative; top: -75px;">Amusement Parks</h2>
+    <!-- <img src = "/static/assets/images/FerrisWheel.gif" style = "width: 800px; height: 600px; position: relative; left: 300px; top: -75px;"> -->
+</div>
+
+<div id = "FunTimesBackground4">
+    <h2 style = "color: black; text-align: center;">Beaches</h2>
+</div>
+
+<div id = "FunTimesBackground5">
+    <h2 style = "color: black; text-align: center;">Skiing/Snowboarding</h2>
+    <img src = "https://ak.picdn.net/shutterstock/videos/1058205313/thumb/1.jpg" style = "width: 400px; height: 225px; position: relative;">
+</div>
+
+<div id = "FunTimesBackground6">
+    <h2 style = "color: black; text-align: center;">National Parks</h2>
+    <img src = "https://www.apple.com/newsroom/images/values/environment/Apple_national-parks-badge-3_08242020_inline.gif.large.gif" style = "width: 225px; height: 225px; position: relative;">
+</div>
+
+<div id = "FunTimesBackground7">
+
+</div>
+
+
+
+<!-- <div class="one">
     <h2 style = "position: relative; top: -200px; left: 150px;">Browse our excellent deals! </h2>
     <p style = "position:relative; top: -200px; left:150px;">Special packages for family fun activites available now!</p>
     <p style = "position:relative; top: -200px; left:-400px; text-align: center;">Subscribe to our annual membership to receive special deals on amusement parks,
@@ -171,16 +335,19 @@
     <img src="/static/assets/images/KnottsBerryFarm.jpg" style="width: 500px; height: 300px; position: relative; top: -50px; left: 1000px;">
 </div>
 
-<div class="two"><div id = "div1" class = "MovingBox2"></div></div>
+<div class="two"></div>
 
-<div class="three"><div id = "div1" class = "MovingBox"></div></div>
+<div class="three"></div>
 
-<div class="four"><div id = "div1" class = "MovingBox2"></div></div>
+<div class="two"></div>
 
-<div class="five"></div>
+<div class="four"></div>
 
-<div class="six"></div>
+<div class="five"></div> -->
 
-<div class="seven"></div>
 </body>
+
+
+<script>
+</script>
 </html>
