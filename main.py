@@ -20,6 +20,9 @@ app.register_blueprint(app_algorithm)
 app.register_blueprint(app_api)
 app.register_blueprint(app_crud)
 app.register_blueprint(app_y2022)
+
+forumList = []
+
 # connects default URL to render index.html
 @app.route('/')
 def index():
@@ -125,6 +128,24 @@ def Calculator():
 @app.route('/FlightInformation/')
 def FlightInformation():
     return render_template("FlightInformation.html")
+
+@app.route('/forum/', methods=['GET', 'POST'])
+def forum():
+    # submit button has been pushed
+    if request.form:
+        name = request.form.get("name")
+        forumList.append(name)
+        if len(name) != 0:  # input field has content
+            return render_template("forum.html", greetforum=forumList)
+    # starting and empty input default
+    return render_template("forum.html", greetforum="World")
+
+@app.route('/delete', methods=['GET', 'POST'])
+def delete():
+    if len(forumList) > 0:
+        forumList.pop(len(forumList) - 1)
+    return render_template("forum.html", nickname=forumList)
+
 
 # runs the application on the development server
 if __name__ == "__main__":

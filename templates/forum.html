@@ -1,0 +1,48 @@
+{% extends "layouts/base.html" %}
+
+<!- This variable sets name of browser tab  -->
+{% set project = "Forum" %}
+
+<!- This is a replacement block for Body in base.html -->
+{% block body %}
+
+    <h1 style = "position: relative; text-align: center;">Travel Forum</h1>
+    <p style = "position: relative; text-align: center;"> Hello user, this space is a forum for your thoughts on vacation. You may collaborate with other users on travel issues, debates, and much more! </p>
+
+    <div class="center-block" style="margin: 5% 5% 5%; text-align:left; font-family: gilroy,serif;">
+        <div class="col-12">
+            <p> Message: {{greetforum}} </p>
+        </div>
+        <div class="col-12">
+            <form action="/forum/" id="forum" method="POST" >
+                <label for="greetforum">Enter message!</label>
+                <input name="name" id="greetforum">
+                <input type="submit" value="Enter!">
+            </form>
+            <form action="/delete" id="remove" method="POST" >
+                <label>Delete Last Message</label>
+                <input type="submit" value="Delete!">
+            </form>
+        </div>
+    </div>
+
+    <html>
+    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dHJvcGljYWwlMjBiZWFjaHxlbnwwfHwwfHw%3D&w=1000&q=80" alt="Travel Picture.">
+    </html>
+
+    <style>
+        html, body {
+            background-color: deepskyblue;
+            color: black;
+        }
+    </style>
+
+{% endblock %}
+
+<!- This is turning off birds background from base.html -->
+
+{% block background %}
+    <script src="{{ url_for('static', filename='three.r119.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='vanta.birds.min.js') }}"></script>
+
+{% endblock %}
