@@ -1,2 +1,6 @@
-flask
+flask~=2.0.1
 import flask
+SQLAlchemy~=1.4.28
+requests~=2.26.0
+Starter~=0.4.2
+algorithm~=1.2.0

@@ -1,5 +1,5 @@
 # import "packages" from flask
-from flask import Flask, render_template, request
+from flask import render_template, request
 import requests
 import json
 
@@ -8,6 +8,7 @@ from algorithm import app_algorithm
 from webapi import app_api
 from crud.app_crud import app_crud
 from y2022 import app_y2022
+from web.websiteSearch import websiteSearch
 # from api.jeanapi import api_bp
 from __init__ import app
 
@@ -20,9 +21,8 @@ app.register_blueprint(app_algorithm)
 app.register_blueprint(app_api)
 app.register_blueprint(app_crud)
 app.register_blueprint(app_y2022)
-
+app.register_blueprint(websiteSearch)
 forumList = []
-
 # connects default URL to render index.html
 @app.route('/')
 def index():
@@ -128,24 +128,6 @@ def Calculator():
 @app.route('/FlightInformation/')
 def FlightInformation():
     return render_template("FlightInformation.html")
-
-@app.route('/forum/', methods=['GET', 'POST'])
-def forum():
-    # submit button has been pushed
-    if request.form:
-        name = request.form.get("name")
-        forumList.append(name)
-        if len(name) != 0:  # input field has content
-            return render_template("forum.html", greetforum=forumList)
-    # starting and empty input default
-    return render_template("forum.html", greetforum="World")
-
-@app.route('/delete', methods=['GET', 'POST'])
-def delete():
-    if len(forumList) > 0:
-        forumList.pop(len(forumList) - 1)
-    return render_template("forum.html", nickname=forumList)
-
 
 # runs the application on the development server
 if __name__ == "__main__":

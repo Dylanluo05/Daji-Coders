@@ -2,7 +2,7 @@ from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.exc import IntegrityError
 from flask_migrate import Migrate
 
-from __init__ import app
+from __init__ import db, app
 
 dbURI = 'sqlite:///model/websiteDB.db'
 # Setup properties for the database
@@ -19,6 +19,7 @@ class webPages(db.Model):
     pageName = db.Column(db.String(255), unique=False, nullable=False)
     pageURL = db.Column(db.String(255), unique=True, nullable=False)
     pageDesc = db.Column(db.String(255), unique=False, nullable=False)
+
 
     def __init__(self, pageName, pageURL, pageDesc):
         self.pageName = pageName
@@ -41,6 +42,7 @@ class webPages(db.Model):
             "pageURL": self.pageURL,
             "pageDesc": self.pageDesc
         }
+
 
     def update(self, pageName, pageURL='', pageDesc=''):
         if len(pageName) > 0:
@@ -74,14 +76,18 @@ def model_tester():
             db.session.remove()
             print(f"Records already exist: {row.pageURL}")
 
+
 def model_printer():
     print("------------")
-    print("Table: webpages with SQL query")
+    print("Table: webPages with SQL query")
     print("------------")
-    result = db.session.execute('select * from webPages')
-    print(result.keys())
-    for row in result:
+    #result = db.session.execute('select * from webpages')
+    #print(result.keys())
+    result = webPages.query.all()
+    json_ready = [page.read() for page in result]
+    for row in json_ready:
         print(row)
+
 
 if __name__ == "__main__":
     model_tester()  # builds model of Users
