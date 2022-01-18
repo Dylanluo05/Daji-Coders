@@ -13,6 +13,7 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SQLALCHEMY_DATABASE_URI'] = dbURI
 app.config['SECRET_KEY'] = 'SECRET_KEY'
 # Create SQLAlchemy engine to support SQLite dialect (sqlite:)
+
 db = SQLAlchemy(app)
 Migrate(app, db)
 

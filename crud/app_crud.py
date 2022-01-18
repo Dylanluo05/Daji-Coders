@@ -1,7 +1,10 @@
 """control dependencies to support CRUD app routes and APIs"""
-from flask import Blueprint, render_template, request, url_for, redirect, jsonify, make_response
-from flask_restful import Api, Resource
 import requests
+from flask import Blueprint, render_template, request, url_for, redirect, jsonify, make_response
+from flask_restful import Api
+from crud.sql import *
+
+# import requests
 
 from crud.model import Users
 
@@ -133,60 +136,60 @@ def search_term():
 """ API routes section """
 
 
-class UsersAPI:
-    # class for create/post
-    class _Create(Resource):
-        def post(self, name, email, password, phone):
-            po = Users(name, email, password, phone)
-            person = po.create()
-            if person:
-                return person.read()
-            return {'message': f'Processed {name}, either a format error or {email} is duplicate'}, 210
-
-    # class for read/get
-    class _Read(Resource):
-        def get(self):
-            return users_all()
-
-    # class for read/get
-    class _ReadILike(Resource):
-        def get(self, term):
-            return users_ilike(term)
-
-    # class for update/put
-    class _Update(Resource):
-        def put(self, email, name):
-            po = user_by_email(email)
-            if po is None:
-                return {'message': f"{email} is not found"}, 210
-            po.update(name)
-            return po.read()
-
-    class _UpdateAll(Resource):
-        def put(self, email, name, password, phone):
-            po = user_by_email(email)
-            if po is None:
-                return {'message': f"{email} is not found"}, 210
-            po.update(name, password, phone)
-            return po.read()
-
-    # class for delete
-    class _Delete(Resource):
-        def delete(self, userid):
-            po = user_by_id(userid)
-            if po is None:
-                return {'message': f"{userid} is not found"}, 210
-            data = po.read()
-            po.delete()
-            return data
-
-    # building RESTapi resource
-    api.add_resource(_Create, '/create/<string:name>/<string:email>/<string:password>/<string:phone>')
-    api.add_resource(_Read, '/read/')
-    api.add_resource(_ReadILike, '/read/ilike/<string:term>')
-    api.add_resource(_Update, '/update/<string:email>/<string:name>')
-    api.add_resource(_UpdateAll, '/update/<string:email>/<string:name>/<string:password>/<string:phone>')
-    api.add_resource(_Delete, '/delete/<int:userid>')
+# class UsersAPI:
+#     # class for create/post
+#     class _Create(Resource):
+#         def post(self, name, email, password, phone):
+#             po = Users(name, email, password, phone)
+#             person = po.create()
+#             if person:
+#                 return person.read()
+#             return {'message': f'Processed {name}, either a format error or {email} is duplicate'}, 210
+#
+#     # class for read/get
+#     class _Read(Resource):
+#         def get(self):
+#             return users_all()
+#
+#     # class for read/get
+#     class _ReadILike(Resource):
+#         def get(self, term):
+#             return users_ilike(term)
+#
+#     # class for update/put
+#     class _Update(Resource):
+#         def put(self, email, name):
+#             po = user_by_email(email)
+#             if po is None:
+#                 return {'message': f"{email} is not found"}, 210
+#             po.update(name)
+#             return po.read()
+#
+#     class _UpdateAll(Resource):
+#         def put(self, email, name, password, phone):
+#             po = user_by_email(email)
+#             if po is None:
+#                 return {'message': f"{email} is not found"}, 210
+#             po.update(name, password, phone)
+#             return po.read()
+#
+#     # class for delete
+#     class _Delete(Resource):
+#         def delete(self, userid):
+#             po = user_by_id(userid)
+#             if po is None:
+#                 return {'message': f"{userid} is not found"}, 210
+#             data = po.read()
+#             po.delete()
+#             return data
+#
+#     # building RESTapi resource
+#     api.add_resource(_Create, '/create/<string:name>/<string:email>/<string:password>/<string:phone>')
+#     api.add_resource(_Read, '/read/')
+#     api.add_resource(_ReadILike, '/read/ilike/<string:term>')
+#     api.add_resource(_Update, '/update/<string:email>/<string:name>')
+#     api.add_resource(_UpdateAll, '/update/<string:email>/<string:name>/<string:password>/<string:phone>')
+#     api.add_resource(_Delete, '/delete/<int:userid>')
 
 
 """ API testing section """
