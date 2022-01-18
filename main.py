@@ -113,6 +113,23 @@ def facts():
     response = requests.request("GET", url)
     return render_template("facts.html", facts=response.json())
 
+@app.route('/forum/', methods=['GET', 'POST'])
+def forum():
+    # submit button has been pushed
+    if request.form:
+        name = request.form.get("name")
+        forumList.append(name)
+        if len(name) != 0:  # input field has content
+            return render_template("forum.html", greetforum=forumList)
+    # starting and empty input default
+    return render_template("forum.html", greetforum="World")
+
+@app.route('/delete', methods=['GET', 'POST'])
+def delete():
+    if len(forumList) > 0:
+        forumList.pop(len(forumList) - 1)
+    return render_template("forum.html", nickname=forumList)
+
 @app.route('/RestaurantSearch/')
 def RestaurantSearch():
     return render_template("RestaurantSearch.html")
