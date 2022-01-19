@@ -43,10 +43,45 @@
         background-repeat: no-repeat;
     }
 
-    #FunTimesBackground3 {
-        padding: 100px;
-        background-color: white;
+
+    .FunTimesBackground3 {
+        font-family: 'Ubuntu', sans-serif;
         background-repeat: no-repeat;
+        position: relative;
+    }
+
+    .FunTimesBackground3_background, .FunTimesBackground3_overlay {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+
+    .FunTimesBackground3_background {
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background: url("https://www.prisagroup.com/wp-content/uploads/2016/07/AC_TPAAC_Exterior_Night_2_Low_Res.jpg");
+        animation-name: imageswitch1;
+        animation-duration: 20s;
+        animation-iteration-count: infinite;
+        z-index: 1
+    }
+
+    .FunTimesBackground3_overlay {
+        background: rgba(50, 50, 120, 0.57);
+        z-index: 2;
+    }
+
+    .FunTimesBackground3_content {
+        position: relative;
+        z-index: 3;
+        color: white;
+        min-height: 75vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     #FunTimesBackground4 {
@@ -305,6 +340,23 @@
 <div id = "FunTimesBackground3">
     <h2 style = "color: black; text-align: center; position: relative; top: -75px;">Amusement Parks</h2>
     <!-- <img src = "/static/assets/images/FerrisWheel.gif" style = "width: 800px; height: 600px; position: relative; left: 300px; top: -75px;"> -->
+</div>
+
+<div class="HotelBackground1">
+    <div class="HotelBackground1_background"></div>
+    <div class="HotelBackground1_overlay"></div>
+    <div class="HotelBackground1_content">
+        <h2 style = "color: black; text-align: center; position: relative; top: -75px;">Amusement Parks</h2>
+
+        <div class="search-container" style = "position: relative; left: -490px; top: -150px;">
+            <form autocomplete="off" action="/action_page.php">
+                <div class="autocomplete" style="width:300px; color:black;">
+                    <input id="myInput" type="text" name="myHotelSearch" placeholder="Search">
+                    <button type="submit" style = "position: relative; left: 300px; top: -45px;"><i class="fa fa-search"></i></button>
+                </div>
+            </form>
+        </div>
+    </div>
 </div>
 
 <div id = "FunTimesBackground4">

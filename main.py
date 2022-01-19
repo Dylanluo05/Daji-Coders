@@ -146,6 +146,10 @@ def Calculator():
 def FlightInformation():
     return render_template("FlightInformation.html")
 
+@app.route('/Forum/')
+def Forum():
+    return render_template("FlightInformation.html")
+
 # runs the application on the development server
 if __name__ == "__main__":
     app.run(debug=True,port=8000)

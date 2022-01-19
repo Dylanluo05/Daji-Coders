@@ -1,48 +1,234 @@
-{% extends "layouts/base.html" %}
+
 
 <!- This variable sets name of browser tab  -->
 {% set project = "Forum" %}
 
 <!- This is a replacement block for Body in base.html -->
-{% block body %}
+
+
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+    <style>
+        :root{
+            --white: whitesmoke;
+            --black: black;
+            --grey: grey;
+        }
+
+        html, body{
+            animation: fadein 2s;
+            -moz-animation: fadein 2s; /* Firefox */
+            -webkit-animation: fadein 2s; /* Safari and Chrome */
+            -o-animation: fadein 2s; /* Opera */
+            background-color: #F8F8F8;
+            color: var(--white);
+            width: 100%;
+            height: 100%;
+            margin: 0px;
+            padding: 0px;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        .dark-mode {
+            background-color: var(--white);
+            color: var(--black);
+        }
+
+        h1{
+            font-size: 5em;
+            font-family: 'Ubuntu', sans-serif;
+            color:black;
+        }
+
+        h2, h3, h4,h5, h6 {
+            font-family: 'Ubuntu', sans-serif;
+            color:black;
+        }
+
+        p{
+            color:black
+        }
+
+        .fa{
+            font-size: 1.5em;
+            letter-spacing: 0em;
+            transition: all .2s;
+            color: black;
+        }
+
+        /* .fa:hover{
+          transform: translateY(10px);
+        } */
+
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .container {
+            padding: 16px;
+            background-color: white;
+        }
+
+        input[type=text1], input[type=password] {
+            width: 100%;
+            padding: 15px;
+            margin: 5px 0 22px 0;
+            display: inline-block;
+            border: none;
+            background: #f1f1f1;
+        }
+
+        input[type=text1]:focus, input[type=password]:focus {
+            background-color: #ddd;
+            outline: none;
+        }
+
+        hr {
+            border: 1px solid #f1f1f1;
+            margin-bottom: 25px;
+        }
+
+        .registerbtn {
+            background-color: dodgerblue;
+            color: white;
+            padding: 16px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            opacity: 0.9;
+        }
+
+        .registerbtn:hover {
+            opacity: 1;
+        }
+
+        a {
+            color: dodgerblue;
+        }
+
+        .signin {
+            background-color: #f1f1f1;
+            text-align: center;
+        }
+
+        #parent { white-space: nowrap; }
+        .child { display: inline-block; }
+
+    </style>
+
+    <title> Register | A1 from Day 0 </title>
+
+</head>
+
+<body>
+{% include "layouts/navbar.html" %}
+
+<form action="">
+    <div class="container">
+        <h1>Travel Forum</h1>
+        <p>Hello user, this space is a forum for your thoughts on vacation.
+            You may collaborate with other users on travel issues, debates, and much more!</p>
+        <hr>
+
+        <label for="email"><b style = "color: black;">Username</b></label>
+        <input type="text1" placeholder="Enter Username" name="email" id="email" required>
+
+        <label for="psw"><b style = "color: black;">Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+<form action="/forum/" id="forum" method="POST">
+        <label for="greetforum"><b style = "color: black;">Comment</b></label>
+        <input name="name" id="greetforum" type="text1" placeholder="Write your comment here!" required>
+        <hr>
+
+        <button type = "submit" class="registerbtn">Comment</button>
+</form>
+    </div>
+
+    <div class="container signin">
+        <p style = "position:relative; left:-465px">Comments:</p>
+        <p style = "position: relative; text-align: center;"> Message: {{greetforum}}</p>
+    </div>
+</form>
+
+
+<script>
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+ <!--   <style>
+        html, body {
+            background-color: deepskyblue;
+            color: black;
+        }
+
+        .button {
+            background-color: white;
+            border: none;
+            color: white;
+            padding: 16px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+        }
+        .button1 {
+            background-color: white;
+            color: dodgerblue;
+            border: 2px solid dodgerblue;
+        }
+
+        .button1:hover {
+            background-color: dodgerblue;
+            color: white;
+        }
+
+    </style>
 
     <h1 style = "position: relative; text-align: center;">Travel Forum</h1>
-    <p style = "position: relative; text-align: center;"> Hello user, this space is a forum for your thoughts on vacation. You may collaborate with other users on travel issues, debates, and much more! </p>
+    <p style = "position: relative; text-align: center;"> Hello user, this space is a forum for your thoughts on vacation. You may collaborate with other users on travel issues, debates, and much more!</p>
 
     <div class="center-block" style="margin: 5% 5% 5%; text-align:left; font-family: gilroy,serif;">
         <div class="col-12">
-            <p> Message: {{greetforum}} </p>
+            <p style = "position: relative; text-align: center;"> Message: {{greetforum}} </p>
         </div>
         <div class="col-12">
-            <form action="/forum/" id="forum" method="POST" >
+            <form action="/forum/" id="forum" method="POST" style = "position: relative; text-align: center;">
                 <label for="greetforum">Enter message!</label>
                 <input name="name" id="greetforum">
-                <input type="submit" value="Enter!">
+                <input type="submit" value="Enter!" class = "button button1">
             </form>
-            <form action="/delete" id="remove" method="POST" >
+            <form action="/delete" id="remove" method="POST" style = "position: relative; text-align: center;">
                 <label>Delete Last Message</label>
-                <input type="submit" value="Delete!">
+                <input type="submit" value="Delete!" class = "button button1">
             </form>
         </div>
     </div>
 
     <html>
     <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dHJvcGljYWwlMjBiZWFjaHxlbnwwfHwwfHw%3D&w=1000&q=80" alt="Travel Picture.">
-    </html>
+    </html> -->
 
-    <style>
-        html, body {
-            background-color: deepskyblue;
-            color: black;
-        }
-    </style>
 
-{% endblock %}
+
 
 <!- This is turning off birds background from base.html -->
-
-{% block background %}
-    <script src="{{ url_for('static', filename='three.r119.min.js') }}"></script>
-    <script src="{{ url_for('static', filename='vanta.birds.min.js') }}"></script>
-
-{% endblock %}
