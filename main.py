@@ -122,7 +122,7 @@ def forum():
         if len(name) != 0:  # input field has content
             return render_template("forum.html", greetforum=forumList)
     # starting and empty input default
-    return render_template("forum.html", greetforum="World")
+    return render_template("forum.html", greetforum="Hello World")
 
 @app.route('/delete', methods=['GET', 'POST'])
 def delete():

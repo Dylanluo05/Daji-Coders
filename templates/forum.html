@@ -125,7 +125,7 @@
 
     </style>
 
-    <title> Register | A1 from Day 0 </title>
+    <title> Travel Forum </title>
 
 </head>
 
@@ -148,13 +148,19 @@
 <form action="/forum/" id="forum" method="POST">
 <div class = "container">
         <label for="greetforum"><b style = "color: black;">Comment</b></label>
-        <input name="name" id="greetforum" type="text1" placeholder="Write your comment here!" required>
+        <input name="name" id="greetforum" type="text1" placeholder="Write your comment here!">
         <hr>
         <button type = "submit" class="registerbtn">Comment</button>
+
+        <form action="/delete" id="remove" method="POST" style = "position: relative; text-align: center;">
+{#            <label>Delete Last Message</label>#}
+            <input type="submit" value="Delete last message" class = "button button1">
+        </form>
+
 </div>
     <div class="container signin">
         <p style = "position:relative; left:-465px">Comments:</p>
-        <p style = "position: relative; text-align: center;"> Message: {{greetforum}}</p>
+        <p style = "position: relative; text-align: center;"> User: {{name}} Message: {{greetforum}}</p>
     </div>
 </form>
 
