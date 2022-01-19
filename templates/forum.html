@@ -132,7 +132,7 @@
 <body>
 {% include "layouts/navbar.html" %}
 
-<form action="">
+<!-- <form action="">
     <div class="container">
         <h1>Travel Forum</h1>
         <p>Hello user, this space is a forum for your thoughts on vacation.
@@ -144,20 +144,20 @@
 
         <label for="psw"><b style = "color: black;">Password</b></label>
         <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+    </div> -->
 <form action="/forum/" id="forum" method="POST">
+<div class = "container">
         <label for="greetforum"><b style = "color: black;">Comment</b></label>
         <input name="name" id="greetforum" type="text1" placeholder="Write your comment here!" required>
         <hr>
-
         <button type = "submit" class="registerbtn">Comment</button>
-</form>
-    </div>
-
+</div>
     <div class="container signin">
         <p style = "position:relative; left:-465px">Comments:</p>
         <p style = "position: relative; text-align: center;"> Message: {{greetforum}}</p>
     </div>
 </form>
+
 
 
 <script>
