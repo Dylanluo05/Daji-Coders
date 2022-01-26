@@ -61,5 +61,5 @@ def sqlquery_2_list(rows):
 
 # Test queries
 if __name__ == "__main__":
-    for i in range(10):
+    for i in range(1):
         print(users_all())
