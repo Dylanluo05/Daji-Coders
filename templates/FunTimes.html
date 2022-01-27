@@ -37,9 +37,39 @@
         background-repeat: no-repeat;
     }
 
-    #FunTimesBackground2 {
-        padding: 50px;
-        background-color: slategray;
+    /* #FunTimesSubBackground1 {
+        background-color: #013A6B;
+        background-image: -webkit-linear-gradient(30deg, #013A6B 50%, #004E95 50%);
+        padding: 100px;
+        color: white;
+        background-repeat: no-repeat;
+    } */
+
+
+    #FunTimesSubBackground1 {
+        /* background-color: #013A6B;
+        background-image: -webkit-linear-gradient(30deg, #004E95 50%, rebeccapurple 50%); */
+        /* background-image: linear-gradient(darkblue, blueviolet); */
+        background-color: black;
+        padding: 150px;
+        color: white;
+        background-repeat: no-repeat;
+    }
+
+
+    #FunTimesSubBackground3 {
+        background-color: #013A6B;
+        background-image: -webkit-linear-gradient(30deg, #004E95 50%, rebeccapurple 50%);
+        padding: 100px;
+        color: white;
+        background-repeat: no-repeat;
+    }
+
+    #FunTimesSubBackground4 {
+        background-color: #013A6B;
+        background-image: -webkit-linear-gradient(30deg, purple 50%, mediumvioletred 50%);
+        padding: 100px;
+        color: white;
         background-repeat: no-repeat;
     }
 
@@ -82,21 +112,115 @@
     }
 
     #FunTimesBackground4 {
-        padding: 400px;
-        background-color: white;
+        font-family: 'Ubuntu', sans-serif;
         background-repeat: no-repeat;
+        position: relative;
+    }
+
+    .FunTimesBackground4_background, .FunTimesBackground4_overlay {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+
+    .FunTimesBackground4_background {
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background: url("https://cdn.wallpapersafari.com/40/47/qGeFlQ.jpg");
+        z-index: 1
+    }
+
+    .FunTimesBackground4_overlay {
+        background: rgba(50, 50, 120, 0.57);
+        z-index: 2;
+    }
+
+    .FunTimesBackground4_content {
+        position: relative;
+        z-index: 3;
+        color: white;
+        min-height: 75vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     #FunTimesBackground5 {
-        padding: 100px;
-        background-color: white;
+        font-family: 'Ubuntu', sans-serif;
         background-repeat: no-repeat;
+        position: relative;
     }
 
-    #FunTimesBackground6 {
-        padding: 100px;
-        background-color: white;
+    .FunTimesBackground5_background, .FunTimesBackground5_overlay {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+
+    .FunTimesBackground5_background {
+        background-size: cover;
+        background-position: center center;
         background-repeat: no-repeat;
+        background: url("https://wallpaper.dog/large/11040083.jpg");
+        z-index: 1
+    }
+
+    .FunTimesBackground5_overlay {
+        background: rgba(178, 102, 255, 0.37);
+        z-index: 2;
+    }
+
+    .FunTimesBackground5_content {
+        position: relative;
+        z-index: 3;
+        color: white;
+        min-height: 75vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    #FunTimesBackground6 {
+        font-family: 'Ubuntu', sans-serif;
+        background-repeat: no-repeat;
+        position: relative;
+    }
+
+    .FunTimesBackground6_background, .FunTimesBackground6_overlay {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+
+    .FunTimesBackground6_background {
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background: url("https://www.libertytravel.com/sites/default/files/styles/full_size/public/19201080ssss.jpg?itok=6Kbogw_5");
+        z-index: 1
+    }
+
+    .FunTimesBackground6_overlay {
+        background: rgba(255, 51, 153, 0.27);
+        z-index: 2;
+    }
+
+    .FunTimesBackground6_content {
+        position: relative;
+        z-index: 3;
+        color: white;
+        min-height: 75vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     #FunTimesBackground7 {
@@ -249,14 +373,13 @@
         background-color: white;
         border: none;
         color: white;
-        padding: 16px 32px;
+        padding: 8px 16px;
         text-align: center;
         text-decoration: none;
         display: inline-block;
         font-size: 16px;
         margin: 4px 2px;
         transition-duration: 0.4s;
-        border-radius: 40px;
         cursor: pointer;
     }
     .button1 {
@@ -272,37 +395,127 @@
 
     .button2 {
         background-color: white;
-        color: yellow;
-        border: 2px solid yellow;
+        color: dodgerblue;
+        border: 2px solid dodgerblue;
     }
 
     .button2:hover {
-        background-color: yellow;
+        background-color: dodgerblue;
         color: white;
     }
 
     .button3 {
         background-color: white;
-        color: dodgerblue;
-        border: 2px solid dodgerblue;
+        color: red;
+        border: 2px solid red;
     }
 
     .button3:hover {
-        background-color: dodgerblue;
+        background-color: red;
         color: white;
     }
 
     .button4 {
         background-color: white;
-        color: red;
-        border: 2px solid red;
+        color: darkslateblue;
+        border: 2px solid darkslateblue;
     }
 
     .button4:hover {
-        background-color: red;
+        background-color: darkslateblue;
         color: white;
     }
 
+    .btn {
+        line-height: 50px;
+        height: 50px;
+        text-align: center;
+        width: 250px;
+        cursor: pointer;
+        display: inline-block;
+        font-size: 16px;
+        padding: 1px 3px;
+        color: #FFF;
+    }
+
+    .btn-two {
+        color: #FFF;
+        transition: all 0.5s;
+        position: relative;
+    }
+    .btn-two span {
+        color: #FFF;
+        z-index: 2;
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+    .btn-two::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        transition: all 0.5s;
+        border: 1px solid rgba(255,255,255,0.7);
+        background-color: rgba(255,255,255,0.3);
+    }
+    .btn-two::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        transition: all 0.5s;
+        color: white;
+        border: 1px solid rgba(255,255,255,0.7);
+        background-color: rgba(255,255,255,0.3);
+    }
+
+    .btn-two:hover::before {
+        transform: rotate(-24deg);
+        background-color: rgba(255,255,255,0);
+        color: #FFF;
+    }
+
+    .btn-two:hover::after {
+        transform: rotate(24deg);
+        background-color: rgba(255,255,255,0);
+        color: #FFF;
+    }
+
+    .btn-two:hover::after {
+        animation-name: rotatecw;
+        animation-duration: 2s;
+    }
+    .btn-two:hover::before {
+        animation-name: rotateccw;
+        animation-duration: 3s;
+    }
+    .btn-two:hover::after, .btn-two:hover::before {
+        left: 25px;
+        top: -75px;
+        width: 200px;
+        height: 200px;
+
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+
+    @keyframes rotatecw {
+        from {transform: rotate(0deg);}
+        to {transform: rotate(360deg);}
+    }
+
+    @keyframes rotateccw {
+        from {transform: rotate(0deg);}
+        to {transform: rotate(-360deg);}
+    }
 </style>
 
 <body>
@@ -322,45 +535,61 @@
 </div>
 
 
-<div id = "FunTimesBackground2">
-    <h4 style = "color:black; position: relative; top: -25px;">Key:</h4>
-    <!-- <button class = "button button1" onclick = "document.getElementById('FunTimesBackground3').scrollIntoView();">Amusement Parks!</button>
-    <button class = "button button2" onclick = "document.getElementById('FunTimesBackground4').scrollIntoView();">Beaches!</button>
-    <button class = "button button3" onclick = "document.getElementById('FunTimesBackground5').scrollIntoView();">Skiing/Snowboarding!</button>
-    <button class = "button button4" onclick = "document.getElementById('FunTimesBackground6').scrollIntoView();">National Parks!</button> -->
-    <button type="button" class="btn btn-warning" onclick = "document.getElementById('FunTimesBackground3').scrollIntoView();">Amusement Parks!</button>
-    <button type="button" class="btn btn-primary" onclick = "document.getElementById('FunTimesBackground4').scrollIntoView();">Beaches!</button>
-    <button type="button" class="btn btn-success" onclick = "document.getElementById('FunTimesBackground5').scrollIntoView();">Skiing and Snowboarding!</button>
-    <button type="button" class="btn btn-info" onclick = "document.getElementById('FunTimesBackground6').scrollIntoView();">National Parks!</button>
+<div id="FunTimesSubBackground1">
+        <!-- <button class = "button button1" onclick = "document.getElementById('FunTimesBackground3').scrollIntoView();">Amusement Parks!</button>
+        <button class = "button button2" onclick = "document.getElementById('FunTimesBackground4').scrollIntoView();">Beaches!</button>
+        <button class = "button button3" onclick = "document.getElementById('FunTimesBackground5').scrollIntoView();">Skiing/Snowboarding!</button>
+        <button class = "button button4" onclick = "document.getElementById('FunTimesBackground6').scrollIntoView();">National Parks!</button> -->
+        <button type="button" class="btn btn-two" onclick = "document.getElementById('FunTimesBackground3').scrollIntoView();" style = "position:relative; left:0px;">Amusement Parks!</button>
+        <button type="button" class="btn btn-two" onclick = "document.getElementById('FunTimesBackground4').scrollIntoView();" style = "position:relative; left:100px;">Beaches!</button>
+        <button type="button" class="btn btn-two" onclick = "document.getElementById('FunTimesBackground5').scrollIntoView();" style = "position:relative; left:200px;">Skiing and Snowboarding!</button>
+        <button type="button" class="btn btn-two" onclick = "document.getElementById('FunTimesBackground6').scrollIntoView();" style = "position:relative; left:300px;">National Parks!</button>
 </div>
 
     <!-- <img src = "/static/assets/images/FerrisWheel.gif" style = "width: 800px; height: 600px; position: relative; left: 300px; top: -75px;"> -->
 
-<div class="FunTimesBackground3">
+<div id="FunTimesBackground3">
     <div class="FunTimesBackground3_background"></div>
     <div class="FunTimesBackground3_overlay"></div>
     <div class="FunTimesBackground3_content">
         <h2 style = "color: white; position: relative; top: -200px; left: 0px;">Amusement Parks</h2>
-
     </div>
 </div>
 
-<div id = "FunTimesBackground4">
-    <h2 style = "color: black; text-align: center;">Beaches</h2>
+<div id ="FunTimesSubBackground1">
+
 </div>
 
-<div id = "FunTimesBackground5">
-    <h2 style = "color: black; text-align: center;">Skiing/Snowboarding</h2>
-    <img src = "https://ak.picdn.net/shutterstock/videos/1058205313/thumb/1.jpg" style = "width: 400px; height: 225px; position: relative;">
+<div id="FunTimesBackground4">
+    <div class="FunTimesBackground4_background"></div>
+    <div class="FunTimesBackground4_overlay"></div>
+    <div class="FunTimesBackground4_content">
+        <h2 style = "color: white; position: relative; top: -200px; left: 0px;">Relax on Beaches</h2>
+    </div>
 </div>
 
-<div id = "FunTimesBackground6">
-    <h2 style = "color: black; text-align: center;">National Parks</h2>
-    <img src = "https://www.apple.com/newsroom/images/values/environment/Apple_national-parks-badge-3_08242020_inline.gif.large.gif" style = "width: 225px; height: 225px; position: relative;">
+<div id ="FunTimesSubBackground1">
+
 </div>
 
-<div id = "FunTimesBackground7">
+<div id="FunTimesBackground5">
+    <div class="FunTimesBackground5_background"></div>
+    <div class="FunTimesBackground5_overlay"></div>
+    <div class="FunTimesBackground5_content">
+        <h2 style = "color: white; position: relative; top: -200px; left: 0px;">Explore the Snow</h2>
+    </div>
+</div>
 
+<div id ="FunTimesSubBackground1">
+
+</div>
+
+<div id="FunTimesBackground6">
+    <div class="FunTimesBackground6_background"></div>
+    <div class="FunTimesBackground6_overlay"></div>
+    <div class="FunTimesBackground6_content">
+        <h2 style = "color: white; position: relative; top: -200px; left: 0px;">Embrace Nature</h2>
+    </div>
 </div>
 
 
