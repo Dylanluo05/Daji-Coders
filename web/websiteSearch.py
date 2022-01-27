@@ -47,14 +47,18 @@ def page_by_URL(pageURL):
 
 
 # Default URL
-@websiteSearch.route('/')
+@websiteSearch.route('/', methods=['GET', 'POST'])
 def searchWebsite():
     """obtains all Users from table and loads Admin Form"""
-    return render_template("web/searchWebsite.html", table=pages_all())
+    if request.form:
+        term = request.form.get("term")
+        if len(term) != 0:
+            return render_template("web/searchWebsite.html", term=term)
+    return render_template("web/searchWebsite.html", term="")
 
 
 # CRUD create/add
-@websiteSearch.route('/create/', methods=["POST"])
+@websiteSearch.route('/create/', methods=['GET', 'POST'])
 def create():
     """gets data from form and add it to Users table"""
     if request.form:
@@ -64,7 +68,7 @@ def create():
             request.form.get("pageDesc"),
         )
         po.create()
-    return redirect(url_for('web.searchWebsite'))
+    return redirect(url_for('web.enterWeb'))
 
 
 # CRUD read
@@ -77,7 +81,7 @@ def read():
         po = page_by_id(pageID)
         if po is not None:
             table = [po.read()]  # placed in list for easier/consistent use within HTML
-    return render_template("web/searchWebsite.html", table=table)
+    return render_template("web/enterWeb.html", table=table)
 
 
 # CRUD update
@@ -106,13 +110,12 @@ def delete():
 
 
 # Search Form
-@websiteSearch.route('/search/')
-def search():
-    """loads form to search Users data"""
-    return render_template("web/searchWebsite.html")
+# @websiteSearch.route('/search/')
+# def search():
+#    """loads form to search Users data"""
+#    return render_template("web/searchWebsite.html", term=search)
 
-
-# Search request and response
+        # Search request and response
 @websiteSearch.route('/search/term/', methods=["POST"])
 def search_term():
     """ obtain term/search request """
@@ -192,15 +195,15 @@ def webApi_tester():
     API = 0
     METHOD = 1
     tests = [
-        ['/create/Boat Search/wilma@bedrock.org/123wifli/0001112222', "post"],
-        ['/create/Fred Flintstone/fred@bedrock.org/123wifli/0001112222', "post"],
-        ['/read/', "get"],
-        ['/read/ilike/John', "get"],
-        ['/read/ilike/com', "get"],
-        ['/update/wilma@bedrock.org/Wilma S Flintstone/123wsfli/0001112229', "put"],
-        ['/update/wilma@bedrock.org/Wilma Slaghoople Flintstone', "put"],
-        ['/delete/4', "delete"],
-        ['/delete/5', "delete"],
+#        ['/create/Boat Search/wilma@bedrock.org/123wifli/0001112222', "post"],
+#        ['/create/Fred Flintstone/fred@bedrock.org/123wifli/0001112222', "post"],
+#        ['/read/', "get"],
+#        ['/read/ilike/John', "get"],
+#        ['/read/ilike/com', "get"],
+#        ['/update/wilma@bedrock.org/Wilma S Flintstone/123wsfli/0001112229', "put"],
+#        ['/update/wilma@bedrock.org/Wilma Slaghoople Flintstone', "put"],
+#        ['/delete/4', "delete"],
+#        ['/delete/5', "delete"],
     ]
 
     # loop through each test condition and provide feedback
@@ -226,14 +229,14 @@ def webApi_tester():
             print("unknown error")
 
 
-def api_printer():
+def webApi_printer():
     print()
-    print("Users table")
-    for user in users_all():
-        print(user)
+    print("pages table")
+    for page in pages_all():
+        print(page)
 
 
-"""validating api's requires server to be running"""
+# """validating api's requires server to be running"""
 if __name__ == "__main__":
-    api_tester()
-    api_printer()
+    webApi_tester()
+    webApi_printer()

@@ -20,7 +20,6 @@ class webPages(db.Model):
     pageURL = db.Column(db.String(255), unique=True, nullable=False)
     pageDesc = db.Column(db.String(255), unique=False, nullable=False)
 
-
     def __init__(self, pageName, pageURL, pageDesc):
         self.pageName = pageName
         self.pageURL = pageURL
@@ -43,7 +42,6 @@ class webPages(db.Model):
             "pageDesc": self.pageDesc
         }
 
-
     def update(self, pageName, pageURL='', pageDesc=''):
         if len(pageName) > 0:
             self.pageName = pageName
@@ -62,11 +60,15 @@ class webPages(db.Model):
 
 def model_tester():
     db.create_all()
-    p1 = webPages(pageName='Fun Times', pageURL='http://127.0.0.1:8000/FunTimes/', pageDesc='Fun Times for fun people :)')
-    p2 = webPages(pageName='Hotel Search', pageURL='http://127.0.0.1:8000/HotelSearch/', pageDesc='Find a hotel for your next vacation here!')
+    p1 = webPages(pageName='Fun Times', pageURL='http://127.0.0.1:8000/FunTimes/',
+                  pageDesc='Fun Times for fun people :)')
+    p2 = webPages(pageName='Hotel Hunter', pageURL='http://127.0.0.1:8000/HotelSearch/',
+                  pageDesc='Find a hotel for your next vacation here!')
     p3 = webPages(pageName='Car Rental', pageURL='http://127.0.0.1:8000/CarSearch/', pageDesc='Rent a car here!')
-    p4 = webPages(pageName='Foodie Finder', pageURL='http://127.0.0.1:8000/RestaurantSearch/', pageDesc='Require sustenance during your trip? FInd somewhere to eat here!')
-    p5 = webPages(pageName='Currency Exchange', pageURL='http://127.0.0.1:8000/currency_exchange/', pageDesc='Learn how much your money is worth in another country')
+    p4 = webPages(pageName='Foodie Finder', pageURL='http://127.0.0.1:8000/RestaurantSearch/',
+                  pageDesc='Require sustenance during your trip? FInd somewhere to eat here!')
+    p5 = webPages(pageName='Currency Exchange', pageURL='http://127.0.0.1:8000/currency_exchange/',
+                  pageDesc='Learn how much your money is worth in another country')
     table = [p1, p2, p3, p4, p5]
     for row in table:
         try:
@@ -81,8 +83,8 @@ def model_printer():
     print("------------")
     print("Table: webPages with SQL query")
     print("------------")
-    #result = db.session.execute('select * from webpages')
-    #print(result.keys())
+    # result = db.session.execute('select * from webpages')
+    # print(result.keys())
     result = webPages.query.all()
     json_ready = [page.read() for page in result]
     for row in json_ready:
