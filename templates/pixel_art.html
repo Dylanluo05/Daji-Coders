@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends "layouts/base.html" %}
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        font-family: monospace;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    canvas {
+        display:block;
+    }
+
+    .upload {
+        position: absolute;
+        top: 2%;
+        right: 1%;
+        background: #a7d5ef;
+        border: 2px dashed #3caff2;
+        padding: 1rem 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .result {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+</style>
+
+{% block body %}
+
+<body>
+    <div class="upload">
+        <h2>Choose a Image</h2>
+        <input type="file" onchange="encodeImageFileAsURL(this)" />
+    </div>
+    <div class="result">
+        <canvas id="canvas"></canvas>
+    </div>
+    <script>
+        var canvas = document.getElementById('canvas');
+        if (canvas.getContext) {
+            var imageBase64 , image;
+            var ctx = canvas.getContext('2d');
+            function encodeImageFileAsURL(element) {
+                var file = element.files[0];
+                var reader = new FileReader();
+                reader.onloadend = function() {
+                    console.log('RESULT =>', reader.result);
+                    imageBase64 = reader.result;
+                    canvasStart();
+                }
+                reader.readAsDataURL(file);
+            }
+
+            function canvasStart () {
+                image = new Image();
+                image.onload = drawScene;
+                image.src = imageBase64;
+                function drawScene() {
+                    // canvas size
+                    canvas.width = window.innerWidth;
+                    canvas.height = window.innerHeight;
+                    // image
+                    ctx.drawImage(image, 0, 0);
+                    var imageData = ctx.getImageData(0, 0, image.width, image.height);
+                    // If the Alpha is over 128, push the pixel into particles array
+                    var particles = [];
+                    for (var y = 0, y2 = imageData.height; y < y2; y++) {
+                        for (var x = 0, x2 = imageData.width; x < x2; x++) {
+                            if (imageData.data[(x * 4 + y * 4 * imageData.width) + 3] > 128) {
+                                var p = ctx.getImageData(x, y, 1, 1).data;
+                                var hex = "#" + ("000000" + rgbToHex(p[0], p[1], p[2])).slice(-6);
+                                var particle = {
+                                    x : x,
+                                    y : y,
+                                    color: hex
+                                };
+                                particles.push(particle);
+                            }
+                        }
+                    }
+                    ctx.clearRect(0,0,canvas.width, canvas.height);
+                    // size
+                    var sz = 5;
+                    // animate
+                    var counter = 0;
+                    var fps = 60;
+                    var now;
+                    var then = Date.now();
+                    var interval = 60/fps;
+                    var delta;
+                    function animate() {
+                        var Raf = requestAnimationFrame(animate);
+                        now = Date.now();
+                        delta = now - then;
+                        if (delta > interval) {
+                            then = now - (delta % interval);
+                            if(counter < particles.length) {
+                                var particle = particles[counter];
+                                ctx.fillStyle = particle.color;
+                                ctx.fillRect(particle.x*sz,particle.y*sz,sz,sz);
+                                counter++;
+                            } else {
+                                cancelAnimationFrame(Raf);
+                            }
+                        }
+                    }
+                    animate();
+                }
+
+                function rgbToHex(r, g, b) {
+                    if (r > 255 || g > 255 || b > 255)
+                        throw "Invalid color component";
+                    return ((r << 16) | (g << 8) | b).toString(16);
+                }
+            }
+        } else {
+            console.log('Canvas is not supported !!!');
+        }
+    </script>
+</body>
+{% endblock %}
+</html>

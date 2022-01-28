@@ -13,6 +13,8 @@ Jean Kim, Dylan Luo, Isabelle Gunawan, Alex Do
 - [Sprint 4 Week 4](#sprint-4-week-4)
 - [Sprint 5 Week 5](#sprint-5-week-5)
 - [Sprint 6 Week 6](#sprint-6-week-6)
+- [Sprint 7 Week 7](#sprint-7-week-7)
+
 
 
 ### Runtime Link
@@ -119,3 +121,13 @@ Jean Kim | Week 6 Midterm Vocabulary and Competency | [Link to wiki page with al
 Dylan Luo | Week 6 Midterm Vocabulary and Competency | [Link to wiki page with all terms, definitions, and examples](https://github.com/Dylanluo05/Daji-Coders/wiki/Tech-Talk-6-Vocab-Competency)
 Isabelle Gunawan | Week 6 Midterm Vocabulary and Competency | [Link to wiki page with all terms, definitions, and examples](https://github.com/Dylanluo05/Daji-Coders/wiki/Tech-Talk-6-Vocab-Competency)
 Alex Do | Week 6 Midterm Vocabulary and Competency | [Link to wiki page with all terms, definitions, and examples](https://github.com/Dylanluo05/Daji-Coders/wiki/Tech-Talk-6-Vocab-Competency)
+
+### Sprint 7 Week 7
+
+Name | Requirements | Evidence | Notes and Scores |
+---- | ------------ | -------- | ----- |
+Jean Kim | 3.16-3.18 College Board Work and Quizzes, Bring in CRUD SQL and ASYNC Operations to project, work on travel forum page, to do list, and vacation facts cards | [Jean Kim and Alex Do Journal](https://docs.google.com/document/d/1Z-1t7JIvJnqctDlQt7ALcxyDKhtoPdDNBLIA8d82Qgo/edit?usp=sharing) // [Link to Scrum Board Ticket](https://github.com/Dylanluo05/Daji-Coders/issues/57) // [Link to Scrum Board Ticket](https://github.com/Dylanluo05/Daji-Coders/issues/58) // [Link to Scrum Board Ticket](https://github.com/Dylanluo05/Daji-Coders/issues/59) // [Link to Scrum Board Ticket](https://github.com/Dylanluo05/Daji-Coders/issues/60)
+Dylan Luo | 3.16-3.18 College Board Work and Quizzes, Add CSS and design to all existing pages, work on Activities for Fun Times page, help with CRUD operations | [Dylan Luo and Isabelle Gunawan Journal](https://docs.google.com/document/d/1LDHFMI3j1qDKWwgjiuCrH2cgK1KQCoKsQF3OOdGBvIw/edit?usp=sharing) // [Link to Scrum Board Ticket](https://github.com/Dylanluo05/Daji-Coders/issues/61)
+Isabelle Gunawan | 3.16-3.18 College Board Work and Quizzes, Work on website search bar, other PBL features for pictures page through pixel art | [Dylan Luo and Isabelle Gunawan Journal](https://docs.google.com/document/d/1LDHFMI3j1qDKWwgjiuCrH2cgK1KQCoKsQF3OOdGBvIw/edit?usp=sharing) // [Link to Scrum Board ticket](https://github.com/Dylanluo05/Daji-Coders/issues/20) // [Link to Scrum Board Ticket](https://github.com/Dylanluo05/Daji-Coders/issues/63)
+Alex Do | 3.16-3.18 College Board Work and Quizzes, continue updating deployed website and jekyll subdomain, add to flight information page, start on databases for existing pages | [Jean Kim and Alex Do Journal](https://docs.google.com/document/d/1Z-1t7JIvJnqctDlQt7ALcxyDKhtoPdDNBLIA8d82Qgo/edit?usp=sharing) // [Link to Scrum Board Ticket](https://github.com/Dylanluo05/Daji-Coders/issues/64) // [Link to deployed website](https://dajicoders.tk/)
+

@@ -24,6 +24,8 @@ app.register_blueprint(app_y2022)
 app.register_blueprint(websiteSearch)
 forumList = []
 # connects default URL to render index.html
+
+
 @app.route('/')
 def index():
     return render_template("index.html")
@@ -64,6 +66,7 @@ def AboutDylan1():
     # starting and empty input default
     return render_template("AboutDylan.html", nickname="World")
 
+
 @app.route('/AboutIsabelle/', methods=['GET', 'POST'])
 def AboutIsabelle():
     url = "https://iata-and-icao-codes.p.rapidapi.com/airlines"
@@ -77,6 +80,7 @@ def AboutIsabelle():
     print(response.text)
     return render_template("AboutIsabelle.html", output=response.json())
 
+
 @app.route('/AboutJean/', methods=['GET', 'POST'])
 def AboutJean():
     url = "https://world-time2.p.rapidapi.com/timezone/Europe/London"
@@ -89,17 +93,21 @@ def AboutJean():
     data = json.loads(response.text)
     return render_template("AboutJean.html", output=response.json())
 
+
 @app.route('/HotelSearch/')
 def HotelSearch():
     return render_template("HotelSearch.html")
+
 
 @app.route('/FunTimes/')
 def FunTimes():
     return render_template("FunTimes.html")
 
+
 @app.route('/currency_exchange/', methods=['GET', 'POST'])
 def currency_exchange():
     return render_template("currency_exchange.html")
+
 
 @app.route('/fact', methods=['GET', 'POST'])
 def fact():
@@ -107,11 +115,13 @@ def fact():
     response = requests.request("GET", url)
     return render_template("fact.html", fact=response.json())
 
+
 @app.route('/facts/', methods=['GET', 'POST'])
 def facts():
     url = "http://localhost:5000/api/facts"
     response = requests.request("GET", url)
     return render_template("facts.html", facts=response.json())
+
 
 @app.route('/forum/', methods=['GET', 'POST'])
 def forum():
@@ -124,23 +134,28 @@ def forum():
     # starting and empty input default
     return render_template("forum.html", greetforum="Hello World")
 
+
 @app.route('/delete', methods=['GET', 'POST'])
 def delete():
     if len(forumList) > 0:
         forumList.pop(len(forumList) - 1)
     return render_template("forum.html", nickname=forumList)
 
+
 @app.route('/RestaurantSearch/')
 def RestaurantSearch():
     return render_template("RestaurantSearch.html")
+
 
 @app.route('/CarSearch/')
 def CarSearch():
     return render_template("CarSearch.html")
 
+
 @app.route('/Calculator/')
 def Calculator():
     return render_template("Calculator.html")
+
 
 @app.route('/FlightInformation/')
 def FlightInformation():
@@ -153,6 +168,12 @@ def travelcard():
 @app.route('/vacationtodo/')
 def vacationtodo():
     return render_template("vacationtodo.html")
+
+
+@app.route('/pixel_art/')
+def pixel_art():
+    return render_template("pixel_art.html")
+
 
 # runs the application on the development server
 if __name__ == "__main__":
