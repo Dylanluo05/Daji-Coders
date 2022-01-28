@@ -66,7 +66,7 @@ def model_tester():
                   pageDesc='Find a hotel for your next vacation here!')
     p3 = webPages(pageName='Car Rental', pageURL='http://127.0.0.1:8000/CarSearch/', pageDesc='Rent a car here!')
     p4 = webPages(pageName='Foodie Finder', pageURL='http://127.0.0.1:8000/RestaurantSearch/',
-                  pageDesc='Require sustenance during your trip? FInd somewhere to eat here!')
+                  pageDesc='Require sustenance during your trip? Find somewhere to eat here!')
     p5 = webPages(pageName='Currency Exchange', pageURL='http://127.0.0.1:8000/currency_exchange/',
                   pageDesc='Learn how much your money is worth in another country')
     table = [p1, p2, p3, p4, p5]
