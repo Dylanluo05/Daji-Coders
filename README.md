@@ -126,8 +126,8 @@ Alex Do | Week 6 Midterm Vocabulary and Competency | [Link to wiki page with all
 
 Name | Requirements | Evidence | Notes and Scores |
 ---- | ------------ | -------- | ----- |
-Jean Kim | 3.16-3.18 College Board Work and Quizzes, Bring in CRUD SQL and ASYNC Operations to project, work on travel forum page, to do list, and vacation facts cards
-Dylan Luo | 3.16-3.18 College Board Work and Quizzes, Add CSS and design to all existing pages, work on Activities for Fun Times page, help with CRUD operations
-Isabelle Gunawan | 3.16-3.18 College Board Work and Quizzes, Work on website search bar, other PBL features for pictures page
-Alex Do | 3.16-3.18 College Board Work and Quizzes, continue updating deployed website and jekyll subdomain, add to flight information page, start on databases for existing pages
+Jean Kim | 3.16-3.18 College Board Work and Quizzes, Bring in CRUD SQL and ASYNC Operations to project, work on travel forum page, to do list, and vacation facts cards | [Jean Kim and Alex Do Journal](https://docs.google.com/document/d/1Z-1t7JIvJnqctDlQt7ALcxyDKhtoPdDNBLIA8d82Qgo/edit?usp=sharing)
+Dylan Luo | 3.16-3.18 College Board Work and Quizzes, Add CSS and design to all existing pages, work on Activities for Fun Times page, help with CRUD operations | [Dylan Luo and Isabelle Gunawan Journal](https://docs.google.com/document/d/1LDHFMI3j1qDKWwgjiuCrH2cgK1KQCoKsQF3OOdGBvIw/edit?usp=sharing)
+Isabelle Gunawan | 3.16-3.18 College Board Work and Quizzes, Work on website search bar, other PBL features for pictures page | [Dylan Luo and Isabelle Gunawan Journal](https://docs.google.com/document/d/1LDHFMI3j1qDKWwgjiuCrH2cgK1KQCoKsQF3OOdGBvIw/edit?usp=sharing)
+Alex Do | 3.16-3.18 College Board Work and Quizzes, continue updating deployed website and jekyll subdomain, add to flight information page, start on databases for existing pages | [Jean Kim and Alex Do Journal](https://docs.google.com/document/d/1Z-1t7JIvJnqctDlQt7ALcxyDKhtoPdDNBLIA8d82Qgo/edit?usp=sharing)
 
