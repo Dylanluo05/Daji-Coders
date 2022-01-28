@@ -146,6 +146,14 @@ def Calculator():
 def FlightInformation():
     return render_template("FlightInformation.html")
 
+@app.route('/travelcard/')
+def travelcard():
+    return render_template("travelcard.html")
+
+@app.route('/vacationtodo/')
+def vacationtodo():
+    return render_template("vacationtodo.html")
+
 # runs the application on the development server
 if __name__ == "__main__":
     app.run(debug=True,port=8000)
