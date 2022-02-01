@@ -175,6 +175,10 @@ def pixel_art():
     return render_template("pixel_art.html")
 
 
+@app.route('/AmusementParksBookTickets/')
+def AmusementParksBookTickets():
+    return render_template("AmusementParksBookTickets.html")
+
 # runs the application on the development server
 if __name__ == "__main__":
     app.run(debug=True,port=8000)
