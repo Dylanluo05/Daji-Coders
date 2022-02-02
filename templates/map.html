@@ -1,0 +1,47 @@
+{% include "layouts/navbar.html" %}
+
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block body %}
+
+        <style>
+        #map {
+            width: 75%;
+            height: 500px;
+            background-color: gray;
+            position: relative;
+            left: 220px;
+            top: 150px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <title>Maps</title>
+</head>
+<body>
+<h1 style="text-align: center;color: #1da1f2">Interactive Google Maps</h1>
+    <div id="map"></div>
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBna_dA2QPGn9SWMRm1_TuGMjCCra80DKI&callback=initMap">
+    </script>
+    <script>
+        function initMap() {
+            var dumbo = {lat: 40.700802, lng:73.987602};
+            var mapOptions = {
+                center: dumbo,
+                zoom: 10
+            };
+            var googlemap = new google.maps.Map(document.getElementById("map"), mapOptions);
+        }
+        var googlemap = new google.maps.Map(document.getElementById("map"), mapOptions);
+        var marker = new google.maps.Marker({
+            position: siliconValley,
+            map: googlemap
+        });
+    </script>
+</body>
+{% endblock %}
+</html>
