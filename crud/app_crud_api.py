@@ -109,7 +109,7 @@ class UsersAPI:
 
 def api_tester():
     # local host URL for model
-    url = 'http://localhost:5222/crud_api'
+    url = 'http://localhost:8000/crud_api'
 
     # test conditions
     API = 0

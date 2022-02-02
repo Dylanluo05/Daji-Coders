@@ -4,13 +4,11 @@ inspiration from https://www.youtube.com/watch?v=QKcVjdLEX_s
 -->
 {% extends "layouts/base.html" %}
 
-{% set project = "Database Search" %}
 {% block head %}
-    <title>SQL search</title>
+<title>SQL search</title>
 {% endblock %}
 
 {% block body %}
-    <body style="background-color:powderblue; height: 2000px">
     <div class="container py-4 bg-primary">
         <!-- heading -->
         <header class="pb-3 mb-4 border-bottom">
@@ -57,68 +55,33 @@ inspiration from https://www.youtube.com/watch?v=QKcVjdLEX_s
                     "content-type": "application/json"
                 })
             })
-                // async then replies with response header
-                .then(function (response) {
-                    // prepare HTML search result container for new output
-                    const resultContainer = document.getElementById("result");
-                    // clean up from previous search
-                    while (resultContainer.firstChild) {
-                        resultContainer.removeChild(resultContainer.firstChild);
-                    }
-                    // trap error response from Web API
-                    if (response.status !== 200) {
-                        const errorMsg = 'Database response error: ' + response.status;
-                        console.log(errorMsg);
+            // async then replies with response header
+            .then(function (response) {
+                // prepare HTML search result container for new output
+                const resultContainer = document.getElementById("result");
+                // clean up from previous search
+                while (resultContainer.firstChild) {
+                    resultContainer.removeChild(resultContainer.firstChild);
+                }
+                // trap error response from Web API
+                if (response.status !== 200) {
+                    const errorMsg = 'Database response error: ' + response.status;
+                    console.log(errorMsg);
+                    const div = document.createElement("div");
+                    div.innerHTML = errorMsg;
+                    resultContainer.appendChild(div);
+                    return;
+                }
+                // response contains valid result
+                response.json().then(function(data) {
+                    // loop through JSON and build HTML output
+                    for (let i = 0; i < data.length; i++) {
                         const div = document.createElement("div");
-                        div.innerHTML = errorMsg;
+                        div.innerHTML = data[i].name + ' ' + data[i].email;
                         resultContainer.appendChild(div);
-                        return;
                     }
-                    // response contains valid result
-
-
-                    response.json().then(function(data) {
-                        // loop through JSON and build HTML output
-                        const div = document.createElement("div");
-                        let table = "<table>"
-                        for (let i = 0; i < data.length; i++) {
-                            table += "<tr><td>"+" | " + data[i].name + "</td><td>"+" | " + data[i].email + "</td><td>" +" | "+ data[i].password + "</td><td>" +" | "+ "</td></tr>"
-                            div.innerHTML = table
-                            resultContainer.appendChild(div);
-                        }
-                    })
                 })
+            })
         }
     </script>
-{#    <div class="row align-items-md-stretch">#}
-{#        <div class="container-fluid py-5">#}
-{#            <table class="table">#}
-{#                <thead>#}
-{#                <tr>#}
-{#                    <th>Name</th>#}
-{#                    <th>Email</th>#}
-{#                    <th>Password</th>#}
-{#                    <th>Phone</th>#}
-{#                </tr>#}
-{#                </thead>#}
-{#                <tbody>#}
-{#                <!-- Loop through rows in table -->#}
-{#                {% for row in table %}#}
-{#                    <!--#}
-{#                    Prepare table for display#}
-{#                        caution: phone number needs "~" format step to force type to string#}
-{#                    -->#}
-{#                    {% set pn = "" ~ row['phone'] %}#}
-{#                    {% set pnf = "(" ~ pn[0:3] ~ ")" ~ pn[3:6] ~ "-" ~ pn[6:10] %}#}
-{#                    <tr>#}
-{#                        <td>{{ row['name'] }}</td>#}
-{#                        <td>{{ row['email'] }}</td>#}
-{#                        <td>{{ row['password'] }}</td>#}
-{#                        <td>{{ pnf }}</td>#}
-{#                    </tr>#}
-{#                {% endfor %}#}
-{#                </tbody>#}
-{#            </table>#}
-{#        </div>#}
-{#    </div>#}
 {% endblock %}
