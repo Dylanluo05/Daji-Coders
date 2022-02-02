@@ -82,15 +82,15 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
         cursor: pointer;
     }
 </style>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="https://github.com/Dylanluo05/Daji-Coders">{{name}}</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
             <!--root menu -->
-            <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
 
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false" id="dropdownMenuButton1" type="button">About Us</a>
@@ -102,37 +102,38 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
                 </div>
             </li>
 
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false" id="dropdownMenuButton1" type="button">Vacation and Travel</a>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                    <a class="dropdown-item" href="/currency_exchange/">Currency Exchange</a>
-                    <a class="dropdown-item" href="/fact">Vacation Fact</a>
-                    <a class="dropdown-item" href="/facts/">Vacation Facts</a>
-                    <a class="dropdown-item" href="/travelcard/">Travel Cards</a>
-                    <a class="dropdown-item" href="/vacationtodo/">Vacation To-Do List</a>
-                    <a class="dropdown-item" href={{ url_for('crud.crud') }}>SQL CRUD</a>
-                    <a class="dropdown-item" href={{ url_for('crud.search') }}>SQL Search</a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false" id="dropdownMenuButton1" type="button">Vacation and Travel</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <a class="dropdown-item" href="/currency_exchange/">Currency Exchange</a>
+                        <a class="dropdown-item" href="/fact">Vacation Fact</a>
+                        <a class="dropdown-item" href="/facts/">Vacation Facts</a>
+                        <a class="dropdown-item" href="/travelcard/">Travel Cards</a>
+                        <a class="dropdown-item" href="/vacationtodo/">Vacation To-Do List</a>
+                        <a class="dropdown-item" href={{ url_for('crud.crud') }}>SQL CRUD</a>
+                        <a class="dropdown-item" href={{ url_for('crud.search') }}>SQL Search</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false" id="dropdownMenuButton1" type="button">Plan your next trip</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <a class="dropdown-item" href="/HotelSearch/">Hotel Search <span class="sr-only">(current)</span></a>
+                        <a class="dropdown-item" href="/RestaurantSearch/">Restaurant Search <span class="sr-only">(current)</span></a>
+                        <a class="dropdown-item" href="/CarSearch/"> Car Rental <span class="sr-only">(current)</span></a>
+                        <a class="dropdown-item" href="/FunTimes/"> Activities for Fun Times <span class="sr-only">(current)</span></a>
+                        <a class="dropdown-item" href="/FlightInformation/"> Flight Information <span class="sr-only">(current)</span></a>
+                    </div>
+                </li>
+                <a class="nav-link" href="/pixel_art/"> Pixel Art <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="/forum/"> Travel Forum <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="/contactus/"> Contact Us <span class="sr-only">(current)</span></a>
+                <div class="search-container">
+                    <form action="{{ url_for('web.searchWebsite') }}" method="POST">
+                        <input type="text" placeholder="Search.." name="term" id="term">
+                        <button type="submit"><i class="fa fa-search"></i></button>
+                    </form>
                 </div>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false" id="dropdownMenuButton1" type="button">Plan your next trip</a>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                    <a class="dropdown-item" href="/HotelSearch/">Hotel Search <span class="sr-only">(current)</span></a>
-                    <a class="dropdown-item" href="/RestaurantSearch/">Restaurant Search <span class="sr-only">(current)</span></a>
-                    <a class="dropdown-item" href="/CarSearch/"> Car Rental <span class="sr-only">(current)</span></a>
-                    <a class="dropdown-item" href="/FunTimes/"> Activities for Fun Times <span class="sr-only">(current)</span></a>
-                    <a class="dropdown-item" href="/FlightInformation/"> Flight Information <span class="sr-only">(current)</span></a>
-                </div>
-            </li>
-            <a class="nav-link" href="/pixel_art/"> Pixel Art <span class="sr-only">(current)</span></a>
-            <a class="nav-link" href="/forum/"> Travel Forum <span class="sr-only">(current)</span></a>
-            <div class="search-container">
-                <form action="{{ url_for('web.searchWebsite') }}" method="POST">
-                    <input type="text" placeholder="Search.." name="term" id="term">
-                    <button type="submit"><i class="fa fa-search"></i></button>
-                </form>
             </div>
         </div>
-    </div>
     </div>
 </nav>
