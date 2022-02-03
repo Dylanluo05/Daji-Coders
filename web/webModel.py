@@ -4,7 +4,7 @@ from flask_migrate import Migrate
 
 from __init__ import db, app
 
-dbURI = 'sqlite:///model/websiteDB.db'
+dbURI = 'sqlite:///model/myDB.db'
 # Setup properties for the database
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SQLALCHEMY_DATABASE_URI'] = dbURI

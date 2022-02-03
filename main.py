@@ -6,7 +6,7 @@ import json
 from starter import app_starter
 from algorithm import app_algorithm
 from webapi import app_api
-from crud.app_crud import app_crud
+from dc_crud.app_crud import app_crud
 from y2022 import app_y2022
 from web.websiteSearch import websiteSearch
 # from api.jeanapi import api_bp
@@ -177,4 +177,4 @@ def pixel_art():
 
 # runs the application on the development server
 if __name__ == "__main__":
-    app.run(debug=True,port=8000)
+    app.run(debug=True,port=8002)

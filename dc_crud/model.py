@@ -1,6 +1,8 @@
 """ database dependencies to support Users db examples """
+from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.exc import IntegrityError
-from __init__ import db
+from flask_migrate import Migrate
+from __init__ import app
 
 # Tutorial: https://www.sqlalchemy.org/library.html#tutorials, try to get into Python shell and follow along
 
@@ -10,6 +12,16 @@ from __init__ import db
 # -- a.) db.Model is like an inner layer of the onion in ORM
 # -- b.) Users represents data we want to store, something that is built on db.Model
 # -- c.) SQLAlchemy ORM is layer on top of SQLAlchemy Core, then SQLAlchemy engine, SQL
+dbURI = 'sqlite:///model/myDB.db'
+# Setup properties for the database
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+app.config['SQLALCHEMY_DATABASE_URI'] = dbURI
+app.config['SECRET_KEY'] = 'SECRET_KEY'
+# Create SQLAlchemy engine to support SQLite dialect (sqlite:)
+db = SQLAlchemy(app)
+Migrate(app, db)
+
+
 class Users(db.Model):
     # define the Users schema
     userID = db.Column(db.Integer, primary_key=True)
