@@ -185,6 +185,10 @@ def map():
 def AmusementParksBookTickets():
     return render_template("AmusementParksBookTickets.html")
 
+@app.route('/ContactOthers/')
+def contactothers():
+    return render_template("contactothers.html")
+
 @app.route('/travelquiz/')
 def travelquiz():
     return render_template("travelquiz.html")
