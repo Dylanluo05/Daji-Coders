@@ -78,6 +78,8 @@
         font-family: 'Ubuntu', sans-serif;
         background-repeat: no-repeat;
         position: relative;
+        padding: 200px;
+        color: black;
     }
 
     .FunTimesBackground3_background, .FunTimesBackground3_overlay {
@@ -426,6 +428,50 @@
         color: white;
     }
 
+
+
+    .btn3 {
+        border: none;
+        display: block;
+        text-align: center;
+        cursor: pointer;
+        text-transform: uppercase;
+        outline: none;
+        overflow: hidden;
+        position: relative;
+        color: #fff;
+        font-weight: 700;
+        font-size: 15px;
+        background-color: darkblue;
+        padding: 17px 60px;
+        margin: 0 auto;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.20);
+    }
+
+    .btn3 span {
+        position: relative;
+        z-index: 1;
+    }
+
+    .btn3:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 500%;
+        width: 140%;
+        background: darkturquoise;
+        -webkit-transition: all .5s ease-in-out;
+        transition: all .5s ease-in-out;
+        -webkit-transform: translateX(-95%) translateY(-25%);
+        transform: translateX(-95%) translateY(-25%);
+    }
+
+    .btn3:hover:after {
+        -webkit-transform: translateX(-5%) translateY(-25%);
+        transform: translateX(-5%) translateY(-25%);
+    }
+
     .btn {
         line-height: 50px;
         height: 50px;
@@ -516,6 +562,161 @@
         from {transform: rotate(0deg);}
         to {transform: rotate(-360deg);}
     }
+
+
+
+    .cell {
+        color: white;
+        font-size: 40px;
+        text-align: center;
+        padding: 5px;
+        font-family: 'Ubuntu', sans-serif;
+        border-radius: 100%;
+    }
+    .cell-1 {
+        background: whitesmoke;
+        font-family: 'Ubuntu', sans-serif;
+    }
+
+    .card-body {
+        background: whitesmoke;
+        font-family: 'Ubuntu', sans-serif;
+    }
+    .card-title{
+        color: black;
+    }
+    .card {
+        background: whitesmoke;
+        font-family: 'Ubuntu', sans-serif;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+    }
+    .collapsible {
+        background-color: black;
+        color: white;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+        font-family: 'Ubuntu', sans-serif;
+    }
+
+    .active2, .collapsible:hover {
+        background-color: #282828;
+        font-family: 'Ubuntu', sans-serif;
+    }
+
+    .collapsible:after {
+        content: '\002B';
+        color: white;
+        font-weight: bold;
+        float: right;
+        margin-left: 5px;
+        font-family: 'Ubuntu', sans-serif;
+    }
+
+    .active2:after {
+        content: "\2212";
+        color: white;
+        font-family: 'Ubuntu', sans-serif;
+    }
+
+    .content {
+        padding: 0 24px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+        background-color: #282828;
+        color: white;
+        font-family: 'Ubuntu', sans-serif;
+    }
+
+    .RatingContainer {
+        margin: 5px;
+        height: 14px;
+    }
+
+    *, *::before, *::after {
+        box-sizing: border-box;
+    }
+
+    :root {
+        --hue-neutral: 200;
+        --hue-wrong: 0;
+        --hue-correct: 145;
+    }
+
+    body.correct {
+        --hue: var(--hue-correct);
+    }
+
+    body.wrong {
+        --hue: var(--hue-wrong);
+    }
+
+    .container {
+        width: 800px;
+        max-width: 80%;
+        background-color: white;
+        color: black;
+        border-radius: 5px;
+        padding: 10px;
+        box-shadow: 0 0 10px 2px;
+    }
+
+    .btn2-grid {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        gap: 10px;
+        margin: 20px 0;
+    }
+
+    .btn2 {
+        --hue: var(--hue-neutral);
+        border: 1px solid hsl(var(--hue), 100%, 30%);
+        background-color: hsl(var(--hue), 100%, 50%);
+        padding: 5px 10px;
+        color: white;
+        outline: none;
+    }
+
+
+    .btn2:hover {
+        border-color: black;
+    }
+
+
+    .btn2.correct {
+        --hue: var(--hue-correct);
+        color: black;
+    }
+
+    .btn2.wrong {
+        --hue: var(--hue-wrong);
+    }
+
+    .start-btn, .next-btn {
+        font-size: 1.5rem;
+        font-weight: bold;
+        padding: 10px 20px;
+    }
+
+    .controls {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hide {
+        display: none;
+    }
+
+    TicketContainer1 {
+        padding: 7px;
+    }
 </style>
 
 <body>
@@ -552,12 +753,77 @@
     <div class="FunTimesBackground3_background"></div>
     <div class="FunTimesBackground3_overlay"></div>
     <div class="FunTimesBackground3_content">
-        <h2 style = "color: white; position: relative; top: -200px; left: 0px;">Amusement Parks</h2>
+        <h2 style = "color: white; position: relative; left: 425px; top: -400px; display: inline-block; white-space: nowrap;">Amusement Parks</h2>
+
+        <div class="card" style="width: 34rem; position: relative; left: -250px;"><div class="cell cell-1"><img src="https://i.ytimg.com/vi/TZl6sWOBmow/maxresdefault.jpg" alt="Greeting" width="400" height="300"></div>
+            <div class="card-body">
+                <h5 class="card-title" style = "color: black;">Knott's Berry Farm</h5>
+                <button class="collapsible">Info</button>
+                <div class="content">
+                    <p>Have fun at the fun rides of Knott's Berry Farm!</p>
+                </div>
+                <br>
+                <div class = "RatingContainer">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="card" style="width: 34rem; position: relative; left: 0px;"><div class="cell cell-1"><img src="https://upload.wikimedia.org/wikipedia/commons/1/18/Walt_Disney_World%27s_Cinderella_Castle_in_2021.png" alt="Greeting" width="400" height="300"></div>
+            <div class="card-body">
+                <h5 class="card-title">Disney World</h5>
+                <button class="collapsible">Info</button>
+                <div class="content">
+                    <p>Have fun at the fun rides of Disney World!</p>
+                </div>
+                <br>
+                <div class = "RatingContainer">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                </div>
+            </div>
+        </div>
+
+
+
     </div>
 </div>
 
 <div id ="FunTimesSubBackground1">
 
+<h3 style = "position: relative; text-align: center;">Amusement Parks Quiz</h3>
+    <div class="container">
+        <div id="question-container" class="hide">
+            <div id="question">Question</div>
+            <div id="answer-buttons" class="btn2-grid">
+                <button class="btn2">Answer 1</button>
+                <button class="btn2">Answer 2</button>
+                <button class="btn2">Answer 3</button>
+                <button class="btn2">Answer 4</button>
+            </div>
+        </div>
+        <div class="controls">
+            <button id="start-btn" class="start-btn btn2">Start</button>
+            <button id="next-btn" class="next-btn btn2 hide">Next</button>
+        </div>
+    </div>
+    <h3 style = "position: relative; text-align: center; top: 70px;">Book a trip to an amusement park!</h3>
+    <div class = "TicketContainer1" style = "position: relative; left: 400px; top: 77px;">
+        <form action="/action_page.php" target="/AmusementParksBookTickets/">
+            <p><input style = "border-radius: 0px; width: 400px; height: 40px;" type="text" placeholder="Name" required name="Name"></p>
+            <p><input style = "border-radius: 0px; width: 400px; height: 40px;" type="number" placeholder="Number of Tickets" required name="People"></p>
+            <p><input style = "border-radius: 0px; width: 400px; height: 40px;" type="datetime-local" placeholder="Date and time" required name="date" value="2022-02-14T11:11"></p> <!-- AM -->
+            <p><input style = "border-radius: 0px; width: 400px; height: 40px;" type="text" placeholder="Name of Amusement Park" required name="Message"></p>
+            <p><button type="submit" class = "btn3" style = "position: relative; left: -495px; top: 10px;"><span>Book Tickets!</span></button></p>
+        </form>
+    </div>
 </div>
 
 <div id="FunTimesBackground4">
@@ -616,5 +882,132 @@
 
 
 <script>
+    const startButton = document.getElementById('start-btn')
+    const nextButton = document.getElementById('next-btn')
+    const questionContainerElement = document.getElementById('question-container')
+    const questionElement = document.getElementById('question')
+    const answerButtonsElement = document.getElementById('answer-buttons')
+
+    let shuffledQuestions, currentQuestionIndex
+
+    startButton.addEventListener('click', startGame)
+    nextButton.addEventListener('click', () => {
+        currentQuestionIndex++
+        setNextQuestion()
+    })
+
+    function startGame() {
+        startButton.classList.add('hide')
+        shuffledQuestions = questions.sort(() => Math.random() - .5)
+        currentQuestionIndex = 0
+        questionContainerElement.classList.remove('hide')
+        setNextQuestion()
+    }
+
+    function setNextQuestion() {
+        resetState()
+        showQuestion(shuffledQuestions[currentQuestionIndex])
+    }
+
+    function showQuestion(question) {
+        questionElement.innerText = question.question
+        question.answers.forEach(answer => {
+            const button = document.createElement('button')
+            button.innerText = answer.text
+            button.classList.add('btn2')
+            if (answer.correct) {
+                button.dataset.correct = answer.correct
+            }
+            button.addEventListener('click', selectAnswer)
+            answerButtonsElement.appendChild(button)
+        })
+    }
+
+    function resetState() {
+        clearStatusClass(document.body)
+        nextButton.classList.add('hide')
+        while (answerButtonsElement.firstChild) {
+            answerButtonsElement.removeChild(answerButtonsElement.firstChild)
+        }
+    }
+
+    function selectAnswer(e) {
+        const selectedButton = e.target
+        const correct = selectedButton.dataset.correct
+        setStatusClass(document.body, correct)
+        Array.from(answerButtonsElement.children).forEach(button => {
+            setStatusClass(button, button.dataset.correct)
+        })
+        if (shuffledQuestions.length > currentQuestionIndex + 1) {
+            nextButton.classList.remove('hide')
+        } else {
+            startButton.innerText = 'Restart'
+            startButton.classList.remove('hide')
+        }
+    }
+
+    function setStatusClass(element, correct) {
+        clearStatusClass(element)
+        if (correct) {
+            element.classList.add('correct')
+        } else {
+            element.classList.add('wrong')
+        }
+    }
+
+    function clearStatusClass(element) {
+        element.classList.remove('correct')
+        element.classList.remove('wrong')
+    }
+
+    const questions = [
+        {
+            question: 'Which is older? Knotts Berry Farm or Disney World?',
+            answers: [
+                { text: 'Knotts Berry Farm', correct: true },
+                { text: 'Disney World', correct: false }
+            ]
+        },
+        {
+            question: 'Which ride belongs in Knotts Berry Farm?',
+            answers: [
+                { text: 'Splash Mountain', correct: false },
+                { text: 'Ghost Rider', correct: true },
+                { text: 'Superman Ride', correct: false },
+                { text: 'Twister', correct: false }
+            ]
+        },
+        {
+            question: 'Is Knotts Berry Farm a fun amusement park?',
+            answers: [
+                { text: 'Not at all', correct: false },
+                { text: 'YES!!!', correct: true }
+            ]
+        },
+        {
+            question: 'What is a new ride of Knotts Berry Farm',
+            answers: [
+                { text: 'Hang Time', correct: true },
+                { text: 'Calico Log Ride', correct: false }
+            ]
+        }
+    ]
+
+    /* Fun Times Dropdown */
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+            this.classList.toggle("active2");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight){
+                content.style.maxHeight = null;
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+            }
+        });
+    }
+
 </script>
 </html>

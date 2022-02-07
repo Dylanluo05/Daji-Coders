@@ -23,8 +23,6 @@ app.register_blueprint(app_crud)
 app.register_blueprint(app_y2022)
 app.register_blueprint(websiteSearch)
 forumList = []
-
-
 # connects default URL to render index.html
 
 
@@ -39,15 +37,14 @@ def AboutAlex():
     # Get the keyword value from POST
     keyword = request.form.get("keyword");
     url = "https://nba-player-individual-stats.p.rapidapi.com/players/firstname"
-    querystring = {"firstname": keyword}
+    querystring = {"firstname":keyword}
     headers = {
         'x-rapidapi-host': "nba-player-individual-stats.p.rapidapi.com",
         'x-rapidapi-key': "39c4bf8c2emsh30b02ab6dc01dd9p13f427jsn690a650cf2ec"
     }
     athleteApiResponse = requests.request("GET", url, headers=headers, params=querystring)
 
-    return render_template("AboutAlex.html", results=athleteApiResponse.json())
-
+    return render_template("AboutAlex.html", results = athleteApiResponse.json())
 
 @app.route('/AboutDylan/', methods=['GET', 'POST'])
 def AboutDylan():
@@ -60,8 +57,6 @@ def AboutDylan():
 
     response = requests.request("GET", url, headers=headers)
     return render_template("AboutDylan.html", stats=response.json())
-
-
 def AboutDylan1():
     # submit button has been pushed
     if request.form:
@@ -166,11 +161,9 @@ def Calculator():
 def FlightInformation():
     return render_template("FlightInformation.html")
 
-
 @app.route('/travelcard/')
 def travelcard():
     return render_template("travelcard.html")
-
 
 @app.route('/vacationtodo/')
 def vacationtodo():
@@ -188,15 +181,18 @@ def contactus():
 def map():
     return render_template("map.html")
 
-@app.route('/budget/')
-def budget():
-    return render_template("budget.html")
+@app.route('/AmusementParksBookTickets/')
+def AmusementParksBookTickets():
+    return render_template("AmusementParksBookTickets.html")
 
-@app.route('/packinglist/')
-def packinglist():
-    return render_template("packinglist.html")
+@app.route('/ContactOthers/')
+def contactothers():
+    return render_template("contactothers.html")
 
+@app.route('/travelquiz/')
+def travelquiz():
+    return render_template("travelquiz.html")
 
 # runs the application on the development server
 if __name__ == "__main__":
-    app.run(debug=True, port=8000)
+    app.run(debug=True,port=8000)

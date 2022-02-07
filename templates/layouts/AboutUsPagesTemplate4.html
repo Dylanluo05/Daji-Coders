@@ -316,8 +316,18 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
             text-align: center;
             color: black;
         }
+        .dark-mode {
+            background: black;
+        }
         /* CSS */
     </style>
+    <script>
+        function darkMode() {
+            var element = document.body;
+            element.classList.toggle("dark-mode");
+        }
+    </script>
+
 
     <div class="main-container">
         <h1> NBA Current Athletes Search</h1>

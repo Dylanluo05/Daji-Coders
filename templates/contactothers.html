@@ -6,17 +6,11 @@
 
 <!- This is a replacement block for Body in base.html -->
 {% block body %}
-    <h1>Contact Us</h1>
     <style>
-        h1 {
-            color: blue;
-            text-align: center;
-        }
         /* Style inputs with type="text", select elements and textareas */
         input[type=text], select, textarea {
             width: 100%; /* Full width */
             padding: 12px; /* Some padding */
-            color: black;
             border: 1px solid #ccc; /* Gray border */
             border-radius: 4px; /* Rounded borders */
             box-sizing: border-box; /* Make sure that padding and width stays in place */
@@ -28,7 +22,7 @@
         /* Style the submit button with a specific background color etc */
         input[type=submit] {
             background-color: #04AA6D;
-            color: black;
+            color: white;
             padding: 12px 20px;
             border: none;
             border-radius: 4px;
@@ -47,37 +41,9 @@
             padding: 20px;
         }
     </style>
-    <div class="center-block" style="margin: 2% 5% 5%; text-align:left; font-family: gilroy,serif;">
-    <div class="container">
-        <form action="https://formsubmit.co/bettanetwork123@gmail.com" method="POST">
+    <script>
+        var name = window.prompt("Enter the email : ");
+        window.open('mailto:' + name);
+    </script>
 
-            <label for="fname">First Name</label>
-            <input type="text" id="fname" name="firstname" placeholder="Your name..">
-
-            <label for="lname">Last Name</label>
-            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-
-            <label for="country">Country</label>
-            <select id="country" name="country">
-                <option value="australia">Australia</option>
-                <option value="canada">Canada</option>
-                <option value="usa">USA</option>
-            </select>
-
-            <label for="subject">Subject</label>
-            <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-
-            <input type="submit" value="Submit">
-
-        </form>
-    </div>
-
-
-
-{% endblock %}
-
-</html>
-</div>
-<!- This is turning off birds background from base.html -->
-{% block background %}
 {% endblock %}
