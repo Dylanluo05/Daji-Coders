@@ -7,8 +7,11 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
 <head>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+
 </head>
 <style>
+
+
     html, body{
         font-family: 'Ubuntu', sans-serif;
     }
@@ -81,12 +84,29 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
         color: #fff;
         cursor: pointer;
     }
+    .button1 {
+        border: 2px solid #111B2D;
+        background-color: white;
+        color: #111B2D;
+    }
+
+    .button1:hover {
+        background-color: #111B2D;
+        color: white;
+    }
+
 </style>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <span style="font-size:30px;cursor:pointer;color:#000044; font:" onclick="openNav()">&#9776; </span>
+<blockquote></blockquote>
+        <div></div>
     <a class="navbar-brand" href="https://github.com/Dylanluo05/Daji-Coders">{{name}}</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <button class = "button button1" onclick="darkMode()" style = "position: relative; left: 7px;">Toggle Dark Mode</button>
         <span class="navbar-toggler-icon"></span>
+
     </button>
+
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
             <!--root menu -->
@@ -122,8 +142,41 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
                         <a class="dropdown-item" href="/CarSearch/"> Car Rental <span class="sr-only">(current)</span></a>
                         <a class="dropdown-item" href="/FunTimes/"> Activities for Fun Times <span class="sr-only">(current)</span></a>
                         <a class="dropdown-item" href="/FlightInformation/"> Flight Information <span class="sr-only">(current)</span></a>
+                        <a class="dropdown-item" href="/currency_exchange/">Currency Exchange</a>
+                        <a class="dropdown-item" href="/map/"> Interactive Google Map <span class="sr-only">(current)</span></a>
                     </div>
                 </li>
+
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false" id="dropdownMenuButton1" type="button">Fun and Games</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <a class="dropdown-item" href="travelquiz">Travel Quiz</a>
+                        <a class="dropdown-item" href="/pixel_art/">Pixel Art <span class="sr-only">(current)</span></a>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false" id="dropdownMenuButton1" type="button">CRUD</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <a class="dropdown-item" href={{ url_for('crud.crud') }}>SQL CRUD</a>
+                        <a class="dropdown-item" href={{ url_for('crud.search') }}>SQL Search</a>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false" id="dropdownMenuButton1" type="button">Contact</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <a class="dropdown-item" href="contactus">Contact Us</a>
+                        <a class="dropdown-item" href="ContactOthers">Contact Others</a>
+                    </div>
+                </li>
+
+                <div class="search-container">
+                    <form action="{{ url_for('web.searchWebsite') }}" method="POST">
+                        <input type="text" placeholder="Search.." name="term" id="term">
+                        <button type="submit"><i class="fa fa-search"></i></button>
+                    </form>
                 <a class="nav-link" href="/pixel_art/"> Pixel Art <span class="sr-only">(current)</span></a>
                 <a class="nav-link" href="/forum/"> Travel Forum <span class="sr-only">(current)</span></a>
 {#                <div class="search-container">#}
@@ -135,6 +188,16 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
                 <div class="px-3">
                     <input id="search" type="search" placeholder="Search" aria-label="Search">
                 </div>
+                <div id="google_translate_element"></div>
+                <script type="text/javascript">
+                    function googleTranslateElementInit() {
+                        new google.translate.TranslateElement(
+                            {pageLanguage: 'en'},
+                            'google_translate_element'
+                        );
+                    }
+                </script>
+                <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
             </div>
         </div>
     </div>

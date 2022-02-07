@@ -5,10 +5,9 @@ import random
 
 # this is method called by frontend, it has been randomized between Alchemy and Native SQL for fun
 def users_all():
-    if random.randint(0, 1) == 0:
-        table = users_all_alc()
-    else:
-        table = users_all_sql()
+
+    table = users_all_sql()
+
     return table
 
 
@@ -61,5 +60,5 @@ def sqlquery_2_list(rows):
 
 # Test queries
 if __name__ == "__main__":
-    for i in range(1):
+    for i in range(10):
         print(users_all())

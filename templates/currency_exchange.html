@@ -23,11 +23,15 @@
         }
 
         body {
-            margin-bottom: 100px;
-            background-image: url('/static/assets/bg4k.jpg');
-            background-size: 100%;
+            padding: 25px;
+            {#background-color: white;#}
+            {#color: black;#}
+            font-size: 25px;
         }
 
+        .dark-mode {
+            background-color: black;
+        }
         .APIContainer {
             margin: 50px auto 150px auto;
             padding: 20px 100px 20px 100px;
@@ -181,7 +185,12 @@
         }
     </script>
 
-
+    <script>
+        function myFunction() {
+            var element = document.body;
+            element.classList.toggle("dark-mode");
+        }
+    </script>
 
 {% endblock %}
 </body>

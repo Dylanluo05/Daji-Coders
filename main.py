@@ -6,7 +6,7 @@ import json
 from starter import app_starter
 from algorithm import app_algorithm
 from webapi import app_api
-from dc_crud.app_crud import app_crud
+from crud.app_crud import app_crud
 from y2022 import app_y2022
 from web.websiteSearch import websiteSearch
 # from api.jeanapi import api_bp
@@ -174,6 +174,25 @@ def vacationtodo():
 def pixel_art():
     return render_template("pixel_art.html")
 
+@app.route('/contactus/')
+def contactus():
+    return render_template("contactus.html")
+
+@app.route('/map/')
+def map():
+    return render_template("map.html")
+
+@app.route('/AmusementParksBookTickets/')
+def AmusementParksBookTickets():
+    return render_template("AmusementParksBookTickets.html")
+
+@app.route('/ContactOthers/')
+def contactothers():
+    return render_template("contactothers.html")
+
+@app.route('/travelquiz/')
+def travelquiz():
+    return render_template("travelquiz.html")
 
 # runs the application on the development server
 if __name__ == "__main__":
