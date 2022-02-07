@@ -101,6 +101,9 @@ def model_printer():
     print("------------")
     print("Table: users with SQL query")
     print("------------")
+    table = Users.query.all()
+    json_ready = [peep.read() for peep in table]
+    print(json_ready)
     result = db.session.execute('select * from users')
     print(result.keys())
     for row in result:

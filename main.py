@@ -85,9 +85,9 @@ def AboutIsabelle():
 def AboutJean():
     url = "https://world-time2.p.rapidapi.com/timezone/Europe/London"
     headers = {
-            'x-rapidapi-host': "world-time2.p.rapidapi.com",
-            'x-rapidapi-key': "0a00932a78msh5f89ea8b8f5d589p124611jsn64789e16513c"
-            }
+        'x-rapidapi-host': "world-time2.p.rapidapi.com",
+        'x-rapidapi-key': "0a00932a78msh5f89ea8b8f5d589p124611jsn64789e16513c"
+    }
     response = requests.request("GET", url, headers=headers)
     # return(response.json())
     data = json.loads(response.text)
@@ -169,11 +169,17 @@ def travelcard():
 def vacationtodo():
     return render_template("vacationtodo.html")
 
-
 @app.route('/pixel_art/')
 def pixel_art():
     return render_template("pixel_art.html")
 
+@app.route('/contactus/')
+def contactus():
+    return render_template("contactus.html")
+
+@app.route('/map/')
+def map():
+    return render_template("map.html")
 
 @app.route('/AmusementParksBookTickets/')
 def AmusementParksBookTickets():
