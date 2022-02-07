@@ -31,7 +31,6 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
             -moz-animation: fadein 2s; /* Firefox */
             -webkit-animation: fadein 2s; /* Safari and Chrome */
             -o-animation: fadein 2s; /* Opera */
-            background-color: var(--white);
             color: var(--white);
             font-family: 'Ubuntu', sans-serif;
             padding: 0px;
@@ -40,12 +39,9 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
         }
 
 
-
         .dark-mode {
-            background-color: var(--white);
-            color: var(--black);
+            background: black;
         }
-
         h1{
             font-size: 5em;
         }
@@ -106,6 +102,13 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
 
 
     </style>
+{#    Dark Mode Code#}
+    <script>
+        function darkMode() {
+            var element = document.body;
+            element.classList.toggle("dark-mode");
+        }
+    </script>
 
     <title>{{ name }} | TRAVEL HUB </title>
     {% block meta %}

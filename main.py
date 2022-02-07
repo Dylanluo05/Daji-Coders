@@ -181,6 +181,10 @@ def contactus():
 def map():
     return render_template("map.html")
 
+@app.route('/testdarkmode/')
+def testdarkmode():
+    return render_template("testdarkmode.html")
+
 # runs the application on the development server
 if __name__ == "__main__":
     app.run(debug=True,port=8000)
