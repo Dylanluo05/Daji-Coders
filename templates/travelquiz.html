@@ -1,0 +1,211 @@
+
+{% extends "layouts/base.html" %}
+
+{% block body %}
+    <h1 class="center-block" style=" text-align:center; font-family: serif"> Travel Quiz</h1>
+    <h3 style="text-align: center;padding-left:25px; font-size: 25px">Welcome to our quiz! Click the corresponding letter to your answer to all the questions and then submit. This mini quiz will test you on common travel facts. </h3>
+    <h4 style="text-align: center; font-size: 20px">Correct Answers Show up in Green while incorrect answers show up in red. Scroll all the way down for results. Good luck!</h4>
+    <div id="quiz"></div>
+    <button id="submit">Submit Answers</button>
+    <div id="results"></div>
+
+    <style>
+        body{
+            font-size: 15px;
+            font-family: rono, serif;
+            color: #333;
+        }
+        .question{
+            font-weight: 600;
+        }
+        .answers {
+            margin-bottom: 20px;
+        }
+        .answers label{
+            display: block;
+        }
+        #submit{
+            font-family: sans-serif;
+            font-size: 20px;
+            background-color: pink;
+            color: black;
+            border: 0px;
+            border-radius: 3px;
+            padding: 20px;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+        #submit:hover{
+            background-color: lightpink;
+        }
+
+    </style>
+
+    <script>
+        (function(){
+            function buildQuiz(){
+                const output = [];
+
+                myQuestions.forEach(
+                    (currentQuestion, questionNumber) => {
+
+                        const answers = [];
+
+                        for(letter in currentQuestion.answers){
+
+                            answers.push(
+                                `<label>
+              <input type="radio" name="question${questionNumber}" value="${letter}">
+              ${letter} :
+              ${currentQuestion.answers[letter]}
+            </label>`
+                            );
+                        }
+
+                        output.push(
+                            `<div class="question"> ${currentQuestion.question} </div>
+          <div class="answers"> ${answers.join('')} </div>`
+                        );
+                    }
+                );
+
+                quizContainer.innerHTML = output.join('');
+            }
+
+            function showResults(){
+
+                const answerContainers = quizContainer.querySelectorAll('.answers');
+
+                let numCorrect = 0;
+
+                myQuestions.forEach( (currentQuestion, questionNumber) => {
+
+
+                    const answerContainer = answerContainers[questionNumber];
+                    const selector = `input[name=question${questionNumber}]:checked`;
+                    const userAnswer = (answerContainer.querySelector(selector) || {}).value;
+
+                    if(userAnswer === currentQuestion.correctAnswer){
+
+                        numCorrect++;
+
+
+                        answerContainers[questionNumber].style.color = 'darkgreen';
+                    }
+
+                    else{
+
+                        answerContainers[questionNumber].style.color = 'red';
+                    }
+                });
+
+
+                resultsContainer.innerHTML = `Result: ${numCorrect} out of ${myQuestions.length} correct`;
+            }
+
+            const quizContainer = document.getElementById('quiz');
+            const resultsContainer = document.getElementById('results');
+            const submitButton = document.getElementById('submit');
+            const myQuestions = [
+                {
+                    question: "1. What percent of the world's lakes are in Canada?",
+                    answers: {
+                        a: "30%",
+                        b: "40%",
+                        c: "50%",
+                        d: "60%"
+                    },
+                    correctAnswer: "d"
+                },
+                {
+                    question: "2. How many people work at the Eiffel Tower daily?",
+                    answers: {
+                        a: "500",
+                        b: "600",
+                        c: "700",
+                        d: "800"
+                    },
+                    correctAnswer: "b"
+                },
+                {
+                    question: "3. italy has a free, public wine fountain",
+                    answers: {
+                        a: "True",
+                        b: "False",
+                    },
+                    correctAnswer: "a"
+                },
+                {
+                    question: "4. The world's most longest flight is around how many hours? ",
+                    answers: {
+                        a: "10",
+                        b: "20",
+                        c: "30",
+                        d: "40"
+                    },
+                    correctAnswer: "c"
+                },
+                {
+                    question: "5. What is the world's shortest flight?",
+                    answers: {
+                        a: "Westray Island to Papa Westray Island",
+                        b: "New York to New Mexico",
+                        c: "San Diego to San Antonio",
+                        d: "Long Island to Short Island"
+                    },
+                    correctAnswer: "a"
+                },
+                {
+                    question: "6. Which airport is the world's busiest?",
+                    answers: {
+                        a: "LAX",
+                        b: "Heathrow",
+                        c: "Hartsfield-Jackson",
+                        d: "JFK"
+                    },
+                    correctAnswer: "c"
+                },
+                {
+                    question: "7. How many time zones does China have? ",
+                    answers: {
+                        a: "1",
+                        b: "2",
+                        c: "3",
+                        d: "4"
+                    },
+                    correctAnswer: "a"
+                },
+                {
+                    question: "8. How many pyramids does Sudan have?",
+                    answers: {
+                        a: "2+",
+                        b: "100+",
+                        c: "175+",
+                        d: "250+"
+                    },
+                    correctAnswer: "d"
+                },
+                {
+                    question: "8. Which country hosts the world's largest sandcastle?",
+                    answers: {
+                        a: "Norway",
+                        b: "Germany",
+                        c: "South Korea",
+                        d: "America",
+                    },
+                    correctAnswer: "b"
+                }
+            ];
+
+            buildQuiz();
+
+            submitButton.addEventListener('click', showResults);
+        })();
+    </script>
+    <style>
+        #results {
+        text-align: center; font-size: 35px
+        }
+    </style>
+
+{% endblock %}

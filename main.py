@@ -185,6 +185,10 @@ def map():
 def AmusementParksBookTickets():
     return render_template("AmusementParksBookTickets.html")
 
+@app.route('/travelquiz/')
+def travelquiz():
+    return render_template("travelquiz.html")
+
 # runs the application on the development server
 if __name__ == "__main__":
     app.run(debug=True,port=8000)
