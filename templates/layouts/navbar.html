@@ -112,30 +112,19 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
             <!--root menu -->
                 <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
 
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false" id="dropdownMenuButton1" type="button">About Us</a>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                    <a class="dropdown-item" href="/AboutAlex/">About Alex</a>
-                    <a class="dropdown-item" href="/AboutDylan/">About Dylan</a>
-                    <a class="dropdown-item" href="/AboutIsabelle/">About Isabelle</a>
-                    <a class="dropdown-item" href="/AboutJean/">About Jean</a>
-                </div>
-            </li>
 
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false" id="dropdownMenuButton1" type="button">Vacation and Travel</a>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                        <a class="dropdown-item" href="/currency_exchange/">Currency Exchange</a>
                         <a class="dropdown-item" href="/fact">Vacation Fact</a>
                         <a class="dropdown-item" href="/facts/">Vacation Facts</a>
                         <a class="dropdown-item" href="/travelcard/">Travel Cards</a>
                         <a class="dropdown-item" href="/vacationtodo/">Vacation To-Do List</a>
-                        <a class="dropdown-item" href={{ url_for('crud.crud') }}>SQL CRUD</a>
-                        <a class="dropdown-item" href={{ url_for('crud.search') }}>SQL Search</a>
+                        <a class="dropdown-item" href="/forum/">Vacation Forum</a>
                     </div>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false" id="dropdownMenuButton1" type="button">Plan your next trip</a>
+                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false" id="dropdownMenuButton1" type="button">Planning and Resources</a>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                         <a class="dropdown-item" href="/HotelSearch/">Hotel Search <span class="sr-only">(current)</span></a>
                         <a class="dropdown-item" href="/RestaurantSearch/">Restaurant Search <span class="sr-only">(current)</span></a>
@@ -179,8 +168,8 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
 {#                        <input type="text" placeholder="Search.." name="term" id="term">#}
 {#                        <button type="submit"><i class="fa fa-search"></i></button>#}
 {#                    </form>#}
-                <a class="nav-link" href="/pixel_art/"> Pixel Art <span class="sr-only">(current)</span></a>
-                <a class="nav-link" href="/forum/"> Travel Forum <span class="sr-only">(current)</span></a>
+{#                <a class="nav-link" href="/pixel_art/"> Pixel Art <span class="sr-only">(current)</span></a>#}
+{#                <a class="nav-link" href="/forum/"> Travel Forum <span class="sr-only">(current)</span></a>#}
 {#                <div class="search-container">#}
 {#                    <form action="{{ url_for('web.searchWebsite') }}" method="POST">#}
 {#                        <input type="text" placeholder="Search.." name="term" id="term">#}
@@ -190,6 +179,29 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
                 <div class="px-3">
                     <input id="search" type="search" placeholder="Search" aria-label="Search">
                 </div>
+
+{#                script for search#}
+
+{#                <script>#}
+{#                    const search = document.getElementById('search');#}
+{#                    const google = 'https://www.google.com/search?q=site%3A+';#}
+{#                    const site = 'https://dajicoders.tk/';#}
+{##}
+{#                    function submitted(event) {#}
+{#                        if (event.key === 'Enter') {#}
+{#                            event.preventDefault();#}
+{#                            const url = google#}
+{#                                + site#}
+{#                                + '+'#}
+{#                                + search.value;#}
+{#                            const win = window.open(url, '_blank', [showAddAnotherPopup =(1) ]);#}
+{#                            win.focus();#}
+{#                        }#}
+{#                    }#}
+{#                    search.addEventListener('keypress', submitted);#}
+{#                </script>#}
+
+{#                script for translate#}
 
                 <div id="google_translate_element"></div>
                 <script type="text/javascript">
@@ -204,22 +216,4 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
             </div>
         </div>
     </div>
-      <script>
-        const search = document.getElementById('search');
-        const google = 'https://www.google.com/search?q=site%3A+';
-        const site = 'https://dajicoders.tk/';
-
-        function submitted(event) {
-        if (event.key === 'Enter') {
-        event.preventDefault();
-        const url = google
-        + site
-        + '+'
-        + search.value;
-        const win = window.open(url, '_blank', [showAddAnotherPopup =(1) ]);
-        win.focus();
-        }
-        }
-        search.addEventListener('keypress', submitted);
-      </script>
     </nav>
