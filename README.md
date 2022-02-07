@@ -140,6 +140,6 @@ Jean Kim | No College Board Work, Coordinate Crossover Grading, Travel Quiz, Map
 Saumya (Crossover Team) | No College Board Work, CSS to all pages, and Side Navbar | [Link to Scrum Board Ticket](https://github.com/Dylanluo05/Daji-Coders/issues/72) // [Link to Scrum Board Ticket](https://github.com/Dylanluo05/Daji-Coders/issues/71)
 Prisha (Crossover Team) | No College Board Work, Google Search, Import CRUD and personalize Database | [Link to Scrum Board Ticket](https://github.com/Dylanluo05/Daji-Coders/issues/74) // [Link to Scrum Board Ticket](https://github.com/Dylanluo05/Daji-Coders/issues/70)
 Vidhi (Crossover Team) | No College board Work, Contact Us Page, Dark Mode Toggle | [Link to Scrum Board Ticket](https://github.com/Dylanluo05/Daji-Coders/issues/66) // [Link to Scrum Board Ticket](https://github.com/Dylanluo05/Daji-Coders/issues/67)
-Aryan (Crossover Team) | No College Board Work, Budget Tracker, Cruise Search Template | [Link to Scrum Board Ticket](https://github.com/Dylanluo05/Daji-Coders/issues/69) // [Link to Scrum Board Ticket](https://github.com/Dylanluo05/Daji-Coders/issues/68)
+Aryan (Crossover Team) | No College Board Work, Budget Tracker, Packing List | [Link to Scrum Board Ticket](https://github.com/Dylanluo05/Daji-Coders/issues/69) // [Link to Scrum Board Ticket](https://github.com/Dylanluo05/Daji-Coders/issues/68)
 Everyone |Week 8 Review Ticket| [Link to Review Ticket](https://github.com/Dylanluo05/Daji-Coders/issues/77)
 
