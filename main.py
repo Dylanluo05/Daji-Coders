@@ -194,6 +194,12 @@ def contactothers():
 def travelquiz():
     return render_template("travelquiz.html")
 
+
+@app.route('/GoogleSearch/')
+def GoogleSearch():
+    return render_template("GoogleSearch.html")
+
+
 # runs the application on the development server
 if __name__ == "__main__":
-    app.run(debug=True,port=8002)
+    app.run(debug=True, port=8002)
