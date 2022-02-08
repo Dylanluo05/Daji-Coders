@@ -1,8 +1,42 @@
 <!DOCTYPE html>
+{#{% extends "layouts/base.html" %}#}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Pixel Art Maker</title>
+    <h1><span>Pixel Art Maker</span></h1>
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <style>
+            body {
+                background: #091e3f;
+                color: #333;
+            {#font-family: Lato, sans-serif;#}
+            }
+
+            a:link, a:visited {
+                background-color: #ab6762;
+                color: white;
+                padding: 20px 25px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+            }
+
+            a:hover, a:active {
+                background-color: #702222;
+            }
+        </style>
+    </head>
+<body>
+
+<a href="http://127.0.0.1:8002/" target="_blank">Home</a>
+
+</body>
+</html>
+
+<blockquote></blockquote>
+
 </head>
     <body>
     <script>
@@ -334,4 +368,34 @@
             .appendChild(startPixelEditor({}));
     </script>
     </body>
+
+
+<style>
+    h1{
+        color: #484848;
+        font-size: 110px;
+        font-weight: bold;
+        font-family: "Ubuntu", sans-serif;
+        letter-spacing: 4px;
+        cursor: pointer
+    }
+    h1 span{
+        transition: .5s linear
+    }
+    h1:hover span:nth-child(1){
+        margin-right: 5px
+    }
+    h1:hover span:nth-child(1):after{
+        content: "";
+    }
+    h1:hover span:nth-child(2){
+        margin-left: 30px
+    }
+    h1:hover span{
+        color: #883f3f;
+        text-shadow: 0 0 10px #889dd5,
+        0 0 20px #fff,
+        0 0 40px #fff;
+    }
+</style>
 </html>

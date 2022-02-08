@@ -1,27 +1,84 @@
 <!DOCTYPE html>
 {% include "layouts/navbar.html" %}
 {% block background %}
-    <html>
-
     <head>
         <meta charset="utf-8">
-        <title>Currency Exchange Rates</title>
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="/browserref.css">
+{# <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">#}
     </head>
 
+    <div id="animated_div">CURRENCY EXCHANGE RATES</div>
     <style>
-        /* general */
-
+        body {
+            background: #be98d7;
+            color: #333;
+            font-family: Ubuntu, sans-serif;}
         .bloop{
             font-size: 14px;
-            font-family: 'Open Sans';
+            font-family: Ubuntu, sans-serif;
             font-weight: 600;
             color: blueviolet;
             cursor: pointer;
         }
+         #animated_div {
+               width:200px;
+               height:200px;
+               background: #000000;
+               color: #1364e1;
+               position: relative;
+               font-weight:bold;
+               font-size:20px;
+               padding:50px;
+               animation:animated_div 5s 1;
+               -moz-animation:animated_div 5s 1;
+               -webkit-animation:animated_div 5s 1;
+               -o-animation:animated_div 5s 1;
+               border-radius:5px;
+               -webkit-border-radius:5px;
 
+         }
+
+        @keyframes animated_div
+        {
+            0% {transform: rotate(0deg);left:0px;}
+            25% {transform: rotate(20deg);left:0px;}
+            50% {transform: rotate(0deg);left:650px;}
+            55% {transform: rotate(0deg);left:650px;}
+            70% {transform: rotate(0deg);left:650px;background:#1ec7e6;}
+            100% {transform: rotate(-360deg);left:0px;}
+        }
+
+        @-webkit-keyframes animated_div
+        {
+            0% {-webkit-transform: rotate(0deg);left:0px;}
+            25% {-webkit-transform: rotate(20deg);left:0px;}
+            50% {-webkit-transform: rotate(0deg);left:650px;}
+            55% {-webkit-transform: rotate(0deg);left:650px;}
+            70% {-webkit-transform: rotate(0deg);left:650px;background:#1ec7e6;}
+            100% {-webkit-transform: rotate(-360deg);left:0px;}
+        }
+
+        @-moz-keyframes animated_div
+        {
+            0%  {-moz-transform: rotate(0deg);left:0px;}
+            25% {-moz-transform: rotate(20deg);left:0px;}
+            50%  {-moz-transform: rotate(0deg);left:650px;}
+            55%  {-moz-transform: rotate(0deg);left:650px;}
+            70%  {-moz-transform: rotate(0deg);left:650px;background:#1ec7e6;}
+            100% {-moz-transform: rotate(-360deg);left:0px;}
+        }
+
+        @-o-keyframes animated_div
+        {
+            0% {transform: rotate(0deg);left:0px;}
+            25% {transform: rotate(20deg);left:0px;}
+            50%  {transform: rotate(0deg);left:650px;}
+            55%  {transform: rotate(0deg);left:650px;}
+            70%  {transform: rotate(0deg);left:650px;background:#1ec7e6;}
+            100% {transform: rotate(-360deg);left:0px;}
+        }
         body {
             padding: 25px;
             {#background-color: white;#}
@@ -68,15 +125,15 @@
 
     <body>
     <!-- Currency exchange rates -->
-    <div class="display-4 text-center">Currency Exchange Rates</div>
+{#    <div class="display-4 text-center">Currency Exchange Rates</div>#}
     <div class="APIContainer">
         <h4>Find out current currency exchange rates and use the calculator below to see conversions</h4>
         <div class="currencyContainer">
-            <div style="margin-top: 16px">
+            <div style="margin-top: -300px";>
                 <p>From: </p>
                 <p>To: </p>
             </div>
-            <div style="margin-left: 20px">
+            <div style="margin-left: -250px">
                 <input class="form-control marginTopBottom" type="text" id="inputCurrencyFrom" value="USD">
                 <input class="form-control marginTopBottom" type="text" id="inputCurrencyTo" value="USD">
                 <button class="btn btn-primary" id="buttonCurrency">Calculate</button>

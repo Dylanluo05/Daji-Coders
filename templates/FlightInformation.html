@@ -11,8 +11,34 @@
     {% include "layouts/navbar.html" %}
 
     <style>
-
+        h1{
+            color: #484848;
+            font-size: 140px;
+            font-weight: bold;
+            font-family: times new roman;
+            letter-spacing: 7px;
+            cursor: pointer
+        }
+        h1 span{
+            transition: .5s linear
+        }
+        h1:hover span:nth-child(1){
+            margin-right: 5px
+        }
+        h1:hover span:nth-child(1):after{
+            content: "";
+        }
+        h1:hover span:nth-child(2){
+            margin-left: 30px
+        }
+        h1:hover span{
+            color: #fff;
+            text-shadow: 0 0 10px #fff,
+            0 0 20px #af8989,
+            0 0 40px #fff;
+        }
         html, body{
+            align-items: center;
             margin: 0;
             height: 100%;
             width: 100%;
@@ -141,10 +167,27 @@
             min-width: 500px;
             height: 20%;
         }
+        #animated_div {
+            width: 70px;
+            height: 47px;
+            background: #92B901;
+            color: #ffffff;
+            position: relative;
+            font-weight: bold;
+            font-size: 20px;
+            padding: 10px;
+            animation: animated_div 5s 1;
+            -moz-animation: animated_div 5s 1;
+            -webkit-animation: animated_div 5s 1;
+            -o-animation: animated_div 5s 1;
+            border-radius: 5px;
+            -webkit-border-radius: 5px;
+        }
 
     </style>
     <meta charset="UTF-8">
-    <title>FLight Information | DAJI Coders</title>
+    <h1><span>FLight Information | DAJI Coders</span></h1>
+{#    <div id="animated_div">FLight INformation></div>#}
 </head>
 <body>
 <div class = "FlightBackground1">
@@ -152,10 +195,10 @@
      <div class="FlightBackground1"></div>
     <div class="FlightBackground1_overlay"></div>
     <div class="FlightBackground1_content">
-        <h1 style = "position: relative; top: -480px; left: 500px; text-align: center;">Flight Information</h1>
+        <h1 style = "position: relative; top: 100px; left: 500px; text-align: center;"</h1>
         <div class="APIContainer">
             <div id="findRouteMain">
-                <div class="SearchInputLabel">Search by Route:</div>
+                <h2><div class="SearchInputLabel">Search by Route:</div></h2>
                 <div class="input-group">
                     <input name="origin" class="trackRouteOrigin" type="text" placeholder="Origin" title="Origin" aria-label="Origin" id="inputCountryOrigin" href=""/>
                     <form autocomplete="off" action="/action_page.php">
