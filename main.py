@@ -194,6 +194,14 @@ def contactothers():
 def travelquiz():
     return render_template("travelquiz.html")
 
+@app.route('/budget/')
+def budget():
+    return render_template("budget.html")
+
+@app.route('/packinglist/')
+def packinglist():
+    return render_template("packinglist.html")
+
 
 @app.route('/GoogleSearch/')
 def GoogleSearch():
