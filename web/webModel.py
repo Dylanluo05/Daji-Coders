@@ -65,7 +65,7 @@ def model_tester():
     p2 = webPages(pageName='Hotel Hunter', pageURL='http://127.0.0.1:8000/HotelSearch/',
                   pageDesc='Find a hotel for your next vacation here!')
     p3 = webPages(pageName='Car Rental', pageURL='http://127.0.0.1:8000/CarSearch/', pageDesc='Rent a car here!')
-    p4 = webPages(pageName='Foodie Finder', pageURL='http://127.0.0.1:8000/RestaurantSearch/',
+    p4 = webPages(pageName='Restaurant Search', pageURL='http://127.0.0.1:8000/RestaurantSearch/',
                   pageDesc='Require sustenance during your trip? Find somewhere to eat here!')
     p5 = webPages(pageName='Currency Exchange', pageURL='http://127.0.0.1:8000/currency_exchange/',
                   pageDesc='Learn how much your money is worth in another country')
