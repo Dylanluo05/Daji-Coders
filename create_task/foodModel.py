@@ -74,7 +74,7 @@ def model_printer():
     print("------------")
     print("Table: Resturants and iconic foods")
     print("------------")
-    # result = db.session.execute('select * from webpages')
+    # result = db.session.execute('select * from foods')
     # print(result.keys())
     result = foods.query.all()
     json_ready = [food.read() for food in result]
