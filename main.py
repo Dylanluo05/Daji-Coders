@@ -207,6 +207,9 @@ def packinglist():
 def GoogleSearch():
     return render_template("GoogleSearch.html")
 
+@app.route('/TravelRecommendation/')
+def TravelRecommendation():
+    return render_template("TravelRecommendation.html")
 
 # runs the application on the development server
 if __name__ == "__main__":
