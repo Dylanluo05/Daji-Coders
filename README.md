@@ -15,6 +15,7 @@ Jean Kim, Dylan Luo, Isabelle Gunawan, Alex Do
 - [Sprint 6 Week 6](#sprint-6-week-6)
 - [Sprint 7 Week 7](#sprint-7-week-7)
 - [Sprint 8 Week 8](#sprint-8-week-8)
+- [Sprint 9 Week 9](#sprint-9-week-9)
 
 
 ### Runtime Link
@@ -143,3 +144,11 @@ Vidhi (Crossover Team) | No College board Work, Contact Us Page, Dark Mode Toggl
 Aryan (Crossover Team) | No College Board Work, Budget Tracker, Packing List | [Link to Scrum Board Ticket](https://github.com/Dylanluo05/Daji-Coders/issues/69) // [Link to Scrum Board Ticket](https://github.com/Dylanluo05/Daji-Coders/issues/68) | 5.75/6
 Everyone |Week 8 Review Ticket| [Link to Review Ticket](https://github.com/Dylanluo05/Daji-Coders/issues/77) | Scores and Explanations in Review Ticket
 
+### Sprint 9 Week 9
+
+Name | Requirements | Evidence | Notes and Scores |
+---- | ------------ | -------- | ----- |
+Jean Kim | Create Task Foodie Finder and Wiki | 
+Dylan Luo | Create Task Travel Recommendations and Wiki |
+Isabelle Gunawan | Create Task Foodie Finder and Wiki |
+Alex Do | Create Task Travel Recommendations and Wiki |
