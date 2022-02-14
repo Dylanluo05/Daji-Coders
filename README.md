@@ -148,7 +148,7 @@ Everyone |Week 8 Review Ticket| [Link to Review Ticket](https://github.com/Dylan
 
 Name | Requirements | Evidence | Notes and Scores |
 ---- | ------------ | -------- | ----- |
-Jean Kim | Create Task Foodie Finder and Wiki | 
-Dylan Luo | Create Task Travel Recommendations and Wiki |
-Isabelle Gunawan | Create Task Foodie Finder and Wiki |
-Alex Do | Create Task Travel Recommendations and Wiki |
+Jean Kim | Create Task Foodie Finder and Wiki | [Wiki Page](https://github.com/Dylanluo05/Daji-Coders/wiki/Week-9-Assignment-Create-Task:-Foodie-Finder) | 5.5/6
+Dylan Luo | Create Task Travel Recommendations and Wiki | [Wiki Page](https://github.com/Dylanluo05/Daji-Coders/wiki/Week-9-Create-Task-Programming) | 5.5/6
+Isabelle Gunawan | Create Task Foodie Finder and Wiki | [Wiki Page](https://github.com/Dylanluo05/Daji-Coders/wiki/Week-9-Assignment-Create-Task:-Foodie-Finder) | 5.5/6
+Alex Do | Create Task Travel Recommendations and Wiki | [Wiki Page](https://github.com/Dylanluo05/Daji-Coders/wiki/Week-9-Create-Task-Programming) | 5.5/6
