@@ -1,0 +1,2147 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+
+    {% set name = "Daji Coders" %}
+    {% include "layouts/navbar.html" %}
+</head>
+
+<style>
+    * { box-sizing: border-box }
+
+    html, body{
+        margin:0;
+        padding:0;
+        color: white;
+        font-family:sans-serif;
+        overflow-x: hidden;
+        font-family: 'Ubuntu', sans-serif;
+        scroll-behavior: smooth;
+    }
+
+    #FunTimesBackground1 {
+        padding: 150px;
+        background-color: #6fb2cc;
+        background-repeat: no-repeat;
+    }
+
+    /* #FunTimesSubBackground1 {
+        background-color: #013A6B;
+        background-image: -webkit-linear-gradient(30deg, #013A6B 50%, #004E95 50%);
+        padding: 100px;
+        color: white;
+        background-repeat: no-repeat;
+    } */
+
+
+    #FunTimesSubBackground1 {
+        /* background-color: #013A6B;
+        background-image: -webkit-linear-gradient(30deg, #004E95 50%, rebeccapurple 50%); */
+        /* background-image: linear-gradient(darkblue, blueviolet); */
+        background-color: black;
+        padding: 150px;
+        color: white;
+        background-repeat: no-repeat;
+    }
+
+
+    #FunTimesSubBackground3 {
+        background-color: #013A6B;
+        background-image: -webkit-linear-gradient(30deg, #004E95 50%, rebeccapurple 50%);
+        padding: 100px;
+        color: white;
+        background-repeat: no-repeat;
+    }
+
+    #FunTimesSubBackground4 {
+        background-color: #013A6B;
+        background-image: -webkit-linear-gradient(30deg, purple 50%, mediumvioletred 50%);
+        padding: 100px;
+        color: white;
+        background-repeat: no-repeat;
+    }
+
+
+    #FunTimesBackground3 {
+        font-family: 'Ubuntu', sans-serif;
+        background-repeat: no-repeat;
+        position: relative;
+        padding: 200px;
+        color: black;
+    }
+
+    .FunTimesBackground3_background, .FunTimesBackground3_overlay {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+
+    .FunTimesBackground3_background {
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background: url("https://wallpaperaccess.com/full/2177420.jpg");
+        z-index: 1
+    }
+
+    .FunTimesBackground3_overlay {
+        background: rgba(50, 50, 120, 0.57);
+        z-index: 2;
+    }
+
+    .FunTimesBackground3_content {
+        position: relative;
+        z-index: 3;
+        color: white;
+        min-height: 75vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #FunTimesBackground4 {
+        font-family: 'Ubuntu', sans-serif;
+        background-repeat: no-repeat;
+        position: relative;
+    }
+
+    .FunTimesBackground4_background, .FunTimesBackground4_overlay {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+
+    .FunTimesBackground4_background {
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background: url("https://cdn.wallpapersafari.com/40/47/qGeFlQ.jpg");
+        z-index: 1
+    }
+
+    .FunTimesBackground4_overlay {
+        background: rgba(50, 50, 120, 0.57);
+        z-index: 2;
+    }
+
+    .FunTimesBackground4_content {
+        position: relative;
+        z-index: 3;
+        color: white;
+        min-height: 75vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #FunTimesBackground5 {
+        font-family: 'Ubuntu', sans-serif;
+        background-repeat: no-repeat;
+        position: relative;
+    }
+
+    .FunTimesBackground5_background, .FunTimesBackground5_overlay {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+
+    .FunTimesBackground5_background {
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background: url("https://wallpaper.dog/large/11040083.jpg");
+        z-index: 1
+    }
+
+    .FunTimesBackground5_overlay {
+        background: rgba(178, 102, 255, 0.37);
+        z-index: 2;
+    }
+
+    .FunTimesBackground5_content {
+        position: relative;
+        z-index: 3;
+        color: white;
+        min-height: 75vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    #FunTimesBackground6 {
+        font-family: 'Ubuntu', sans-serif;
+        background-repeat: no-repeat;
+        position: relative;
+    }
+
+    .FunTimesBackground6_background, .FunTimesBackground6_overlay {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+
+    .FunTimesBackground6_background {
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background: url("https://www.libertytravel.com/sites/default/files/styles/full_size/public/19201080ssss.jpg?itok=6Kbogw_5");
+        z-index: 1
+    }
+
+    .FunTimesBackground6_overlay {
+        background: rgba(255, 51, 153, 0.27);
+        z-index: 2;
+    }
+
+    .FunTimesBackground6_content {
+        position: relative;
+        z-index: 3;
+        color: white;
+        min-height: 75vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #FunTimesBackground7 {
+        padding: 100px;
+        background-color: white;
+        background-repeat: no-repeat;
+    }
+
+
+    .one{
+        background-color: crimson;
+        background-image: -webkit-linear-gradient(30deg, crimson 50% , black 50%);
+        min-height: 200px;
+    }
+    .two{
+        background-color: whitesmoke;
+        padding: 20px;
+    }
+
+    .three{
+        background-color: blue;
+        background-image: -webkit-linear-gradient(30deg, blue 50%, orange 50%);
+        min-height: 200px;
+    }
+
+    .four {
+        background-color: yellow;
+        background-image: -webkit-linear-gradient(30deg, yellow 50%, rebeccapurple 50%);
+        min-height: 200px;
+    }
+
+    .MovingBox{
+        width: 400px;
+        height: 400px;
+        padding: 24px;
+        background-color: dodgerblue;
+        opacity: 50%;
+        animation-name: mymove;
+        animation-duration: 1.5s;
+        animation-fill-mode: forwards;
+        position: relative;
+        top: 50px;
+        font-size: 30px;
+        color: black;
+    }
+
+    .MovingBox2{
+        width: 400px;
+        height: 400px;
+        padding: 24px;
+        background-color: dodgerblue;
+        opacity: 50%;
+        animation-name: mymove2;
+        animation-duration: 1.5s;
+        animation-fill-mode: forwards;
+        position: relative;
+        top: 50px;
+        font-size: 30px;
+        color: black;
+    }
+
+    #div1 {animation-timing-function: ease;}
+
+
+    .five {
+        background-color: crimson;
+        animation-name: colorswitch1;
+        animation-duration: 8s;
+        animation-iteration-count: infinite;
+        min-height: 500px;
+    }
+
+    @keyframes colorswitch1 {
+        0%   {background-color: crimson;}
+        10%   {background-color: orangered;}
+        20%  {background-color: yellow;}
+        30%  {background-color: lawngreen;}
+        40% {background-color: dodgerblue;}
+        50% {background-color: white;}
+        60% {background-color: dodgerblue;}
+        70% {background-color: lawngreen;}
+        80% {background-color: yellow;}
+        90% {background-color: orangered;}
+        100% {background-color: crimson;}
+    }
+
+    @keyframes fadein {
+        0% {opacity: 0%;}
+        100% {opacity: 100%;}
+        from {top: 75px;}
+        to {top: -50px;}
+    }
+
+
+    @keyframes mymove {
+        from {left: 0px;}
+        to {left: 1000px;}
+    }
+
+    @keyframes mymove2 {
+        from {left: 1200px;}
+        to {left: 200px;}
+    }
+
+    /*
+     .one{
+        background-color: #013A6B;
+        background-image: -webkit-linear-gradient(30deg, #013A6B 50%, #004E95 50%);
+        min-height: 500px;
+    }
+    .two{
+        background-color: #34ADFF;
+        background-image: -webkit-linear-gradient(150deg, #34ADFF 35%, #4CBFFF 35%);
+        min-height: 500px;
+    }
+
+    .three{
+        background-color: rebeccapurple;
+        background-image: -webkit-linear-gradient(30deg, rebeccapurple 50%, mediumpurple 50%);
+        min-height: 500px;
+    }
+
+    .four{
+        background-color: lavender;
+        background-image: -webkit-linear-gradient(150deg, mediumaquamarine 35%, #00ad00 35%);
+        min-height: 500px;
+    }
+    .five{
+        background-color: lavender;
+        background-image: -webkit-linear-gradient(150deg, mediumaquamarine 35%, #00ad00 35%);
+        min-height: 500px;
+    }
+    .six{
+        background-color: #EFEEEF;
+        background-image: -webkit-linear-gradient(150deg, #34ADFF 35%, #4CBFFF 35%);
+        min-height: 500px;
+    }
+    .seven{
+        background-color: #EFEEEF;
+        background-image: -webkit-linear-gradient(150deg, #34ADFF 35%, #4CBFFF 35%);
+        min-height: 500px;
+    } */
+
+    .cropped {
+        object-fit: cover;
+        object-position: -10px;
+    }
+
+    .button {
+        background-color: white;
+        border: none;
+        color: white;
+        padding: 8px 16px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+    }
+    .button1 {
+        background-color: white;
+        color: mediumseagreen;
+        border: 2px solid mediumseagreen;
+    }
+
+    .button1:hover {
+        background-color: mediumseagreen;
+        color: white;
+    }
+
+    .button2 {
+        background-color: white;
+        color: dodgerblue;
+        border: 2px solid dodgerblue;
+    }
+
+    .button2:hover {
+        background-color: dodgerblue;
+        color: white;
+    }
+
+    .button3 {
+        background-color: white;
+        color: red;
+        border: 2px solid red;
+    }
+
+    .button3:hover {
+        background-color: red;
+        color: white;
+    }
+
+    .button4 {
+        background-color: white;
+        color: darkslateblue;
+        border: 2px solid darkslateblue;
+    }
+
+    .button4:hover {
+        background-color: darkslateblue;
+        color: white;
+    }
+
+
+
+    .btn3 {
+        border: none;
+        display: block;
+        text-align: center;
+        cursor: pointer;
+        text-transform: uppercase;
+        outline: none;
+        overflow: hidden;
+        position: relative;
+        color: #fff;
+        font-weight: 700;
+        font-size: 15px;
+        background-color: darkblue;
+        padding: 17px 60px;
+        margin: 0 auto;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.20);
+    }
+
+    .btn3 span {
+        position: relative;
+        z-index: 1;
+    }
+
+    .btn3:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 500%;
+        width: 140%;
+        background: darkturquoise;
+        -webkit-transition: all .5s ease-in-out;
+        transition: all .5s ease-in-out;
+        -webkit-transform: translateX(-95%) translateY(-25%);
+        transform: translateX(-95%) translateY(-25%);
+    }
+
+    .btn3:hover:after {
+        -webkit-transform: translateX(-5%) translateY(-25%);
+        transform: translateX(-5%) translateY(-25%);
+    }
+
+    .btn {
+        line-height: 50px;
+        height: 50px;
+        text-align: center;
+        width: 250px;
+        cursor: pointer;
+        display: inline-block;
+        font-size: 16px;
+        padding: 1px 3px;
+        color: #FFF;
+    }
+
+    .btn-two {
+        color: #FFF;
+        transition: all 0.5s;
+        position: relative;
+    }
+    .btn-two span {
+        color: #FFF;
+        z-index: 2;
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+    .btn-two::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        transition: all 0.5s;
+        border: 1px solid rgba(255,255,255,0.7);
+        background-color: rgba(255,255,255,0.3);
+    }
+    .btn-two::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        transition: all 0.5s;
+        color: white;
+        border: 1px solid rgba(255,255,255,0.7);
+        background-color: rgba(255,255,255,0.3);
+    }
+
+    .btn-two:hover::before {
+        transform: rotate(-24deg);
+        background-color: rgba(255,255,255,0);
+        color: #FFF;
+    }
+
+    .btn-two:hover::after {
+        transform: rotate(24deg);
+        background-color: rgba(255,255,255,0);
+        color: #FFF;
+    }
+
+    .btn-two:hover::after {
+        animation-name: rotatecw;
+        animation-duration: 2s;
+    }
+    .btn-two:hover::before {
+        animation-name: rotateccw;
+        animation-duration: 3s;
+    }
+    .btn-two:hover::after, .btn-two:hover::before {
+        left: 25px;
+        top: -75px;
+        width: 200px;
+        height: 200px;
+
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+
+    @keyframes rotatecw {
+        from {transform: rotate(0deg);}
+        to {transform: rotate(360deg);}
+    }
+
+    @keyframes rotateccw {
+        from {transform: rotate(0deg);}
+        to {transform: rotate(-360deg);}
+    }
+
+
+
+    .cell {
+        color: white;
+        font-size: 40px;
+        text-align: center;
+        padding: 5px;
+        font-family: 'Ubuntu', sans-serif;
+        border-radius: 100%;
+    }
+    .cell-1 {
+        background: whitesmoke;
+        font-family: 'Ubuntu', sans-serif;
+    }
+
+    .card-body {
+        background: whitesmoke;
+        font-family: 'Ubuntu', sans-serif;
+    }
+    .card-title{
+        color: black;
+    }
+    .card {
+        background: whitesmoke;
+        font-family: 'Ubuntu', sans-serif;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+    }
+    .collapsible {
+        background-color: black;
+        color: white;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+        font-family: 'Ubuntu', sans-serif;
+    }
+
+    .active2, .collapsible:hover {
+        background-color: #282828;
+        font-family: 'Ubuntu', sans-serif;
+    }
+
+    .collapsible:after {
+        content: '\002B';
+        color: white;
+        font-weight: bold;
+        float: right;
+        margin-left: 5px;
+        font-family: 'Ubuntu', sans-serif;
+    }
+
+    .active2:after {
+        content: "\2212";
+        color: white;
+        font-family: 'Ubuntu', sans-serif;
+    }
+
+    .content {
+        padding: 0 24px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+        background-color: #282828;
+        color: white;
+        font-family: 'Ubuntu', sans-serif;
+    }
+
+    .RatingContainer {
+        margin: 5px;
+        height: 14px;
+    }
+
+    *, *::before, *::after {
+        box-sizing: border-box;
+    }
+
+    :root {
+        --hue-neutral: 200;
+        --hue-wrong: 0;
+        --hue-correct: 145;
+    }
+
+    body.correct {
+        --hue: var(--hue-correct);
+    }
+
+    body.wrong {
+        --hue: var(--hue-wrong);
+    }
+
+    .container {
+        width: 800px;
+        max-width: 80%;
+        background-color: white;
+        color: black;
+        border-radius: 5px;
+        padding: 10px;
+        box-shadow: 0 0 10px 2px;
+    }
+
+    .btn2-grid {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        gap: 10px;
+        margin: 20px 0;
+    }
+
+    .btn2 {
+        display: inline-flex;
+        height: 40px;
+        width: 150px;
+        border: 2px solid #BFC0C0;
+        margin: 20px 20px 20px 20px;
+        color: #BFC0C0;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-size: .8em;
+        letter-spacing: 1.5px;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    a {
+        color: #BFC0C0;
+        text-decoration: none;
+        letter-spacing: 1px;
+    }
+
+    #btn-7 {
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+    }
+
+    #btn-7 a {
+        position: relative;
+        left: 0;
+        transition: all .35s ease-Out;
+    }
+
+    #btnarrow {
+        width: 100%;
+        height: 100%;
+        background: #BFC0C0;
+        left: -200px;
+        position: absolute;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all .35s ease-Out;
+        bottom: 0;
+    }
+
+    #btn-7 img {
+        width: 20px;
+        height: auto;
+    }
+
+    #btn-7:hover #btnarrow {
+        left: 0;
+    }
+
+    #btn-7:hover a {
+        left: 150px;
+    }
+
+    @media screen and (min-width:1000px) {
+        h1 {
+            font-size: 2.2em;
+        }
+        #container {
+            width: 50%;
+        }
+    }
+
+
+    .btn2:hover {
+        border-color: black;
+    }
+
+
+    .btn2.correct {
+        background-color: mediumseagreen;
+        color: black;
+    }
+
+    .btn2.wrong {
+        background-color: darkred;
+    }
+
+    .start-btn, .next-btn {
+        font-size: 1.5rem;
+        font-weight: bold;
+        padding: 10px 20px;
+    }
+
+    .controls {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hide {
+        display: none;
+    }
+
+    TicketContainer1 {
+        padding: 7px;
+    }
+</style>
+
+<body>
+<!-- <div class="one"> <div id = "div1" class = "MovingBox">
+    <span style = "position: relative; top: 90px; left:30px;">&#8227</span>
+    <span style = "position: relative; top: 90px; left:40px;">&#8227</span>
+    <span style = "position: relative; top: 20px; left:70px;">&#8227</span>
+    <span style = "position: relative; top: 40px; left:-50px;">&#8227</span>
+    <span style = "position: relative; top: 20px; left:80px;">&#8227</span>
+    <span style = "position: relative; top: 20px; left:40px;">&#8227</span>
+</div></div> -->
+
+
+<div id = "FunTimesBackground1">
+    <h1 style = "text-align: center; color: white; position: relative; top: -100px;">Welcome to Fun Times!</h1>
+    <img src = "/static/assets/images/Airplane2.jpg" style = "width: 700px; height: 700px; position: relative; left: 270px; top:-50px; animation-name: fadein; animation-duration: 4s;" class = "cropped">
+</div>
+
+
+<div id="FunTimesSubBackground1">
+    <!-- <button class = "button button1" onclick = "document.getElementById('FunTimesBackground3').scrollIntoView();">Amusement Parks!</button>
+    <button class = "button button2" onclick = "document.getElementById('FunTimesBackground4').scrollIntoView();">Beaches!</button>
+    <button class = "button button3" onclick = "document.getElementById('FunTimesBackground5').scrollIntoView();">Skiing/Snowboarding!</button>
+    <button class = "button button4" onclick = "document.getElementById('FunTimesBackground6').scrollIntoView();">National Parks!</button> -->
+    <button type="button" class="btn btn-two" onclick = "document.getElementById('FunTimesBackground3').scrollIntoView();" style = "position:relative; left:0px;">Amusement Parks!</button>
+    <button type="button" class="btn btn-two" onclick = "document.getElementById('FunTimesBackground4').scrollIntoView();" style = "position:relative; left:100px;">Beaches!</button>
+    <button type="button" class="btn btn-two" onclick = "document.getElementById('FunTimesBackground5').scrollIntoView();" style = "position:relative; left:200px;">Skiing and Snowboarding!</button>
+    <button type="button" class="btn btn-two" onclick = "document.getElementById('FunTimesBackground6').scrollIntoView();" style = "position:relative; left:300px;">National Parks!</button>
+</div>
+
+<!-- <img src = "/static/assets/images/FerrisWheel.gif" style = "width: 800px; height: 600px; position: relative; left: 300px; top: -75px;"> -->
+
+<div id="FunTimesBackground3">
+    <div class="FunTimesBackground3_background"></div>
+    <div class="FunTimesBackground3_overlay"></div>
+    <div class="FunTimesBackground3_content">
+        <h2 style = "color: white; position: relative; left: 425px; top: -400px; display: inline-block; white-space: nowrap;">Amusement Parks</h2>
+
+        <div class="card" style="width: 34rem; position: relative; left: -250px;"><div class="cell cell-1"><img src="https://i.ytimg.com/vi/TZl6sWOBmow/maxresdefault.jpg" alt="Greeting" width="400" height="300"></div>
+            <div class="card-body">
+                <h5 class="card-title" style = "color: black;">Knott's Berry Farm</h5>
+                <button class="collapsible">Info</button>
+                <div class="content">
+                    <p>Have fun at the fun rides of Knott's Berry Farm!</p>
+                </div>
+                <br>
+                <div class = "RatingContainer">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="card" style="width: 34rem; position: relative; left: 0px;"><div class="cell cell-1"><img src="https://upload.wikimedia.org/wikipedia/commons/1/18/Walt_Disney_World%27s_Cinderella_Castle_in_2021.png" alt="Greeting" width="400" height="300"></div>
+            <div class="card-body">
+                <h5 class="card-title">Disney World</h5>
+                <button class="collapsible">Info</button>
+                <div class="content">
+                    <p>Have fun at the fun rides of Disney World!</p>
+                </div>
+                <br>
+                <div class = "RatingContainer">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+</div>
+
+<div id ="FunTimesSubBackground1">
+
+    <h3 style = "position: relative; text-align: center;">Amusement Parks Quiz</h3>
+    <div class="container">
+        <div id="question-container" class="hide">
+            <div id="question">Question</div>
+            <div id="answer-buttons" class="btn2-grid">
+                <button class="btn2" id = "btn-7"><div id = "btnarrow">Answer 1</div></button>
+                <button class="btn2">Answer 2</button>
+                <button class="btn2">Answer 3</button>
+                <button class="btn2">Answer 4</button>
+            </div>
+        </div>
+        <div class="controls">
+            <button id="start-btn" class="start-btn btn2">Start</button>
+            <button id="next-btn" class="next-btn btn2 hide">Next</button>
+        </div>
+    </div>
+    <h3 style = "position: relative; text-align: center; top: 70px;">Book a trip to an amusement park!</h3>
+    <div class = "TicketContainer1" style = "position: relative; left: 400px; top: 77px;">
+        <form action="/action_page.php" target="/AmusementParksBookTickets/">
+            <p><input style = "border-radius: 0px; width: 400px; height: 40px;" type="text" placeholder="Name" required name="Name"></p>
+            <p><input style = "border-radius: 0px; width: 400px; height: 40px;" type="number" placeholder="Number of Tickets" required name="People"></p>
+            <p><input style = "border-radius: 0px; width: 400px; height: 40px;" type="datetime-local" placeholder="Date and time" required name="date" value="2022-02-14T11:11"></p> <!-- AM -->
+            <p><input style = "border-radius: 0px; width: 400px; height: 40px;" type="text" placeholder="Name of Amusement Park" required name="Message"></p>
+            <p><button type="submit" class = "btn3" style = "position: relative; left: -495px; top: 10px;"><span>Book Tickets!</span></button></p>
+        </form>
+    </div>
+</div>
+
+<div id="FunTimesBackground4">
+    <div class="FunTimesBackground4_background"></div>
+    <div class="FunTimesBackground4_overlay"></div>
+    <div class="FunTimesBackground4_content">
+        <h2 style = "color: white; position: relative; top: -200px; left: 0px;">Relax on Beaches</h2>
+    </div>
+</div>
+
+<div id ="FunTimesSubBackground1">
+
+</div>
+
+<div id="FunTimesBackground5">
+    <div class="FunTimesBackground5_background"></div>
+    <div class="FunTimesBackground5_overlay"></div>
+    <div class="FunTimesBackground5_content">
+        <h2 style = "color: white; position: relative; top: -200px; left: 0px;">Explore the Snow</h2>
+    </div>
+</div>
+
+<div id ="FunTimesSubBackground1">
+
+</div>
+
+<div id="FunTimesBackground6">
+    <div class="FunTimesBackground6_background"></div>
+    <div class="FunTimesBackground6_overlay"></div>
+    <div class="FunTimesBackground6_content">
+        <h2 style = "color: white; position: relative; top: -200px; left: 0px;">Embrace Nature</h2>
+    </div>
+</div>
+
+
+
+<!-- <div class="one">
+    <h2 style = "position: relative; top: -200px; left: 150px;">Browse our excellent deals! </h2>
+    <p style = "position:relative; top: -200px; left:150px;">Special packages for family fun activites available now!</p>
+    <p style = "position:relative; top: -200px; left:-400px; text-align: center;">Subscribe to our annual membership to receive special deals on amusement parks,
+    <br>tourist destinations, and many more!</p>
+    <img src="/static/assets/images/KnottsBerryFarm.jpg" style="width: 500px; height: 300px; position: relative; top: -50px; left: 1000px;">
+</div>
+
+<div class="two"></div>
+
+<div class="three"></div>
+
+<div class="two"></div>
+
+<div class="four"></div>
+
+<div class="five"></div> -->
+
+</body>
+
+
+<script>
+    const startButton = document.getElementById('start-btn')
+    const nextButton = document.getElementById('next-btn')
+    const questionContainerElement = document.getElementById('question-container')
+    const questionElement = document.getElementById('question')
+    const answerButtonsElement = document.getElementById('answer-buttons')
+
+    let shuffledQuestions, currentQuestionIndex
+
+    startButton.addEventListener('click', startGame)
+    nextButton.addEventListener('click', () => {
+        currentQuestionIndex++
+        setNextQuestion()
+    })
+
+    function startGame() {
+        startButton.classList.add('hide')
+        shuffledQuestions = questions.sort(() => Math.random() - .5)
+        currentQuestionIndex = 0
+        questionContainerElement.classList.remove('hide')
+        setNextQuestion()
+    }
+
+    function setNextQuestion() {
+        resetState()
+        showQuestion(shuffledQuestions[currentQuestionIndex])
+    }
+
+    function showQuestion(question) {
+        questionElement.innerText = question.question
+        question.answers.forEach(answer => {
+            const button = document.createElement('button')
+            button.innerText = answer.text
+            button.classList.add('btn2')
+            if (answer.correct) {
+                button.dataset.correct = answer.correct
+            }
+            button.addEventListener('click', selectAnswer)
+            answerButtonsElement.appendChild(button)
+        })
+    }
+
+    function resetState() {
+        clearStatusClass(document.body)
+        nextButton.classList.add('hide')
+        while (answerButtonsElement.firstChild) {
+            answerButtonsElement.removeChild(answerButtonsElement.firstChild)
+        }
+    }
+
+    function selectAnswer(e) {
+        const selectedButton = e.target
+        const correct = selectedButton.dataset.correct
+        setStatusClass(document.body, correct)
+        Array.from(answerButtonsElement.children).forEach(button => {
+            setStatusClass(button, button.dataset.correct)
+        })
+        if (shuffledQuestions.length > currentQuestionIndex + 1) {
+            nextButton.classList.remove('hide')
+        } else {
+            startButton.innerText = 'Restart'
+            startButton.classList.remove('hide')
+        }
+    }
+
+    function setStatusClass(element, correct) {
+        clearStatusClass(element)
+        if (correct) {
+            element.classList.add('correct')
+        } else {
+            element.classList.add('wrong')
+        }
+    }
+
+    function clearStatusClass(element) {
+        element.classList.remove('correct')
+        element.classList.remove('wrong')
+    }
+
+    const questions = [
+        {
+            question: 'Which is older? Knotts Berry Farm or Disney World?',
+            answers: [
+                { text: 'Knotts Berry Farm', correct: true },
+                { text: 'Disney World', correct: false }
+            ]
+        },
+        {
+            question: 'Which ride belongs in Knotts Berry Farm?',
+            answers: [
+                { text: 'Splash Mountain', correct: false },
+                { text: 'Ghost Rider', correct: true },
+                { text: 'Superman Ride', correct: false },
+                { text: 'Twister', correct: false }
+            ]
+        },
+        {
+            question: 'Is Knotts Berry Farm a fun amusement park?',
+            answers: [
+                { text: 'Not at all', correct: false },
+                { text: 'YES!!!', correct: true }
+            ]
+        },
+        {
+            question: 'What is a new ride of Knotts Berry Farm',
+            answers: [
+                { text: 'Hang Time', correct: true },
+                { text: 'Calico Log Ride', correct: false }
+            ]
+        }
+    ]
+
+    /* Fun Times Dropdown */
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+            this.classList.toggle("active2");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight){
+                content.style.maxHeight = null;
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+            }
+        });
+    }
+
+</script>
+</html><!DOCTYPE HTML>
+<html lang="en">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+
+    {% set name = "Daji Coders" %}
+    {% include "layouts/navbar.html" %}
+</head>
+
+<style>
+    * { box-sizing: border-box }
+
+    html, body{
+        margin:0;
+        padding:0;
+        color: white;
+        font-family:sans-serif;
+        overflow-x: hidden;
+        font-family: 'Ubuntu', sans-serif;
+        scroll-behavior: smooth;
+    }
+
+    #FunTimesBackground1 {
+        padding: 150px;
+        background-color: #6fb2cc;
+        background-repeat: no-repeat;
+    }
+
+    /* #FunTimesSubBackground1 {
+        background-color: #013A6B;
+        background-image: -webkit-linear-gradient(30deg, #013A6B 50%, #004E95 50%);
+        padding: 100px;
+        color: white;
+        background-repeat: no-repeat;
+    } */
+
+
+    #FunTimesSubBackground1 {
+        /* background-color: #013A6B;
+        background-image: -webkit-linear-gradient(30deg, #004E95 50%, rebeccapurple 50%); */
+        /* background-image: linear-gradient(darkblue, blueviolet); */
+        background-color: black;
+        padding: 150px;
+        color: white;
+        background-repeat: no-repeat;
+    }
+
+
+    #FunTimesSubBackground3 {
+        background-color: #013A6B;
+        background-image: -webkit-linear-gradient(30deg, #004E95 50%, rebeccapurple 50%);
+        padding: 100px;
+        color: white;
+        background-repeat: no-repeat;
+    }
+
+    #FunTimesSubBackground4 {
+        background-color: #013A6B;
+        background-image: -webkit-linear-gradient(30deg, purple 50%, mediumvioletred 50%);
+        padding: 100px;
+        color: white;
+        background-repeat: no-repeat;
+    }
+
+
+    #FunTimesBackground3 {
+        font-family: 'Ubuntu', sans-serif;
+        background-repeat: no-repeat;
+        position: relative;
+        padding: 200px;
+        color: black;
+    }
+
+    .FunTimesBackground3_background, .FunTimesBackground3_overlay {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+
+    .FunTimesBackground3_background {
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background: url("https://wallpaperaccess.com/full/2177420.jpg");
+        z-index: 1
+    }
+
+    .FunTimesBackground3_overlay {
+        background: rgba(50, 50, 120, 0.57);
+        z-index: 2;
+    }
+
+    .FunTimesBackground3_content {
+        position: relative;
+        z-index: 3;
+        color: white;
+        min-height: 75vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #FunTimesBackground4 {
+        font-family: 'Ubuntu', sans-serif;
+        background-repeat: no-repeat;
+        position: relative;
+    }
+
+    .FunTimesBackground4_background, .FunTimesBackground4_overlay {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+
+    .FunTimesBackground4_background {
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background: url("https://cdn.wallpapersafari.com/40/47/qGeFlQ.jpg");
+        z-index: 1
+    }
+
+    .FunTimesBackground4_overlay {
+        background: rgba(50, 50, 120, 0.57);
+        z-index: 2;
+    }
+
+    .FunTimesBackground4_content {
+        position: relative;
+        z-index: 3;
+        color: white;
+        min-height: 75vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #FunTimesBackground5 {
+        font-family: 'Ubuntu', sans-serif;
+        background-repeat: no-repeat;
+        position: relative;
+    }
+
+    .FunTimesBackground5_background, .FunTimesBackground5_overlay {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+
+    .FunTimesBackground5_background {
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background: url("https://wallpaper.dog/large/11040083.jpg");
+        z-index: 1
+    }
+
+    .FunTimesBackground5_overlay {
+        background: rgba(178, 102, 255, 0.37);
+        z-index: 2;
+    }
+
+    .FunTimesBackground5_content {
+        position: relative;
+        z-index: 3;
+        color: white;
+        min-height: 75vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    #FunTimesBackground6 {
+        font-family: 'Ubuntu', sans-serif;
+        background-repeat: no-repeat;
+        position: relative;
+    }
+
+    .FunTimesBackground6_background, .FunTimesBackground6_overlay {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+
+    .FunTimesBackground6_background {
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background: url("https://www.libertytravel.com/sites/default/files/styles/full_size/public/19201080ssss.jpg?itok=6Kbogw_5");
+        z-index: 1
+    }
+
+    .FunTimesBackground6_overlay {
+        background: rgba(255, 51, 153, 0.27);
+        z-index: 2;
+    }
+
+    .FunTimesBackground6_content {
+        position: relative;
+        z-index: 3;
+        color: white;
+        min-height: 75vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #FunTimesBackground7 {
+        padding: 100px;
+        background-color: white;
+        background-repeat: no-repeat;
+    }
+
+
+    .one{
+        background-color: crimson;
+        background-image: -webkit-linear-gradient(30deg, crimson 50% , black 50%);
+        min-height: 200px;
+    }
+    .two{
+        background-color: whitesmoke;
+        padding: 20px;
+    }
+
+    .three{
+        background-color: blue;
+        background-image: -webkit-linear-gradient(30deg, blue 50%, orange 50%);
+        min-height: 200px;
+    }
+
+    .four {
+        background-color: yellow;
+        background-image: -webkit-linear-gradient(30deg, yellow 50%, rebeccapurple 50%);
+        min-height: 200px;
+    }
+
+    .MovingBox{
+        width: 400px;
+        height: 400px;
+        padding: 24px;
+        background-color: dodgerblue;
+        opacity: 50%;
+        animation-name: mymove;
+        animation-duration: 1.5s;
+        animation-fill-mode: forwards;
+        position: relative;
+        top: 50px;
+        font-size: 30px;
+        color: black;
+    }
+
+    .MovingBox2{
+        width: 400px;
+        height: 400px;
+        padding: 24px;
+        background-color: dodgerblue;
+        opacity: 50%;
+        animation-name: mymove2;
+        animation-duration: 1.5s;
+        animation-fill-mode: forwards;
+        position: relative;
+        top: 50px;
+        font-size: 30px;
+        color: black;
+    }
+
+    #div1 {animation-timing-function: ease;}
+
+
+    .five {
+        background-color: crimson;
+        animation-name: colorswitch1;
+        animation-duration: 8s;
+        animation-iteration-count: infinite;
+        min-height: 500px;
+    }
+
+    @keyframes colorswitch1 {
+        0%   {background-color: crimson;}
+        10%   {background-color: orangered;}
+        20%  {background-color: yellow;}
+        30%  {background-color: lawngreen;}
+        40% {background-color: dodgerblue;}
+        50% {background-color: white;}
+        60% {background-color: dodgerblue;}
+        70% {background-color: lawngreen;}
+        80% {background-color: yellow;}
+        90% {background-color: orangered;}
+        100% {background-color: crimson;}
+    }
+
+    @keyframes fadein {
+        0% {opacity: 0%;}
+        100% {opacity: 100%;}
+        from {top: 75px;}
+        to {top: -50px;}
+    }
+
+
+    @keyframes mymove {
+        from {left: 0px;}
+        to {left: 1000px;}
+    }
+
+    @keyframes mymove2 {
+        from {left: 1200px;}
+        to {left: 200px;}
+    }
+
+    /*
+     .one{
+        background-color: #013A6B;
+        background-image: -webkit-linear-gradient(30deg, #013A6B 50%, #004E95 50%);
+        min-height: 500px;
+    }
+    .two{
+        background-color: #34ADFF;
+        background-image: -webkit-linear-gradient(150deg, #34ADFF 35%, #4CBFFF 35%);
+        min-height: 500px;
+    }
+
+    .three{
+        background-color: rebeccapurple;
+        background-image: -webkit-linear-gradient(30deg, rebeccapurple 50%, mediumpurple 50%);
+        min-height: 500px;
+    }
+
+    .four{
+        background-color: lavender;
+        background-image: -webkit-linear-gradient(150deg, mediumaquamarine 35%, #00ad00 35%);
+        min-height: 500px;
+    }
+    .five{
+        background-color: lavender;
+        background-image: -webkit-linear-gradient(150deg, mediumaquamarine 35%, #00ad00 35%);
+        min-height: 500px;
+    }
+    .six{
+        background-color: #EFEEEF;
+        background-image: -webkit-linear-gradient(150deg, #34ADFF 35%, #4CBFFF 35%);
+        min-height: 500px;
+    }
+    .seven{
+        background-color: #EFEEEF;
+        background-image: -webkit-linear-gradient(150deg, #34ADFF 35%, #4CBFFF 35%);
+        min-height: 500px;
+    } */
+
+    .cropped {
+        object-fit: cover;
+        object-position: -10px;
+    }
+
+    .button {
+        background-color: white;
+        border: none;
+        color: white;
+        padding: 8px 16px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+    }
+    .button1 {
+        background-color: white;
+        color: mediumseagreen;
+        border: 2px solid mediumseagreen;
+    }
+
+    .button1:hover {
+        background-color: mediumseagreen;
+        color: white;
+    }
+
+    .button2 {
+        background-color: white;
+        color: dodgerblue;
+        border: 2px solid dodgerblue;
+    }
+
+    .button2:hover {
+        background-color: dodgerblue;
+        color: white;
+    }
+
+    .button3 {
+        background-color: white;
+        color: red;
+        border: 2px solid red;
+    }
+
+    .button3:hover {
+        background-color: red;
+        color: white;
+    }
+
+    .button4 {
+        background-color: white;
+        color: darkslateblue;
+        border: 2px solid darkslateblue;
+    }
+
+    .button4:hover {
+        background-color: darkslateblue;
+        color: white;
+    }
+
+
+
+    .btn3 {
+        border: none;
+        display: block;
+        text-align: center;
+        cursor: pointer;
+        text-transform: uppercase;
+        outline: none;
+        overflow: hidden;
+        position: relative;
+        color: #fff;
+        font-weight: 700;
+        font-size: 15px;
+        background-color: darkblue;
+        padding: 17px 60px;
+        margin: 0 auto;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.20);
+    }
+
+    .btn3 span {
+        position: relative;
+        z-index: 1;
+    }
+
+    .btn3:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 500%;
+        width: 140%;
+        background: darkturquoise;
+        -webkit-transition: all .5s ease-in-out;
+        transition: all .5s ease-in-out;
+        -webkit-transform: translateX(-95%) translateY(-25%);
+        transform: translateX(-95%) translateY(-25%);
+    }
+
+    .btn3:hover:after {
+        -webkit-transform: translateX(-5%) translateY(-25%);
+        transform: translateX(-5%) translateY(-25%);
+    }
+
+    .btn {
+        line-height: 50px;
+        height: 50px;
+        text-align: center;
+        width: 250px;
+        cursor: pointer;
+        display: inline-block;
+        font-size: 16px;
+        padding: 1px 3px;
+        color: #FFF;
+    }
+
+    .btn-two {
+        color: #FFF;
+        transition: all 0.5s;
+        position: relative;
+    }
+    .btn-two span {
+        color: #FFF;
+        z-index: 2;
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+    .btn-two::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        transition: all 0.5s;
+        border: 1px solid rgba(255,255,255,0.7);
+        background-color: rgba(255,255,255,0.3);
+    }
+    .btn-two::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        transition: all 0.5s;
+        color: white;
+        border: 1px solid rgba(255,255,255,0.7);
+        background-color: rgba(255,255,255,0.3);
+    }
+
+    .btn-two:hover::before {
+        transform: rotate(-24deg);
+        background-color: rgba(255,255,255,0);
+        color: #FFF;
+    }
+
+    .btn-two:hover::after {
+        transform: rotate(24deg);
+        background-color: rgba(255,255,255,0);
+        color: #FFF;
+    }
+
+    .btn-two:hover::after {
+        animation-name: rotatecw;
+        animation-duration: 2s;
+    }
+    .btn-two:hover::before {
+        animation-name: rotateccw;
+        animation-duration: 3s;
+    }
+    .btn-two:hover::after, .btn-two:hover::before {
+        left: 25px;
+        top: -75px;
+        width: 200px;
+        height: 200px;
+
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+
+    @keyframes rotatecw {
+        from {transform: rotate(0deg);}
+        to {transform: rotate(360deg);}
+    }
+
+    @keyframes rotateccw {
+        from {transform: rotate(0deg);}
+        to {transform: rotate(-360deg);}
+    }
+
+
+
+    .cell {
+        color: white;
+        font-size: 40px;
+        text-align: center;
+        padding: 5px;
+        font-family: 'Ubuntu', sans-serif;
+        border-radius: 100%;
+    }
+    .cell-1 {
+        background: whitesmoke;
+        font-family: 'Ubuntu', sans-serif;
+    }
+
+    .card-body {
+        background: whitesmoke;
+        font-family: 'Ubuntu', sans-serif;
+    }
+    .card-title{
+        color: black;
+    }
+    .card {
+        background: whitesmoke;
+        font-family: 'Ubuntu', sans-serif;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+    }
+    .collapsible {
+        background-color: black;
+        color: white;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+        font-family: 'Ubuntu', sans-serif;
+    }
+
+    .active2, .collapsible:hover {
+        background-color: #282828;
+        font-family: 'Ubuntu', sans-serif;
+    }
+
+    .collapsible:after {
+        content: '\002B';
+        color: white;
+        font-weight: bold;
+        float: right;
+        margin-left: 5px;
+        font-family: 'Ubuntu', sans-serif;
+    }
+
+    .active2:after {
+        content: "\2212";
+        color: white;
+        font-family: 'Ubuntu', sans-serif;
+    }
+
+    .content {
+        padding: 0 24px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+        background-color: #282828;
+        color: white;
+        font-family: 'Ubuntu', sans-serif;
+    }
+
+    .RatingContainer {
+        margin: 5px;
+        height: 14px;
+    }
+
+    *, *::before, *::after {
+        box-sizing: border-box;
+    }
+
+    :root {
+        --hue-neutral: 200;
+        --hue-wrong: 0;
+        --hue-correct: 145;
+    }
+
+    body.correct {
+        --hue: var(--hue-correct);
+    }
+
+    body.wrong {
+        --hue: var(--hue-wrong);
+    }
+
+    .container {
+        width: 800px;
+        max-width: 80%;
+        background-color: white;
+        color: black;
+        border-radius: 5px;
+        padding: 10px;
+        box-shadow: 0 0 10px 2px;
+    }
+
+    .btn2-grid {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        gap: 10px;
+        margin: 20px 0;
+    }
+
+    .btn2 {
+        display: inline-flex;
+        height: 40px;
+        width: 150px;
+        border: 2px solid #BFC0C0;
+        margin: 20px 20px 20px 20px;
+        color: #BFC0C0;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-size: .8em;
+        letter-spacing: 1.5px;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    a {
+        color: #BFC0C0;
+        text-decoration: none;
+        letter-spacing: 1px;
+    }
+
+    #btn-7 {
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+    }
+
+    #btn-7 a {
+        position: relative;
+        left: 0;
+        transition: all .35s ease-Out;
+    }
+
+    #btnarrow {
+        width: 100%;
+        height: 100%;
+        background: #BFC0C0;
+        left: -200px;
+        position: absolute;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all .35s ease-Out;
+        bottom: 0;
+    }
+
+    #btn-7 img {
+        width: 20px;
+        height: auto;
+    }
+
+    #btn-7:hover #btnarrow {
+        left: 0;
+    }
+
+    #btn-7:hover a {
+        left: 150px;
+    }
+
+    @media screen and (min-width:1000px) {
+        h1 {
+            font-size: 2.2em;
+        }
+        #container {
+            width: 50%;
+        }
+    }
+
+
+    .btn2:hover {
+        border-color: black;
+    }
+
+
+    .btn2.correct {
+        background-color: mediumseagreen;
+        color: black;
+    }
+
+    .btn2.wrong {
+        background-color: darkred;
+    }
+
+    .start-btn, .next-btn {
+        font-size: 1.5rem;
+        font-weight: bold;
+        padding: 10px 20px;
+    }
+
+    .controls {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hide {
+        display: none;
+    }
+
+    TicketContainer1 {
+        padding: 7px;
+    }
+</style>
+
+<body>
+<!-- <div class="one"> <div id = "div1" class = "MovingBox">
+    <span style = "position: relative; top: 90px; left:30px;">&#8227</span>
+    <span style = "position: relative; top: 90px; left:40px;">&#8227</span>
+    <span style = "position: relative; top: 20px; left:70px;">&#8227</span>
+    <span style = "position: relative; top: 40px; left:-50px;">&#8227</span>
+    <span style = "position: relative; top: 20px; left:80px;">&#8227</span>
+    <span style = "position: relative; top: 20px; left:40px;">&#8227</span>
+</div></div> -->
+
+
+<div id = "FunTimesBackground1">
+    <h1 style = "text-align: center; color: white; position: relative; top: -100px;">Welcome to Fun Times!</h1>
+    <img src = "/static/assets/images/Airplane2.jpg" style = "width: 700px; height: 700px; position: relative; left: 270px; top:-50px; animation-name: fadein; animation-duration: 4s;" class = "cropped">
+</div>
+
+
+<div id="FunTimesSubBackground1">
+    <!-- <button class = "button button1" onclick = "document.getElementById('FunTimesBackground3').scrollIntoView();">Amusement Parks!</button>
+    <button class = "button button2" onclick = "document.getElementById('FunTimesBackground4').scrollIntoView();">Beaches!</button>
+    <button class = "button button3" onclick = "document.getElementById('FunTimesBackground5').scrollIntoView();">Skiing/Snowboarding!</button>
+    <button class = "button button4" onclick = "document.getElementById('FunTimesBackground6').scrollIntoView();">National Parks!</button> -->
+    <button type="button" class="btn btn-two" onclick = "document.getElementById('FunTimesBackground3').scrollIntoView();" style = "position:relative; left:0px;">Amusement Parks!</button>
+    <button type="button" class="btn btn-two" onclick = "document.getElementById('FunTimesBackground4').scrollIntoView();" style = "position:relative; left:100px;">Beaches!</button>
+    <button type="button" class="btn btn-two" onclick = "document.getElementById('FunTimesBackground5').scrollIntoView();" style = "position:relative; left:200px;">Skiing and Snowboarding!</button>
+    <button type="button" class="btn btn-two" onclick = "document.getElementById('FunTimesBackground6').scrollIntoView();" style = "position:relative; left:300px;">National Parks!</button>
+</div>
+
+<!-- <img src = "/static/assets/images/FerrisWheel.gif" style = "width: 800px; height: 600px; position: relative; left: 300px; top: -75px;"> -->
+
+<div id="FunTimesBackground3">
+    <div class="FunTimesBackground3_background"></div>
+    <div class="FunTimesBackground3_overlay"></div>
+    <div class="FunTimesBackground3_content">
+        <h2 style = "color: white; position: relative; left: 425px; top: -400px; display: inline-block; white-space: nowrap;">Amusement Parks</h2>
+
+        <div class="card" style="width: 34rem; position: relative; left: -250px;"><div class="cell cell-1"><img src="https://i.ytimg.com/vi/TZl6sWOBmow/maxresdefault.jpg" alt="Greeting" width="400" height="300"></div>
+            <div class="card-body">
+                <h5 class="card-title" style = "color: black;">Knott's Berry Farm</h5>
+                <button class="collapsible">Info</button>
+                <div class="content">
+                    <p>Have fun at the fun rides of Knott's Berry Farm!</p>
+                </div>
+                <br>
+                <div class = "RatingContainer">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="card" style="width: 34rem; position: relative; left: 0px;"><div class="cell cell-1"><img src="https://upload.wikimedia.org/wikipedia/commons/1/18/Walt_Disney_World%27s_Cinderella_Castle_in_2021.png" alt="Greeting" width="400" height="300"></div>
+            <div class="card-body">
+                <h5 class="card-title">Disney World</h5>
+                <button class="collapsible">Info</button>
+                <div class="content">
+                    <p>Have fun at the fun rides of Disney World!</p>
+                </div>
+                <br>
+                <div class = "RatingContainer">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+</div>
+
+<div id ="FunTimesSubBackground1">
+
+    <h3 style = "position: relative; text-align: center;">Amusement Parks Quiz</h3>
+    <div class="container">
+        <div id="question-container" class="hide">
+            <div id="question">Question</div>
+            <div id="answer-buttons" class="btn2-grid">
+                <button class="btn2" id = "btn-7"><div id = "btnarrow">Answer 1</div></button>
+                <button class="btn2">Answer 2</button>
+                <button class="btn2">Answer 3</button>
+                <button class="btn2">Answer 4</button>
+            </div>
+        </div>
+        <div class="controls">
+            <button id="start-btn" class="start-btn btn2">Start</button>
+            <button id="next-btn" class="next-btn btn2 hide">Next</button>
+        </div>
+    </div>
+    <h3 style = "position: relative; text-align: center; top: 70px;">Book a trip to an amusement park!</h3>
+    <div class = "TicketContainer1" style = "position: relative; left: 400px; top: 77px;">
+        <form action="/action_page.php" target="/AmusementParksBookTickets/">
+            <p><input style = "border-radius: 0px; width: 400px; height: 40px;" type="text" placeholder="Name" required name="Name"></p>
+            <p><input style = "border-radius: 0px; width: 400px; height: 40px;" type="number" placeholder="Number of Tickets" required name="People"></p>
+            <p><input style = "border-radius: 0px; width: 400px; height: 40px;" type="datetime-local" placeholder="Date and time" required name="date" value="2022-02-14T11:11"></p> <!-- AM -->
+            <p><input style = "border-radius: 0px; width: 400px; height: 40px;" type="text" placeholder="Name of Amusement Park" required name="Message"></p>
+            <p><button type="submit" class = "btn3" style = "position: relative; left: -495px; top: 10px;"><span>Book Tickets!</span></button></p>
+        </form>
+    </div>
+</div>
+
+<div id="FunTimesBackground4">
+    <div class="FunTimesBackground4_background"></div>
+    <div class="FunTimesBackground4_overlay"></div>
+    <div class="FunTimesBackground4_content">
+        <h2 style = "color: white; position: relative; top: -200px; left: 0px;">Relax on Beaches</h2>
+    </div>
+</div>
+
+<div id ="FunTimesSubBackground1">
+
+</div>
+
+<div id="FunTimesBackground5">
+    <div class="FunTimesBackground5_background"></div>
+    <div class="FunTimesBackground5_overlay"></div>
+    <div class="FunTimesBackground5_content">
+        <h2 style = "color: white; position: relative; top: -200px; left: 0px;">Explore the Snow</h2>
+    </div>
+</div>
+
+<div id ="FunTimesSubBackground1">
+
+</div>
+
+<div id="FunTimesBackground6">
+    <div class="FunTimesBackground6_background"></div>
+    <div class="FunTimesBackground6_overlay"></div>
+    <div class="FunTimesBackground6_content">
+        <h2 style = "color: white; position: relative; top: -200px; left: 0px;">Embrace Nature</h2>
+    </div>
+</div>
+
+
+
+<!-- <div class="one">
+    <h2 style = "position: relative; top: -200px; left: 150px;">Browse our excellent deals! </h2>
+    <p style = "position:relative; top: -200px; left:150px;">Special packages for family fun activites available now!</p>
+    <p style = "position:relative; top: -200px; left:-400px; text-align: center;">Subscribe to our annual membership to receive special deals on amusement parks,
+    <br>tourist destinations, and many more!</p>
+    <img src="/static/assets/images/KnottsBerryFarm.jpg" style="width: 500px; height: 300px; position: relative; top: -50px; left: 1000px;">
+</div>
+
+<div class="two"></div>
+
+<div class="three"></div>
+
+<div class="two"></div>
+
+<div class="four"></div>
+
+<div class="five"></div> -->
+
+</body>
+
+
+<script>
+    const startButton = document.getElementById('start-btn')
+    const nextButton = document.getElementById('next-btn')
+    const questionContainerElement = document.getElementById('question-container')
+    const questionElement = document.getElementById('question')
+    const answerButtonsElement = document.getElementById('answer-buttons')
+
+    let shuffledQuestions, currentQuestionIndex
+
+    startButton.addEventListener('click', startGame)
+    nextButton.addEventListener('click', () => {
+        currentQuestionIndex++
+        setNextQuestion()
+    })
+
+    function startGame() {
+        startButton.classList.add('hide')
+        shuffledQuestions = questions.sort(() => Math.random() - .5)
+        currentQuestionIndex = 0
+        questionContainerElement.classList.remove('hide')
+        setNextQuestion()
+    }
+
+    function setNextQuestion() {
+        resetState()
+        showQuestion(shuffledQuestions[currentQuestionIndex])
+    }
+
+    function showQuestion(question) {
+        questionElement.innerText = question.question
+        question.answers.forEach(answer => {
+            const button = document.createElement('button')
+            button.innerText = answer.text
+            button.classList.add('btn2')
+            if (answer.correct) {
+                button.dataset.correct = answer.correct
+            }
+            button.addEventListener('click', selectAnswer)
+            answerButtonsElement.appendChild(button)
+        })
+    }
+
+    function resetState() {
+        clearStatusClass(document.body)
+        nextButton.classList.add('hide')
+        while (answerButtonsElement.firstChild) {
+            answerButtonsElement.removeChild(answerButtonsElement.firstChild)
+        }
+    }
+
+    function selectAnswer(e) {
+        const selectedButton = e.target
+        const correct = selectedButton.dataset.correct
+        setStatusClass(document.body, correct)
+        Array.from(answerButtonsElement.children).forEach(button => {
+            setStatusClass(button, button.dataset.correct)
+        })
+        if (shuffledQuestions.length > currentQuestionIndex + 1) {
+            nextButton.classList.remove('hide')
+        } else {
+            startButton.innerText = 'Restart'
+            startButton.classList.remove('hide')
+        }
+    }
+
+    function setStatusClass(element, correct) {
+        clearStatusClass(element)
+        if (correct) {
+            element.classList.add('correct')
+        } else {
+            element.classList.add('wrong')
+        }
+    }
+
+    function clearStatusClass(element) {
+        element.classList.remove('correct')
+        element.classList.remove('wrong')
+    }
+
+    const questions = [
+        {
+            question: 'Which is older? Knotts Berry Farm or Disney World?',
+            answers: [
+                { text: 'Knotts Berry Farm', correct: true },
+                { text: 'Disney World', correct: false }
+            ]
+        },
+        {
+            question: 'Which ride belongs in Knotts Berry Farm?',
+            answers: [
+                { text: 'Splash Mountain', correct: false },
+                { text: 'Ghost Rider', correct: true },
+                { text: 'Superman Ride', correct: false },
+                { text: 'Twister', correct: false }
+            ]
+        },
+        {
+            question: 'Is Knotts Berry Farm a fun amusement park?',
+            answers: [
+                { text: 'Not at all', correct: false },
+                { text: 'YES!!!', correct: true }
+            ]
+        },
+        {
+            question: 'What is a new ride of Knotts Berry Farm',
+            answers: [
+                { text: 'Hang Time', correct: true },
+                { text: 'Calico Log Ride', correct: false }
+            ]
+        }
+    ]
+
+    /* Fun Times Dropdown */
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+            this.classList.toggle("active2");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight){
+                content.style.maxHeight = null;
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+            }
+        });
+    }
+
+</script>
+</html>
