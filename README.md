@@ -16,6 +16,7 @@ Jean Kim, Dylan Luo, Isabelle Gunawan, Alex Do
 - [Sprint 7 Week 7](#sprint-7-week-7)
 - [Sprint 8 Week 8](#sprint-8-week-8)
 - [Sprint 9 Week 9](#sprint-9-week-9)
+- [Sprint 10 Week 10](#sprint-10-week-10)
 
 
 ### Runtime Link
@@ -152,3 +153,12 @@ Jean Kim | Create Task Foodie Finder and Wiki | [Wiki Page](https://github.com/D
 Dylan Luo | Create Task Travel Recommendations and Wiki | [Wiki Page](https://github.com/Dylanluo05/Daji-Coders/wiki/Week-9-Create-Task-Programming) | 5.5/6
 Isabelle Gunawan | Create Task Foodie Finder and Wiki | [Wiki Page](https://github.com/Dylanluo05/Daji-Coders/wiki/Week-9-Assignment-Create-Task:-Foodie-Finder) | 5.5/6
 Alex Do | Create Task Travel Recommendations and Wiki | [Wiki Page](https://github.com/Dylanluo05/Daji-Coders/wiki/Week-9-Create-Task-Programming) | 5.5/6
+
+### Sprint 10 Week 10
+
+Name | Requirements | Evidence | Notes and Scores |
+---- | ------------ | -------- | ----- |
+Jean Kim | Journal Notes and Practice MCQ Test | [Jean Kim and Alex Do Journal](https://docs.google.com/document/d/1Z-1t7JIvJnqctDlQt7ALcxyDKhtoPdDNBLIA8d82Qgo/edit?usp=sharing) | 4/4
+Dylan Luo | Journal Notes and Practice MCQ Test | [Dylan Luo and Isabelle Gunawan Journal](https://docs.google.com/document/d/1LDHFMI3j1qDKWwgjiuCrH2cgK1KQCoKsQF3OOdGBvIw/edit?usp=sharing) | 4/4
+Isabelle Gunawan | Journal Notes and Practice MCQ Test | [Dylan Luo and Isabelle Gunawan Journal](https://docs.google.com/document/d/1LDHFMI3j1qDKWwgjiuCrH2cgK1KQCoKsQF3OOdGBvIw/edit?usp=sharing) | 4/4
+Alex Do | Journal Notes and Practice MCQ Test | [Jean Kim and Alex Do Journal](https://docs.google.com/document/d/1Z-1t7JIvJnqctDlQt7ALcxyDKhtoPdDNBLIA8d82Qgo/edit?usp=sharing) | 4/4
