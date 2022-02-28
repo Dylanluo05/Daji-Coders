@@ -1,0 +1,223 @@
+
+{% extends "layouts/base.html" %}
+
+{% block body %}
+    <h1 class="center-block" style=" text-align:center; font-family: serif"> Travel Quiz</h1>
+    <h3 style="text-align: center;padding-left:25px; font-size: 25px">Welcome to our quiz! Click the corresponding letter to your answer to all the questions and then submit. This mini quiz will test you on common travel facts. </h3>
+    <h4 style="text-align: center; font-size: 20px">Correct Answers Show up in Green while incorrect answers show up in red. Scroll all the way down for results. Good luck!</h4>
+    <div id="quiz"></div>
+    <button id="submit">Submit Answers</button>
+    <div id="results"></div>
+
+    <style>
+        body{
+            font-size: 15px;
+            font-family: rono, serif;
+            color: #333;
+        }
+        .question{
+            font-weight: 600;
+        }
+        .answers {
+            margin-bottom: 20px;
+        }
+        .answers label{
+            display: block;
+        }
+        #submit{
+            font-family: sans-serif;
+            font-size: 20px;
+            background-color: pink;
+            color: black;
+            border: 0px;
+            border-radius: 3px;
+            padding: 20px;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+        #submit:hover{
+            background-color: lightpink;
+        }
+
+    </style>
+
+    <script>
+        (function(){
+            function buildQuiz(){
+                const output = [];
+
+                myQuestions.forEach(
+                    (currentQuestion, questionNumber) => {
+
+                        const answers = [];
+
+                        for(letter in currentQuestion.answers){
+
+                            answers.push(
+                                `<label>
+              <input type="radio" name="question${questionNumber}" value="${letter}">
+              ${letter} :
+              ${currentQuestion.answers[letter]}
+            </label>`
+                            );
+                        }
+
+                        output.push(
+                            `<div class="question"> ${currentQuestion.question} </div>
+          <div class="answers"> ${answers.join('')} </div>`
+                        );
+                    }
+                );
+
+                quizContainer.innerHTML = output.join('');
+            }
+
+            function showResults(){
+
+                const answerContainers = quizContainer.querySelectorAll('.answers');
+
+                let numCorrect = 0;
+
+                myQuestions.forEach( (currentQuestion, questionNumber) => {
+
+
+                    const answerContainer = answerContainers[questionNumber];
+                    const selector = `input[name=question${questionNumber}]:checked`;
+                    const userAnswer = (answerContainer.querySelector(selector) || {}).value;
+
+                    if(userAnswer === currentQuestion.correctAnswer){
+
+                        numCorrect++;
+
+
+                        answerContainers[questionNumber].style.color = 'darkgreen';
+                    }
+
+                    else{
+
+                        answerContainers[questionNumber].style.color = 'red';
+                    }
+                });
+
+
+                resultsContainer.innerHTML = `Result: ${numCorrect} out of ${myQuestions.length} correct`;
+            }
+
+            const quizContainer = document.getElementById('quiz');
+            const resultsContainer = document.getElementById('results');
+            const submitButton = document.getElementById('submit');
+            const myQuestions = [
+                {
+                    question: "1. What is the most famous food in France?",
+                    answers: {
+                        a: "Burger",
+                        b: "Canape",
+                        c: "Rice",
+                        d: "Cassoulet"
+                    },
+                    correctAnswer: "d"
+                },
+                {
+                    question: "2. Where were french fries invented?",
+                    answers: {
+                        a: "France",
+                        b: "Belgium",
+                        c: "America",
+                        d: "Canada"
+                    },
+                    correctAnswer: "b"
+                },
+                {
+                    question: "3. How many cullinary cuisines are in China?",
+                    answers: {
+                        a: "8",
+                        b: "6",
+                        c: "4",
+                        d: "7"
+                    },
+                    correctAnswer: "a"
+                },
+                {
+                    question: "4. Which country does Paella Valenciana originate from? ",
+                    answers: {
+                        a: "America",
+                        b: "Mexico",
+                        c: "Spain",
+                        d: "Russia"
+                    },
+                    correctAnswer: "c"
+                },
+                {
+                    question: "5. What country does the English Muffin originate from?",
+                    answers: {
+                        a: "United States",
+                        b: "United Kingdom",
+                        c: "Canada",
+                        d: "Australia"
+                    },
+                    correctAnswer: "a"
+                },
+                {
+                    question: "6. Where does hot chocolate originate from?",
+                    answers: {
+                        a: "Canada",
+                        b: "China",
+                        c: "Mexico",
+                        d: "Ukraine"
+                    },
+                    correctAnswer: "c"
+                },
+                {
+                    question: "7. Where is the best coffee made? ",
+                    answers: {
+                        a: "Ethiopia",
+                        b: "Kenya",
+                        c: "Libya",
+                        d: "Liberia"
+                    },
+                    correctAnswer: "a"
+                },
+                {
+                    question: "8. What country does Butter Scotch originate from?",
+                    answers: {
+                        a: "Norway",
+                        b: "America",
+                        c: "Scotland",
+                        d: "England"
+                    },
+                    correctAnswer: "d"
+                },
+                {
+                    question: "9. Which country does omurice originate from?",
+                    answers: {
+                        a: "China",
+                        b: "Japan",
+                        c: "South Korea",
+                        d: "Vietnam",
+                    },
+                    correctAnswer: "b"
+                },
+                {
+                    question: "10. Which cuisine is the spiciest, on average?",
+                    answers: {
+                        a: "Indian",
+                        b: "Mexican",
+                        c: "Thai",
+                        d: "Indonesian",
+                    },
+                    correctAnswer: "b"
+                }
+            ];
+
+            buildQuiz();
+
+            submitButton.addEventListener('click', showResults);
+        })();
+    </script>
+    <style>
+        #results {
+            text-align: center; font-size: 35px
+        }
+    </style>
+
+{% endblock %}
