@@ -1,16 +1,19 @@
-{% include "layouts/navbar.html" %}
 <head>
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+
+    {% set name = "Daji Coders" %}
+    {% include "layouts/navbar.html" %}
 </head>
-{% block body %}
-    <!DOCTYPE html>
 {#    <body style="background-image: url('../static/assets/todoBG.jpg'); background-repeat: no-repeat; background-attachment: fixed; background-size: cover;">#}
-            <h3><span>To-Do list | DAJI Coders</span></h3>
+<!DOCTYPE html>
+<html lang="en">
+<h3><span>To-Do list | DAJI Coders</span></h3>
     <div class="container" id="todo-list">
     <h3>Add Item</h3>
 
@@ -27,6 +30,7 @@
             <li1><input type="checkbox" checked><label>Visit Amusement Park</label><input type="text"><button class="edit">Edit</button><button class="delete">Delete</button></li1>
         </ul>
     </div>
+</html>
     <script>
         var taskInput = document.getElementById("new-task"); //new-task
         var addButton = document.getElementsByTagName("button")[0]; //first button
@@ -35,7 +39,7 @@
         //New Task list Item
         var createNewTaskElement = function(taskString) {
             //Create list Item
-            var listItem = document.createElement("li");
+            var listItem = document.createElement("li1");
             //input (checkbox)
             var checkBox = document.createElement("input"); // checkbox
             //label
@@ -80,7 +84,7 @@
         var editTask = function() {
             console.log("Edit task...");
             var listItem = this.parentNode;
-            var editInput = listItem.querySelector("input[type=text");
+            var editInput = listItem.querySelector("input[type=text]");
             var label = listItem.querySelector("label");
             var containsClass = listItem.classlist.contains("editMode");
             //if the class of the parent is .editMode
@@ -306,6 +310,6 @@
             text-shadow: 0 0 10px #fdd503,
             0 0 20px #ffd500,
             0 0 40px #fdc407;
-        }    </style>
+        }
+   </style>
 
-{% endblock %}

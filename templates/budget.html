@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<head>
 
 <style>
     @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
@@ -20,9 +20,6 @@
         margin: 0;
         background-color: rgb(33, 50, 68);
     }
-
-
-
 
     h1 {
         letter-spacing: 2px;
@@ -149,7 +146,7 @@
         list-style: none;
         display: inline;
     }
-    ul li {
+    ul li1 {
         font-weight: bolder;
         font-size: 21px;
     }
@@ -192,14 +189,7 @@
         color: rgb(86, 184, 197);
     }
     </style>
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <link
-            rel="stylesheet"
-            href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
+    <meta charset="UTF-8">
     <title>Track Budget</title>
 </head>
 <body>
@@ -316,7 +306,7 @@
         // Get sign
         const sign = transaction.amount < 0 ? "-" : "+";
 
-        const item = document.createElement("li");
+        const item = document.createElement("li1");
 
         // Add class based on value
         item.classList.add(transaction.amount < 0 ? "minus" : "plus");
