@@ -211,6 +211,10 @@ def GoogleSearch():
 def TravelRecommendation():
     return render_template("TravelRecommendation.html")
 
+@app.route('/foodieFinder/')
+def foodieFinder():
+    return render_template("foodieFinder.html")
+
 # runs the application on the development server
 if __name__ == "__main__":
     app.run(debug=True, port=8002)
