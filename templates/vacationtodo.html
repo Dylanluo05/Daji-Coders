@@ -1,8 +1,16 @@
-{% extends "layouts/base.html" %}
+{% include "layouts/navbar.html" %}
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+</head>
 {% block body %}
     <!DOCTYPE html>
 {#    <body style="background-image: url('../static/assets/todoBG.jpg'); background-repeat: no-repeat; background-attachment: fixed; background-size: cover;">#}
-            <h3><span>To-Do List | DAJI Coders</span></h3>
+            <h3><span>To-Do list | DAJI Coders</span></h3>
     <div class="container" id="todo-list">
     <h3>Add Item</h3>
 
@@ -11,12 +19,12 @@
         </p>
         <h3>Todo</h3>
         <ul id="incomplete-tasks">
-            <li><input type="checkbox"><label>Watch Sunrise</label><input type="text"><button class="edit">Edit</button><button class="delete">Delete</button></li>
-            <li><input type="checkbox"><label>Go Hiking</label><input type="text" value="Go Shopping"><button class="edit">Edit</button><button class="delete">Delete</button></li>
+            <li1><input type="checkbox"><label>Watch Sunrise</label><input type="text"><button class="edit">Edit</button><button class="delete">Delete</button></li1>
+            <li1><input type="checkbox"><label>Go Hiking</label><input type="text" value="Go Shopping"><button class="edit">Edit</button><button class="delete">Delete</button></li1>
         </ul>
         <h3>Completed</h3>
         <ul id="completed-tasks">
-            <li><input type="checkbox" checked><label>Visit Amusement Park</label><input type="text"><button class="edit">Edit</button><button class="delete">Delete</button></li>
+            <li1><input type="checkbox" checked><label>Visit Amusement Park</label><input type="text"><button class="edit">Edit</button><button class="delete">Delete</button></li1>
         </ul>
     </div>
     <script>
@@ -24,9 +32,9 @@
         var addButton = document.getElementsByTagName("button")[0]; //first button
         var incompleteTasksHolder = document.getElementById("incomplete-tasks"); //incomplete-tasks
         var completedTasksHolder = document.getElementById("completed-tasks"); //completed-tasks
-        //New Task List Item
+        //New Task list Item
         var createNewTaskElement = function(taskString) {
-            //Create List Item
+            //Create list Item
             var listItem = document.createElement("li");
             //input (checkbox)
             var checkBox = document.createElement("input"); // checkbox
@@ -74,7 +82,7 @@
             var listItem = this.parentNode;
             var editInput = listItem.querySelector("input[type=text");
             var label = listItem.querySelector("label");
-            var containsClass = listItem.classList.contains("editMode");
+            var containsClass = listItem.classlist.contains("editMode");
             //if the class of the parent is .editMode
             if (containsClass) {
                 //Switch from .editMode
@@ -86,7 +94,7 @@
                 editInput.value = label.innerText;
             }
             //Toggle .editMode on the list item
-            listItem.classList.toggle("editMode");
+            listItem.classlist.toggle("editMode");
         }
         //Delete an existing task
         var deleteTask = function() {
@@ -112,12 +120,12 @@
             incompleteTasksHolder.appendChild(listItem);
             bindTaskEvents(listItem, taskCompleted);
         }
-        var bindTaskEvents = function(taskListItem, checkBoxEventHandler) {
+        var bindTaskEvents = function(tasklistItem, checkBoxEventHandler) {
             console.log("Bind list item events");
-            //select taskListItem's children
-            var checkBox = taskListItem.querySelector("input[type=checkbox]");
-            var editButton = taskListItem.querySelector("button.edit");
-            var deleteButton = taskListItem.querySelector("button.delete");
+            //select tasklistItem's children
+            var checkBox = tasklistItem.querySelector("input[type=checkbox]");
+            var editButton = tasklistItem.querySelector("button.edit");
+            var deleteButton = tasklistItem.querySelector("button.delete");
             //bind editTask to edit button
             editButton.onclick = editTask;
             //bind deleteTask to delete button
@@ -129,8 +137,8 @@
         // 	console.log("AJAX request");
         // }
         //Set the click handler to the addTask function
-        addButton.addEventListener("click", addTask);
-        //addButton.addEventListener("click", ajaxRequest);
+        addButton.addEventlistener("click", addTask);
+        //addButton.addEventlistener("click", ajaxRequest);
         //cycle over incompleteTasksHolder ul list items
         for (var i = 0; i < incompleteTasksHolder.children.length; i++) {
             //bind events to list item's children (taskCompleted)
@@ -142,11 +150,7 @@
             bindTaskEvents(completedTasksHolder.children[i], taskIncomplete);
         }
     </script>
-    <style>
-        .navbar{
-            width: 50%;
-            margin-bottom: 15px;
-        }
+   <style>
         /* Basic Style */
         body {
         background: #6fb2cc;
@@ -162,10 +166,10 @@
             margin: 0;
             padding: 0;
         }
-        li * {
+        li1 * {
             float: left;
         }
-        li, h3 {
+        li1, h3 {
             clear:both;
             list-style:none;
         }
@@ -224,26 +228,26 @@
             color: #0FC57C;
         }
         /* Task list */
-        li {
+        li1 {
             overflow: hidden;
             padding: 20px 0;
             border-bottom: 1px solid #eee;
         }
-        li > input[type="checkbox"] {
+        li1 > input[type="checkbox"] {
             margin: 0 10px;
             position: relative;
             top: 15px;
         }
-        li > label {
+        li1 > label {
             font-size: 18px;
             line-height: 40px;
             width: 237px;
             padding: 0 0 0 11px;
         }
-        li >  input[type="text"] {
+        li1 >  input[type="text"] {
             width: 226px;
         }
-        li > .delete:hover {
+        li1 > .delete:hover {
             color: #CF2323;
         }
         /* Completed */
@@ -252,13 +256,13 @@
             color: #232323;
         }
         /* Edit Task */
-        ul li input[type=text] {
+        ul li1 input[type=text] {
             display:none;
         }
-        ul li.editMode input[type=text] {
+        ul li1.editMode input[type=text] {
             display:block;
         }
-        ul li.editMode label {
+        ul li1.editMode label {
             display:none;
         }
         /* navbar */
