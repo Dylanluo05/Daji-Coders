@@ -184,12 +184,12 @@
             },
             {
                 "question":
-                    "Select which country you would want to got in order of least to greatest \"Hawaii, Alaska & America",
-                "answer1": "Hawaii, Alaska, America",
+                    "Select which country you would want to go to in order of least to greatest \"Hawaii, Alaska & America",
+                "answer1": "Alaska, America, Hawaii",
                 "answer1Total": "1",
-                "answer2": "Alaska, America, Hawaii",
+                "answer2": "America, Hawaii, Alaska",
                 "answer2Total": "2",
-                "answer3": "America, Hawaii, Alaska",
+                "answer3": "Hawaii, Alaska, America",
                 "answer3Total": "3"
             },
             {
@@ -203,11 +203,11 @@
             },
             {
                 "question": "How long do you like your vacations?",
-                "answer1": "Half a day",
+                "answer1":  "Full day",
                 "answer1Total": "1",
-                "answer2": "Full day",
+                "answer2": "A long time",
                 "answer2Total": "2",
-                "answer3": "A long time",
+                "answer3":  "Half a day",
                 "answer3Total": "3"
             },
             {
@@ -223,11 +223,11 @@
             },
             {
                 "question": "How would you describe yourself?",
-                "answer1": "Energetic and Active",
+                "answer1":  "Curious and Intelligent",
                 "answer1Total": "1",
                 "answer2": "Relaxed and Cool",
                 "answer2Total": "2",
-                "answer3": "Curious and Intelligent",
+                "answer3": "Energetic and Active",
                 "answer3Total": "3"
             }
         ]
@@ -290,20 +290,54 @@
             }
             if(currentQuestion == totalQuestions) {
                 container.style.display = 'none';
-                result.innerHTML =
-                    `<h1 class="final-score">Your score: ${totalScore}</h1>
+
+                if (totalScore >= 7) {
+                    container.style.display = 'none';
+                    result.innerHTML =
+                        `<h1 class="final-score"> You should go chill at a museum! </h1>
+    <button class="restart">Restart Quiz</button>
+     `;
+                }
+
+                if (totalScore > 11) {
+                    container.style.display = 'none';
+                    result.innerHTML =
+                        `<h1 class="final-score"> Go relax at the sunny beach! </h1>
+    <button class="restart">Restart Quiz</button>
+     `;
+                }
+
+                if (totalScore > 15) {
+                    container.style.display = 'none';
+                    result.innerHTML =
+                        `<h1 class="final-score"> You're an amusement park enthusiast! </h1>
+    <button class="restart">Restart Quiz</button>
+     `;
+                }
+
+                if (totalScore >= 19) {
+                    container.style.display = 'none';
+                    result.innerHTML =
+                        `<h1 class="final-score"> Take your friends and family on a hike! </h1>
+    <button class="restart">Restart Quiz</button>
+     `;
+                }
+
+
+                    /* `<h1 class="final-score">Your score: ${totalScore}</h1>
      <div class="summary">
         <h1>Summary</h1>
         <p>Possible - Personality Traits, see below for a summary based on your results:</p>
-        <p>15 - 21- Go relax at the sunny beach!</p>
-        <p>10 - 15 - Take your friends and family on a hike!</p>
-        <p>5 - 10 - You should go chill at a museum!</p>
-        <p>5 - You're an amusement park enthusiast!</p>
+        <p>17 - 21 -  You're an amusement park enthusiast!</p>
+        <p>7 - 12 - Take your friends and family on a hike!</p>
+        <p>12 - 17 - Go relax at the sunny beach!</p>
+        <p>7 - You should go chill at a museum! </p>
     </div>
     <button class="restart">Restart Quiz</button>
-     `;
+     `; */
                 return;
             }
+
             generateQuestions(currentQuestion);
         }
 

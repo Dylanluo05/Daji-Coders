@@ -675,12 +675,73 @@
     }
 
     .btn2 {
-        --hue: var(--hue-neutral);
-        border: 1px solid hsl(var(--hue), 100%, 30%);
-        background-color: hsl(var(--hue), 100%, 50%);
-        padding: 5px 10px;
-        color: white;
-        outline: none;
+        display: inline-flex;
+        height: 40px;
+        width: 150px;
+        border: 2px solid #BFC0C0;
+        margin: 20px 20px 20px 20px;
+        color: #BFC0C0;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-size: .8em;
+        letter-spacing: 1.5px;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    a {
+        color: #BFC0C0;
+        text-decoration: none;
+        letter-spacing: 1px;
+    }
+
+    #btn-7 {
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+    }
+
+    #btn-7 a {
+        position: relative;
+        left: 0;
+        transition: all .35s ease-Out;
+    }
+
+    #btnarrow {
+        width: 100%;
+        height: 100%;
+        background: #BFC0C0;
+        left: -200px;
+        position: absolute;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all .35s ease-Out;
+        bottom: 0;
+    }
+
+    #btn-7 img {
+        width: 20px;
+        height: auto;
+    }
+
+    #btn-7:hover #btnarrow {
+        left: 0;
+    }
+
+    #btn-7:hover a {
+        left: 150px;
+    }
+
+    @media screen and (min-width:1000px) {
+        h1 {
+            font-size: 2.2em;
+        }
+        #container {
+            width: 50%;
+        }
     }
 
 
@@ -690,12 +751,12 @@
 
 
     .btn2.correct {
-        --hue: var(--hue-correct);
+        background-color: mediumseagreen;
         color: black;
     }
 
     .btn2.wrong {
-        --hue: var(--hue-wrong);
+        background-color: darkred;
     }
 
     .start-btn, .next-btn {
@@ -803,7 +864,7 @@
         <div id="question-container" class="hide">
             <div id="question">Question</div>
             <div id="answer-buttons" class="btn2-grid">
-                <button class="btn2">Answer 1</button>
+                <button class="btn2" id = "btn-7"><div id = "btnarrow">Answer 1</div></button>
                 <button class="btn2">Answer 2</button>
                 <button class="btn2">Answer 3</button>
                 <button class="btn2">Answer 4</button>
