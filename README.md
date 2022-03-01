@@ -168,8 +168,8 @@ Alex Do | Journal Notes and Practice MCQ Test | [Jean Kim and Alex Do Journal](h
 
 Name | Requirements | Evidence | Notes and Scores |
 ---- | ------------ | -------- | ----- |
-Jean Kim | PBL Final and Video | [Video Link](https://www.youtube.com/watch?v=9elTx5q5-Ps) | 10/10
-Dylan Luo | PBL Final and Video | [Video Link](https://drive.google.com/file/d/1piu1iX_sbpnTOrTOUmOj6HkTRWtmJT8Y/view) | 10/10
-Isabelle Gunawan | PBL Final and Video | [Video Link](https://www.loom.com/share/974ab7acd8d24327b08b3eecf9ac5882) | 10/10
-Alex Do | PBL Final and Video | [Video Link](https://photos.google.com/share/AF1QipNkRvLbtZ6hCRKXyKIHPY0EtQsLnDnEddG-0hfy2Djc9tsTAZ5XuA3vE7V1sur5wg/photo/AF1QipN6liiORj05_VWDeOZiNpNWDIUlEY6ycZBjZG6F?key=MFM0S0NJVDYtTF9oVlBsN2p2aGhfY3hQVVlrUUF3) | 10/10
+Jean Kim | PBL Final and Video | [Video Link](https://www.youtube.com/watch?v=9elTx5q5-Ps) | 9/10
+Dylan Luo | PBL Final and Video | [Video Link](https://drive.google.com/file/d/1piu1iX_sbpnTOrTOUmOj6HkTRWtmJT8Y/view) | 9/10
+Isabelle Gunawan | PBL Final and Video | [Video Link](https://www.loom.com/share/974ab7acd8d24327b08b3eecf9ac5882) | 9/10
+Alex Do | PBL Final and Video | [Video Link](https://photos.google.com/share/AF1QipNkRvLbtZ6hCRKXyKIHPY0EtQsLnDnEddG-0hfy2Djc9tsTAZ5XuA3vE7V1sur5wg/photo/AF1QipN6liiORj05_VWDeOZiNpNWDIUlEY6ycZBjZG6F?key=MFM0S0NJVDYtTF9oVlBsN2p2aGhfY3hQVVlrUUF3) | 8.8/10
 Everyone | Group Video and Review Ticket | [Review Ticket](https://github.com/Dylanluo05/Daji-Coders/issues/79) | All tangibles and evidence in review ticket
