@@ -104,8 +104,11 @@
             }
 
             const quizContainer = document.getElementById('quiz');
+            {#quizContainer has all the questions that are included in the actual quiz, const refers to a read-only cross reference to a certain value#}
             const resultsContainer = document.getElementById('results');
+            {#resultsContainer helps get the results to the quiz  #}
             const submitButton = document.getElementById('submit');
+            {# submit means that the user will be able to submit their results and get a score #}
             const myQuestions = [
                 {
                     question: "1. What is the most famous food in France?",

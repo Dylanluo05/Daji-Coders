@@ -9,6 +9,7 @@ from webapi import app_api
 from dc_crud.app_crud import app_crud
 from y2022 import app_y2022
 from web.websiteSearch import websiteSearch
+# from create_task.foodiefinder import foodiefinder
 # from api.jeanapi import api_bp
 from __init__ import app
 
@@ -22,6 +23,7 @@ app.register_blueprint(app_api)
 app.register_blueprint(app_crud)
 app.register_blueprint(app_y2022)
 app.register_blueprint(websiteSearch)
+# app.register_blueprint(foodiefinder)
 forumList = []
 # connects default URL to render index.html
 
