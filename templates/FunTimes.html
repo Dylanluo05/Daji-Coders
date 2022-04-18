@@ -877,12 +877,12 @@
     </div>
     <h3 style = "position: relative; text-align: center; top: 70px;">Book a trip to an amusement park!</h3>
     <div class = "TicketContainer1" style = "position: relative; left: 400px; top: 77px;">
-        <form action="/action_page.php" target="/AmusementParksBookTickets/">
+        <form action="/action_page.php">
             <p><input style = "border-radius: 0px; width: 400px; height: 40px;" type="text" placeholder="Name" required name="Name"></p>
             <p><input style = "border-radius: 0px; width: 400px; height: 40px;" type="number" placeholder="Number of Tickets" required name="People"></p>
             <p><input style = "border-radius: 0px; width: 400px; height: 40px;" type="datetime-local" placeholder="Date and time" required name="date" value="2022-02-14T11:11"></p> <!-- AM -->
             <p><input style = "border-radius: 0px; width: 400px; height: 40px;" type="text" placeholder="Name of Amusement Park" required name="Message"></p>
-            <p><button type="submit" class = "btn3" style = "position: relative; left: -495px; top: 10px;"><span>Book Tickets!</span></button></p>
+            <p><button id="myPopup" class = "btn3" style = "position: relative; left: -495px; top: 10px;"><span>Book Tickets!</span></button></p>
         </form>
     </div>
 </div>
@@ -1070,5 +1070,10 @@
         });
     }
 
+    <!-- Popupwindow -->
+    function myFunction() {
+        var popup = document.getElementById("myPopup");
+        popup.classList.toggle("show");
+    }
 </script>
 </html>
